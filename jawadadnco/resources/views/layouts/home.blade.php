@@ -7,7 +7,7 @@
     {{-- HERO SECTION --}}
     <section id="accueil" class="relative h-screen flex items-center justify-center">
         <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1610647752706-3bb12232b3c2" alt="Private Chauffeur Brussels"
+            <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2" alt="Luxury Chauffeur Service in Brussels"
                 class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
         </div>
