@@ -383,7 +383,7 @@
                     </div>
                     <!-- WhatsApp Button Flottant avec icône seulement sur mobile -->
                     <div class="whatsapp-button" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
-                        <a href="https://wa.me/3221234567?text=Bonjour%20Elite%20Brussels%20Limousine,%20je%20souhaite%20obtenir%20un%20devis%20pour%20un%20chauffeur%20priv%C3%A9%20%C3%A0%20Bruxelles."
+                        <a href="https://wa.me/32497227033?text=Bonjour%20Elite%20Brussels%20Limousine,%20je%20souhaite%20obtenir%20un%20devis%20pour%20un%20chauffeur%20priv%C3%A9%20%C3%A0%20Bruxelles."
                             target="_blank"
                             style="display: flex; align-items: center; justify-content: center; gap: 12px; background-color: #25D366; color: white; font-weight: 600; font-size: 16px; padding: 16px 28px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);"
                             onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(37, 211, 102, 0.4)';"
