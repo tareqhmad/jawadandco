@@ -28,3 +28,26 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+Route::get('/services', function () {
+    return view('layouts/services');
+});
+
+Route::get('/fleet', function () {
+    return view('layouts/fleet');
+});
+
+Route::get('/booking', function () {
+    return view('layouts/booking');
+});
+
+Route::get('/pricing', function () {
+    return view('layouts/pricing');
+});
+
+Route::get('/about', function () {
+    return view('layouts/about');
+});
+
+Route::get('/contact', function () {
+    return view('layouts/contact');
+});
