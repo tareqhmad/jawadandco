@@ -30,174 +30,31 @@
     <section class="section-padding">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px;">
-                <!-- Mercedes S-Class -->
-                <div class="fade-in-up"
-                    style="background: var(--color-white); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(122, 125, 125, 0.08);">
-                    <div
-                        style="height: 250px; background: linear-gradient(45deg, var(--color-accent) 0%, var(--color-primary) 100%); display: flex; align-items: center; justify-content: center;">
-                        <div style="text-align: center;">
-                            <i class="fas fa-car" style="font-size: 80px; color: var(--color-secondary);"></i>
-                            <h3 style="margin-top: 20px; color: var(--color-dark); font-size: 24px;">Mercedes-Benz S-Class
-                            </h3>
-                        </div>
-                    </div>
-                    <div style="padding: 40px;">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 25px;">
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">Passengers
-                                </div>
-                                <div style="color: var(--color-secondary);">3-4</div>
-                            </div>
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">Luggage</div>
-                                <div style="color: var(--color-secondary);">3 large</div>
-                            </div>
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">Category</div>
-                                <div style="color: var(--color-secondary);">Executive</div>
-                            </div>
-                        </div>
-                        <p style="color: var(--color-secondary); margin-bottom: 30px;">
-                            The ultimate in luxury sedans, featuring premium leather, advanced climate control, and
-                            whisper-quiet cabin.
-                        </p>
-                        <ul style="list-style: none; margin-bottom: 30px; color: var(--color-secondary);">
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check"
-                                    style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                                Wi-Fi & Mobile Charging
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check"
-                                    style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                                Refreshment Bar
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check"
-                                    style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                                Panoramic Sunroof
-                            </li>
-                        </ul>
-                        <div style="text-align: center;">
-                            <a href="/booking" class="btn-primary" style="width: 100%;">
-                                <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> Book This Vehicle
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <x-fleet-card title="Mercedes V-Class" passengers="6-7" imageName="mercedes-v-class.png" luggage="8+ large"
+                    category="Executive"
+                    description="Spacious luxury for larger groups, offering exceptional comfort and ample luggage space."
+                    :features="['Captain\'s Chairs', 'Individual Climate Control', 'Panoramic Roof']" icon="fas fa-van" iconColor="var(--color-white)" headerTextColor="var(--color-dark)"
+                    gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
+                <x-fleet-card title="Mercedes S-Class" passengers="3-4" imageName="mercedes-s-class.png" luggage="3"
+                    category="Executive"
+                    description="The ultimate in luxury sedans, featuring premium leather, advanced climate control, and
+                            whisper-quiet cabin."
+                    :features="['Wi-Fi & Mobile Charging', 'Refreshment Bar', 'Panoramic Roof']" icon="fas fa-van" iconColor="var(--color-white)" headerTextColor="var(--color-dark)"
+                    gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
 
-                <!-- BMW 7 Series -->
-                <div class="fade-in-up"
-                    style="background: var(--color-white); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(122, 125, 125, 0.08);">
-                    <div
-                        style="height: 250px; background: linear-gradient(45deg, var(--color-primary) 0%, var(--color-accent) 100%); display: flex; align-items: center; justify-content: center;">
-                        <div style="text-align: center;">
-                            <i class="fas fa-car" style="font-size: 80px; color: var(--color-secondary);"></i>
-                            <h3 style="margin-top: 20px; color: var(--color-dark); font-size: 24px;">BMW 7 Series</h3>
-                        </div>
-                    </div>
-                    <div style="padding: 40px;">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 25px;">
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">Passengers
-                                </div>
-                                <div style="color: var(--color-secondary);">3-4</div>
-                            </div>
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">Luggage</div>
-                                <div style="color: var(--color-secondary);">3 large</div>
-                            </div>
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">Category</div>
-                                <div style="color: var(--color-secondary);">Executive</div>
-                            </div>
-                        </div>
-                        <p style="color: var(--color-secondary); margin-bottom: 30px;">
-                            Combining sporty performance with executive luxury, featuring gesture control and executive
-                            lounge seating.
-                        </p>
-                        <ul style="list-style: none; margin-bottom: 30px; color: var(--color-secondary);">
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check"
-                                    style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                                Bowers & Wilkins Sound
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check"
-                                    style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                                Massage Seats
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check"
-                                    style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                                Rear Entertainment
-                            </li>
-                        </ul>
-                        <div style="text-align: center;">
-                            <a href="/booking" class="btn-primary" style="width: 100%;">
-                                <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> Book This Vehicle
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Limousine -->
-
-                <!-- Mercedes V-Class -->
-                <div class="fade-in-up"
-                    style="background: var(--color-white); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(122, 125, 125, 0.08);">
-                    <div
-                        style="height: 250px; background: linear-gradient(45deg, var(--color-accent) 0%, var(--color-secondary) 100%); display: flex; align-items: center; justify-content: center;">
-                        <div style="text-align: center;">
-                            <i class="fas fa-van" style="font-size: 80px; color: var(--color-white);"></i>
-                            <h3 style="margin-top: 20px; color: var(--color-white); font-size: 24px;">Mercedes V-Class</h3>
-                        </div>
-                    </div>
-                    <div style="padding: 40px;">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 25px;">
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">Passengers
-                                </div>
-                                <div style="color: var(--color-secondary);">6-7</div>
-                            </div>
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">Luggage</div>
-                                <div style="color: var(--color-secondary);">8+ large</div>
-                            </div>
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">Category</div>
-                                <div style="color: var(--color-secondary);">Executive Van</div>
-                            </div>
-                        </div>
-                        <p style="color: var(--color-secondary); margin-bottom: 30px;">
-                            Spacious luxury for larger groups, offering exceptional comfort and ample luggage space.
-                        </p>
-                        <ul style="list-style: none; margin-bottom: 30px; color: var(--color-secondary);">
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check"
-                                    style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                                Captain's Chairs
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check"
-                                    style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                                Individual Climate Control
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                                <i class="fas fa-check"
-                                    style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                                Panoramic Roof
-                            </li>
-                        </ul>
-                        <div style="text-align: center;">
-                            <a href="/booking" class="btn-primary" style="width: 100%;">
-                                <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> Book This Vehicle
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <x-fleet-card title="BMW 7 Series" passengers="3-4" imageName="bmw-7-series.png" luggage="3 large"
+                    category="Executive"
+                    description="Combining sporty performance with executive luxury, featuring gesture control and executive
+                            lounge seating."
+                    :features="['Bowers & Wilkins Sound', 'Massage Seats', 'Rear Entertainment']" icon="fas fa-car" iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
+                    
+                <x-fleet-card title="Mercedes E-Class" passengers="3-4" imageName="mercedes-e-class.png" luggage="3 large"
+                    category="Business"
+                    description="A refined premium sedan that balances comfort, elegance, and everyday practicality.
+                    The E-Class Sedan offers a quiet, smooth ride with a well-insulated cabin, high-quality materials, and a relaxed driving feel"
+                    :features="['Exceptional ride comfort', 'Quiet, relaxing cabin', 'Heated Seats']" icon="fas fa-car" iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
     </section>
 
     <!-- Fleet Features -->
