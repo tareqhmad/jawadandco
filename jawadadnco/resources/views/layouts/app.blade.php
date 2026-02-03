@@ -2,7 +2,7 @@
     $locale = request()->route('locale');
 @endphp
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => request()->cookie('theme', 'light') === 'dark'])>
 
 <head>
     <meta charset="utf-8">
@@ -144,7 +144,6 @@
 
         /* Navigation */
         .nav-bar {
-            background-color: var(--color-primary);
             padding: 20px 0;
             position: fixed;
             width: 100%;
@@ -167,7 +166,6 @@
             font-family: 'Playfair Display', serif;
             font-size: 28px;
             font-weight: 600;
-            color: var(--color-dark);
             text-decoration: none;
             letter-spacing: 1px;
         }
@@ -309,9 +307,9 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="nav-bar">
+    <nav class="nav-bar bg-[var(--color-primary)] dark:bg-[var(--color-dark)]">
         <div class="nav-container">
-            <a href="/" class="logo">EliteBrussels Limo</a>
+            <a href="/" class="logo text-[var(--color-dark)] dark:text-white">EliteBrussels Limo</a>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -326,6 +324,11 @@
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
             </div>
+
+            <button type="button" id="theme-toggle">
+                {{-- Texte initial (aligné avec le cookie) --}}
+                {{ request()->cookie('theme', 'light') === 'dark' ? '☀️ Light' : '🌙 Dark' }}
+            </button>
         </div>
     </nav>
 
@@ -524,6 +527,55 @@
         window.addEventListener('load', animateOnScroll);
         window.addEventListener('scroll', animateOnScroll);
     </script>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('theme-toggle');
+            if (!btn) return;
+
+            const csrf = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+            function isDark() {
+                return document.documentElement.classList.contains('dark');
+            }
+
+            function syncButtonLabel() {
+                btn.textContent = isDark() ?
+                    "☀️ Light"
+                    :
+                    "🌙 Dark";
+            }
+
+            syncButtonLabel();
+
+            btn.addEventListener('click', async () => {
+                document.documentElement.classList.toggle('dark');
+                syncButtonLabel();
+
+                try {
+                    const res = await fetch("{{ route('theme.toggle') }}", {
+                        method: "POST",
+                        headers: {
+                            "X-CSRF-TOKEN": csrf,
+                            "Accept": "application/json"
+                        },
+                        credentials: "same-origin"
+                    });
+
+                    if (!res.ok) {
+                        document.documentElement.classList.toggle('dark');
+                        syncButtonLabel();
+                        console.error('Theme toggle failed:', res.status);
+                    }
+                } catch (e) {
+                    document.documentElement.classList.toggle('dark');
+                    syncButtonLabel();
+                    console.error('Theme toggle error:', e);
+                }
+            });
+        })();
+    </script>
+
 
     @stack('scripts')
 </body>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return redirect('/fr');
@@ -51,3 +52,20 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('layouts/contact');
 });
+
+Route::post('/theme/toggle', function (Request $request) {
+    $current = $request->cookie('theme', 'light');
+    $next = $current === 'dark' ? 'light' : 'dark';
+
+    return response()->noContent()->withCookie(cookie(
+        name: 'theme',
+        value: $next,
+        minutes: 60 * 24 * 365,
+        path: '/',
+        domain: null,
+        secure: $request->isSecure(),
+        httpOnly: false,  // on veut pouvoir lire en JS (optionnel)
+        raw: false,
+        sameSite: 'lax'
+    ));
+})->name('theme.toggle');

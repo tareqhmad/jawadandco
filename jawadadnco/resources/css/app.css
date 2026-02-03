@@ -9,3 +9,5 @@
   --primary: 255 255 255;   /* blanc */
   --secondary: 208 207 207; /* #d0cfcf */
 }
+
+@custom-variant dark (&:where(.dark, .dark *));

@@ -51,9 +51,27 @@
                     
                 <x-fleet-card title="Mercedes E-Class" passengers="3-4" imageName="mercedes-e-class.png" luggage="3 large"
                     category="Business"
-                    description="A refined premium sedan that balances comfort, elegance, and everyday practicality.
-                    The E-Class Sedan offers a quiet, smooth ride with a well-insulated cabin, high-quality materials, and a relaxed driving feel"
+                    description="A refined premium sedan that balances comfort and elegance.
+                    The E-Class Sedan offers a quiet, smooth ride and a relaxed driving feel"
                     :features="['Exceptional ride comfort', 'Quiet, relaxing cabin', 'Heated Seats']" icon="fas fa-car" iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
+                <x-fleet-card title="Mercedes Sprinter" passengers="16-20" imageName="mercedes-sprinter.png" luggage="10-16 medium"
+                    category="Group"
+                    description="Ideal for larger groups, offering spacious seating and modern amenities for a comfortable
+                            journey."
+                    :features="['Air Conditioning', 'Spacious Interior', 'Comfortable Seating']" icon="fas fa-bus" iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
+                <x-fleet-card title="Iveco Daily Minibus" passengers="26-30" imageName="iveco-daily.png" luggage="10-16 medium"
+                    category="Group"
+                    description="Perfect for group travel, featuring comfortable seating and ample luggage space for all your
+                            needs."
+                    :features="['Spacious Seating', 'Air Conditioning', 'Large Luggage Capacity']" icon="fas fa-bus" iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
+                <x-fleet-card title="Mercedes Coach" passengers="40-50" imageName="mercedes-coach.png" luggage="20-30 medium"
+                    category="Group"
+                    description="Our largest vehicle, ideal for corporate events and large groups, offering maximum comfort and
+                            space."
+                    :features="['Spacious Interior', 'Air Conditioning', 'Comfortable Seating']" icon="fas fa-bus" iconColor="var(--color-secondary)"
                     headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
     </section>
 
