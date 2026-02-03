@@ -1,5 +1,8 @@
 @php
     $locale = request()->route('locale');
+    $segments = request()->segments();
+    $segments[0] = $segments[0] === 'fr' ? 'en' : 'fr';
+    $switchUrl = url(implode('/', $segments));
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => request()->cookie('theme', 'light') === 'dark'])>
@@ -176,7 +179,6 @@
         }
 
         .nav-links a {
-            color: var(--color-secondary);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
@@ -257,7 +259,6 @@
                 top: 80px;
                 left: 0;
                 right: 0;
-                background: var(--color-white);
                 flex-direction: column;
                 padding: 30px;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -309,26 +310,29 @@
     <!-- Navigation -->
     <nav class="nav-bar bg-[var(--color-primary)] dark:bg-[var(--color-dark)]">
         <div class="nav-container">
-            <a href="/" class="logo text-[var(--color-dark)] dark:text-white">EliteBrussels Limo</a>
+            <a href="/" class="logo text-[var(--color-)] dark:text-white">EliteBrussels Limo</a>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <div class="nav-links" id="navLinks">
+            <div class="nav-links bg-[var(--color-primary)] dark:bg-[var(--color-dark)] text-[var(--color-secondary)] dark:text-[var(--color-accent)]" id="navLinks">
                 <a href="/">Home</a>
-                <a href="/services">Services</a>
-                <a href="/fleet">Fleet</a>
-                <a href="/booking">Booking</a>
-                <a href="/pricing">Pricing</a>
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
+                <a href="/{{ app()->getLocale() }}/services">Services</a>
+                <a href="/{{ app()->getLocale() }}/fleet">Fleet</a>
+                <a href="/{{ app()->getLocale() }}/booking">Booking</a>
+                <a href="/{{ app()->getLocale() }}/pricing">Pricing</a>
+                <a href="/{{ app()->getLocale() }}/about">About</a>
+                <a href="/{{ app()->getLocale() }}/contact">Contact</a>
             </div>
 
             <button type="button" id="theme-toggle">
                 {{-- Texte initial (aligné avec le cookie) --}}
                 {{ request()->cookie('theme', 'light') === 'dark' ? '☀️ Light' : '🌙 Dark' }}
             </button>
+            <a href="{{ $switchUrl }}" class="inline-block px-3 py-2 border rounded hover:bg-gray-100">
+                {{ strtoupper($segments[0]) }}
+            </a>
         </div>
     </nav>
 
@@ -541,8 +545,7 @@
 
             function syncButtonLabel() {
                 btn.textContent = isDark() ?
-                    "☀️ Light"
-                    :
+                    "☀️ Light" :
                     "🌙 Dark";
             }
 

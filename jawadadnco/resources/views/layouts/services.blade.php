@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Our Services | Premium Limousine Service Brussels')
-@section('description', 'Discover our premium chauffeur services in Brussels: airport transfers, corporate travel,
-    special events, and hourly limousine rentals.')
+@section('title', __('services.meta_title'))
+@section('description', __('services.meta_description'))
 
 @section('content')
     <!-- Hero Section -->
@@ -11,15 +10,15 @@
         <div class="container" style="position: relative; z-index: 2;">
             <div style="max-width: 800px; padding: 80px 0 40px;">
                 <span
-                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">Our
-                    Offerings</span>
+                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">
+                    {{ __('services.hero_badge') }}
+                </span>
                 <h1 class="hero-font fade-in-up"
                     style="font-size: 56px; margin: 20px 0 25px 0; line-height: 1.1; color: var(--color-dark);">
-                    Premium Services
+                    {{ __('services.hero_title') }}
                 </h1>
                 <p class="fade-in-up" style="font-size: 20px; margin-bottom: 40px; color: var(--color-secondary);">
-                    Experience the highest standard of luxury transportation in Brussels with our comprehensive range of
-                    chauffeur services.
+                    {{ __('services.hero_text') }}
                 </p>
             </div>
         </div>
@@ -35,33 +34,33 @@
                     <div class="icon-circle">
                         <i class="fas fa-plane-departure" style="font-size: 32px;"></i>
                     </div>
-                    <h2 style="font-size: 28px; margin-bottom: 20px; color: var(--color-dark); text-align: center;">Airport
-                        Transfers</h2>
+                    <h2 style="font-size: 28px; margin-bottom: 20px; color: var(--color-dark); text-align: center;">
+                        {{ __('services.airport_title') }}
+                    </h2>
                     <p style="text-align: center; color: var(--color-secondary); margin-bottom: 30px;">
-                        Seamless airport transfers to and from Brussels Airport (BRU) and Brussels South Charleroi Airport
-                        (CRL).
+                        {{ __('services.airport_text') }}
                     </p>
                     <ul style="list-style: none; margin-bottom: 30px; color: var(--color-secondary);">
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Flight tracking and wait time included
+                            {{ __('services.airport_feature_1') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Meet & greet service with name sign
+                            {{ __('services.airport_feature_2') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Luggage assistance included
+                            {{ __('services.airport_feature_3') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            24/7 availability
+                            {{ __('services.airport_feature_4') }}
                         </li>
                     </ul>
                     <div style="text-align: center;">
                         <a href="/booking" class="btn-primary">
-                            <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> Book Now
+                            <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> {{ __('services.cta_book_now') }}
                         </a>
                     </div>
                 </div>
@@ -73,32 +72,32 @@
                         <i class="fas fa-briefcase" style="font-size: 32px;"></i>
                     </div>
                     <h2 style="font-size: 28px; margin-bottom: 20px; color: var(--color-dark); text-align: center;">
-                        Corporate Travel</h2>
+                        {{ __('services.corporate_title') }}
+                    </h2>
                     <p style="text-align: center; color: var(--color-secondary); margin-bottom: 30px;">
-                        Professional chauffeur services for business executives, corporate events, and client
-                        transportation.
+                        {{ __('services.corporate_text') }}
                     </p>
                     <ul style="list-style: none; margin-bottom: 30px; color: var(--color-secondary);">
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Executive account management
+                            {{ __('services.corporate_feature_1') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Multiple city transfers
+                            {{ __('services.corporate_feature_2') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Wi-Fi and mobile charging
+                            {{ __('services.corporate_feature_3') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Discretion and confidentiality
+                            {{ __('services.corporate_feature_4') }}
                         </li>
                     </ul>
                     <div style="text-align: center;">
                         <a href="/contact" class="btn-secondary">
-                            <i class="fas fa-envelope" style="margin-right: 10px;"></i> Corporate Inquiry
+                            <i class="fas fa-envelope" style="margin-right: 10px;"></i> {{ __('services.cta_corporate_inquiry') }}
                         </a>
                     </div>
                 </div>
@@ -109,32 +108,33 @@
                     <div class="icon-circle">
                         <i class="fas fa-glass-cheers" style="font-size: 32px;"></i>
                     </div>
-                    <h2 style="font-size: 28px; margin-bottom: 20px; color: var(--color-dark); text-align: center;">Special
-                        Events</h2>
+                    <h2 style="font-size: 28px; margin-bottom: 20px; color: var(--color-dark); text-align: center;">
+                        {{ __('services.events_title') }}
+                    </h2>
                     <p style="text-align: center; color: var(--color-secondary); margin-bottom: 30px;">
-                        Make your special occasions unforgettable with our luxury limousine and chauffeur services.
+                        {{ __('services.events_text') }}
                     </p>
                     <ul style="list-style: none; margin-bottom: 30px; color: var(--color-secondary);">
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Weddings and anniversaries
+                            {{ __('services.events_feature_1') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Galas and red carpet events
+                            {{ __('services.events_feature_2') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Birthday celebrations
+                            {{ __('services.events_feature_3') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Custom decoration available
+                            {{ __('services.events_feature_4') }}
                         </li>
                     </ul>
                     <div style="text-align: center;">
                         <a href="/booking" class="btn-primary">
-                            <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Plan Your Event
+                            <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> {{ __('services.cta_plan_event') }}
                         </a>
                     </div>
                 </div>
@@ -145,35 +145,33 @@
                     <div class="icon-circle">
                         <i class="fas fa-clock" style="font-size: 32px;"></i>
                     </div>
-                    <h2 style="font-size: 28px; margin-bottom: 20px; color: var(--color-dark); text-align: center;">Hourly
-                        Service</h2>
+                    <h2 style="font-size: 28px; margin-bottom: 20px; color: var(--color-dark); text-align: center;">
+                        {{ __('services.hourly_title') }}
+                    </h2>
                     <p style="text-align: center; color: var(--color-secondary); margin-bottom: 30px;">
-                        Flexible hourly rentals for city tours, shopping trips, or any occasion requiring extended service.
+                        {{ __('services.hourly_text') }}
                     </p>
                     <ul style="list-style: none; margin-bottom: 30px; color: var(--color-secondary);">
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
                             <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Minimum 3-hour booking
+                            {{ __('services.hourly_feature_1') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                            <i class="fas fa-check"
-                                style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Multiple stops allowed
+                            <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
+                            {{ __('services.hourly_feature_2') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                            <i class="fas fa-check"
-                                style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            City and country tours
+                            <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
+                            {{ __('services.hourly_feature_3') }}
                         </li>
                         <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                            <i class="fas fa-check"
-                                style="color: var(--color-secondary); position: absolute; left: 0;"></i>
-                            Custom itineraries
+                            <i class="fas fa-check" style="color: var(--color-secondary); position: absolute; left: 0;"></i>
+                            {{ __('services.hourly_feature_4') }}
                         </li>
                     </ul>
                     <div style="text-align: center;">
                         <a href="/pricing" class="btn-secondary">
-                            <i class="fas fa-euro-sign" style="margin-right: 10px;"></i> View Pricing
+                            <i class="fas fa-euro-sign" style="margin-right: 10px;"></i> {{ __('services.cta_view_pricing') }}
                         </a>
                     </div>
                 </div>
@@ -186,10 +184,11 @@
         <div class="container">
             <div style="text-align: center; margin-bottom: 80px;">
                 <span
-                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">How
-                    It Works</span>
+                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">
+                    {{ __('services.process_badge') }}
+                </span>
                 <h2 class="hero-font fade-in-up" style="font-size: 48px; color: var(--color-dark); margin-bottom: 20px;">
-                    Our Service Process
+                    {{ __('services.process_title') }}
                 </h2>
             </div>
 
@@ -198,36 +197,32 @@
                     <div
                         style="width: 80px; height: 80px; background: var(--color-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 28px; color: var(--color-secondary); font-weight: 700;">
                         1</div>
-                    <h3 style="margin-bottom: 15px; color: var(--color-dark);">Book Online or Call</h3>
-                    <p style="color: var(--color-secondary);">Book through our website or call us directly for personalized
-                        service.</p>
+                    <h3 style="margin-bottom: 15px; color: var(--color-dark);">{{ __('services.step_1_title') }}</h3>
+                    <p style="color: var(--color-secondary);">{{ __('services.step_1_text') }}</p>
                 </div>
 
                 <div style="text-align: center;">
                     <div
                         style="width: 80px; height: 80px; background: var(--color-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 28px; color: var(--color-secondary); font-weight: 700;">
                         2</div>
-                    <h3 style="margin-bottom: 15px; color: var(--color-dark);">Confirm Details</h3>
-                    <p style="color: var(--color-secondary);">We confirm all details and assign your dedicated chauffeur.
-                    </p>
+                    <h3 style="margin-bottom: 15px; color: var(--color-dark);">{{ __('services.step_2_title') }}</h3>
+                    <p style="color: var(--color-secondary);">{{ __('services.step_2_text') }}</p>
                 </div>
 
                 <div style="text-align: center;">
                     <div
                         style="width: 80px; height: 80px; background: var(--color-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 28px; color: var(--color-secondary); font-weight: 700;">
                         3</div>
-                    <h3 style="margin-bottom: 15px; color: var(--color-dark);">Experience Luxury</h3>
-                    <p style="color: var(--color-secondary);">Your chauffeur arrives punctually with a pristine vehicle.
-                    </p>
+                    <h3 style="margin-bottom: 15px; color: var(--color-dark);">{{ __('services.step_3_title') }}</h3>
+                    <p style="color: var(--color-secondary);">{{ __('services.step_3_text') }}</p>
                 </div>
 
                 <div style="text-align: center;">
                     <div
                         style="width: 80px; height: 80px; background: var(--color-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 28px; color: var(--color-secondary); font-weight: 700;">
                         4</div>
-                    <h3 style="margin-bottom: 15px; color: var(--color-dark);">Relax & Enjoy</h3>
-                    <p style="color: var(--color-secondary);">Sit back and enjoy a comfortable, luxurious journey to your
-                        destination.</p>
+                    <h3 style="margin-bottom: 15px; color: var(--color-dark);">{{ __('services.step_4_title') }}</h3>
+                    <p style="color: var(--color-secondary);">{{ __('services.step_4_text') }}</p>
                 </div>
             </div>
         </div>
@@ -237,19 +232,20 @@
     <section class="section-padding bg-dark">
         <div class="container">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 class="hero-font" style="font-size: 48px; color: var(--color-white); margin-bottom: 25px;">Ready to
-                    Experience Premium Service?</h2>
+                <h2 class="hero-font" style="font-size: 48px; color: var(--color-white); margin-bottom: 25px;">
+                    {{ __('services.bottom_title') }}
+                </h2>
                 <p style="font-size: 20px; color: var(--color-accent); margin-bottom: 40px;">
-                    Contact us today to discuss your transportation needs or book directly online.
+                    {{ __('services.bottom_text') }}
                 </p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
                     <a href="/booking" class="btn-primary"
                         style="background-color: var(--color-white); color: var(--color-dark); border-color: var(--color-white);">
-                        <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> Book Now
+                        <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> {{ __('services.cta_book_now') }}
                     </a>
                     <a href="/contact" class="btn-secondary"
                         style="color: var(--color-white); border-color: var(--color-white);">
-                        <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Call Now
+                        <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> {{ __('services.cta_call_now') }}
                     </a>
                 </div>
             </div>

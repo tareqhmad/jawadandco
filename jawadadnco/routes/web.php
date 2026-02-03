@@ -8,16 +8,6 @@ Route::get('/', function () {
     return redirect('/fr');
 });
 
-Route::group([
-    'prefix' => '{locale}',
-    'middleware' => 'locale',
-    'where' => ['locale' => 'fr|en|nl'],
-], function () {
-
-    Route::get('/', function () {
-        return view('layouts/home');
-    })->name('home');
-});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -29,29 +19,41 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
-Route::get('/services', function () {
+Route::get('/{locale}/services', function () {
     return view('layouts/services');
-});
+})
+->where(['locale' => 'fr|nl|en'])
+->middleware('setlocale');
 
-Route::get('/fleet', function () {
+Route::get('/{locale}/fleet', function () {
     return view('layouts/fleet');
-});
+})
+->where(['locale' => 'fr|nl|en'])
+->middleware('setlocale');
 
-Route::get('/booking', function () {
+Route::get('/{locale}/booking', function () {
     return view('layouts/booking');
-});
+})
+->where(['locale' => 'fr|nl|en'])
+->middleware('setlocale');
 
-Route::get('/pricing', function () {
+Route::get('/{locale}/pricing', function () {
     return view('layouts/pricing');
-});
+})
+->where(['locale' => 'fr|nl|en'])
+->middleware('setlocale');
 
-Route::get('/about', function () {
+Route::get('/{locale}/about', function () {
     return view('layouts/about');
-});
+})
+->where(['locale' => 'fr|nl|en'])
+->middleware('setlocale');
 
-Route::get('/contact', function () {
+Route::get('/{locale}/contact', function () {
     return view('layouts/contact');
-});
+})
+->where(['locale' => 'fr|nl|en'])
+->middleware('setlocale');
 
 Route::post('/theme/toggle', function (Request $request) {
     $current = $request->cookie('theme', 'light');
@@ -64,8 +66,21 @@ Route::post('/theme/toggle', function (Request $request) {
         path: '/',
         domain: null,
         secure: $request->isSecure(),
-        httpOnly: false,  // on veut pouvoir lire en JS (optionnel)
+        httpOnly: false,
         raw: false,
         sameSite: 'lax'
     ));
 })->name('theme.toggle');
+
+Route::redirect('/', '/en');
+
+Route::prefix('{locale}')
+  ->where(['locale' => 'fr|en'])
+  ->middleware('setlocale')
+  ->group(function () {
+
+    Route::get('/', function () {
+      return view('layouts/home');
+    })->name('home');
+
+  });
