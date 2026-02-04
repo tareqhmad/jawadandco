@@ -6,7 +6,7 @@
 @section('content')
     <!-- Hero Section -->
     <section
-        style="background: linear-gradient(135deg, var(--color-primary) 0%, rgba(255, 251, 254, 0.95) 100%); min-height: 60vh; display: flex; align-items: center; color: var(--color-dark); margin-top: 80px; position: relative;">
+        style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-white) 100%); min-height: 60vh; display: flex; align-items: center; color: var(--color-dark); margin-top: 80px; position: relative;">
         <div class="container" style="position: relative; z-index: 2;">
             <div style="max-width: 800px; padding: 80px 0 40px;">
                 <span

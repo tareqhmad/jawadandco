@@ -52,6 +52,25 @@
             --color-accent: #D0CFCF;
             --color-white: #FFFFFF;
             --color-dark: #4A4C4C;
+            --color-footer-bg: #1D222F;
+            --color-footer-text-primary: #B1B7C2;
+            --color-footer-text-secondary: #7A7D7D;
+            --color-gradient-from: #FF7E5F;
+            --color-gradient-to: #FEB47B;
+        }
+
+        html.dark {
+            --color-primary: #0f1115;
+            /* background global */
+            --color-white: #1d222f;
+            /* cartes / surfaces */
+            --color-dark: #f2f4f7;
+            /* texte principal */
+            --color-secondary: #b1b7c2;
+            /* texte secondaire */
+            --color-accent: #333e50;
+            /* borders / séparateurs */
+
         }
 
         * {
@@ -165,6 +184,7 @@
 
         /* Navigation */
         .nav-bar {
+            background: var(--color-primary);
             padding: 20px 0;
             position: fixed;
             width: 100%;
@@ -192,6 +212,8 @@
         }
 
         .nav-links {
+            background: var(--color-primary);
+            color: var(--color-secondary);
             display: flex;
             gap: 40px;
         }
@@ -313,6 +335,7 @@
             }
 
             .logo {
+                color: var(--color-secondary);
                 font-size: 24px;
             }
         }
@@ -340,9 +363,9 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="nav-bar bg-[var(--color-primary)] dark:bg-[var(--color-dark)]">
+    <nav class="nav-bar">
         <div class="nav-container">
-            <a href="/{{ app()->getLocale() }}" class="logo text-[var(--color-secondary)] dark:text-white">
+            <a href="/{{ app()->getLocale() }}" class="logo">
                 EliteBrussels Limo
             </a>
 
@@ -350,7 +373,7 @@
                 <i class="fas fa-bars"></i>
             </button>
 
-            <div class="nav-links bg-[var(--color-primary)] dark:bg-[var(--color-dark)] text-[var(--color-secondary)] dark:text-[var(--color-accent)]"
+            <div class="nav-links"
                 id="navLinks">
                 <a href="/{{ app()->getLocale() }}">{{ __('layout.nav_home') }}</a>
                 <a href="/{{ app()->getLocale() }}/services">{{ __('layout.nav_services') }}</a>
@@ -360,6 +383,14 @@
                 <a href="/{{ app()->getLocale() }}/about">{{ __('layout.nav_about') }}</a>
                 <a href="/{{ app()->getLocale() }}/contact">{{ __('layout.nav_contact') }}</a>
                 <div style="display: flex;">
+                    <button type="button" id="theme-toggle">
+                        @if (request()->cookie('theme', 'light') === 'dark')
+                            <i class="fas fa-sun"></i>
+                        @else
+                            <i class="fas fa-moon"></i>
+                        @endif
+                    </button>
+
                     <div style="display:flex; align-items:center; gap:10px;">
                         <span
                             style="font-size: 12px; font-weight:600; color: var(--color-dark); background: var(--color-accent); padding: 3px 5px; border-radius: 4px;">
@@ -383,51 +414,51 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white">
+    <footer style="background-color: var(--color-footer-bg); color: var(--color-footer-text-primary);">
         <div class="container section-padding">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px;">
                 <div>
-                    <h3 class="hero-font" style="font-size: 26px; margin-bottom: 25px; color: var(--color-white);">
+                    <h3 class="hero-font" style="font-size: 26px; margin-bottom: 25px;">
                         {{ __('layout.footer_brand_title') }}
                     </h3>
                     <p style="margin-bottom: 20px;">{{ __('layout.footer_brand_text') }}</p>
 
                     <div style="display: flex; gap: 15px; margin-top: 20px;">
-                        <a href="#" style="color: var(--color-white); font-size: 20px;"><i
+                        <a href="#" style="font-size: 20px;"><i
                                 class="fab fa-facebook"></i></a>
-                        <a href="#" style="color: var(--color-white); font-size: 20px;"><i
+                        <a href="#" style="font-size: 20px;"><i
                                 class="fab fa-instagram"></i></a>
-                        <a href="#" style="color: var(--color-white); font-size: 20px;"><i
+                        <a href="#" style="font-size: 20px;"><i
                                 class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 25px; color: var(--color-white);">
+                    <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 25px">
                         {{ __('layout.footer_quick_links') }}
                     </h4>
                     <ul style="list-style: none;">
                         <li style="margin-bottom: 12px;">
                             <a href="/{{ app()->getLocale() }}/services"
-                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">
+                                style="color: var(--color-footer-text-secondary); text-decoration: none; transition: color 0.3s ease;">
                                 {{ __('layout.footer_link_services') }}
                             </a>
                         </li>
                         <li style="margin-bottom: 12px;">
                             <a href="/{{ app()->getLocale() }}/fleet"
-                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">
+                                style="color: var(--color-footer-text-secondary); text-decoration: none; transition: color 0.3s ease;">
                                 {{ __('layout.footer_link_fleet') }}
                             </a>
                         </li>
                         <li style="margin-bottom: 12px;">
                             <a href="/{{ app()->getLocale() }}/booking"
-                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">
+                                style="color: var(--color-footer-text-secondary); text-decoration: none; transition: color 0.3s ease;">
                                 {{ __('layout.footer_link_booking') }}
                             </a>
                         </li>
                         <li style="margin-bottom: 12px;">
                             <a href="/{{ app()->getLocale() }}/contact"
-                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">
+                                style="color: var(--color-footer-text-secondary); text-decoration: none; transition: color 0.3s ease;">
                                 {{ __('layout.footer_link_contact') }}
                             </a>
                         </li>
@@ -435,20 +466,20 @@
                 </div>
 
                 <div>
-                    <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 25px; color: var(--color-white);">
+                    <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 25px;">
                         {{ __('layout.footer_contact_info') }}
                     </h4>
 
                     <div style="margin-bottom: 15px; display: flex; align-items: start; gap: 10px;">
-                        <i class="fas fa-map-marker-alt" style="color: var(--color-accent); margin-top: 3px;"></i>
+                        <i class="fas fa-map-marker-alt" style="color: var(--color-footer-text-secondary); margin-top: 3px;"></i>
                         <p>{{ __('layout.footer_address') }}</p>
                     </div>
                     <div style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-phone" style="color: var(--color-accent);"></i>
+                        <i class="fas fa-phone" style="color: var(--color-footer-text-secondary);"></i>
                         <p>{{ __('layout.footer_phone') }}</p>
                     </div>
                     <div style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-envelope" style="color: var(--color-accent);"></i>
+                        <i class="fas fa-envelope" style="color: var(--color-footer-text-secondary);"></i>
                         <p>{{ __('layout.footer_email') }}</p>
                     </div>
 
@@ -527,7 +558,7 @@
             </div>
 
             <div
-                style="border-top: 1px solid rgba(208, 207, 207, 0.2); margin-top: 70px; padding-top: 30px; text-align: center; color: var(--color-accent);">
+                style="border-top: 1px solid rgba(208, 207, 207, 0.2); margin-top: 70px; padding-top: 30px; text-align: center; color: var(--color-footer-text-secondary);">
                 <p>&copy; {{ date('Y') }} {{ __('layout.copyright') }}</p>
             </div>
         </div>

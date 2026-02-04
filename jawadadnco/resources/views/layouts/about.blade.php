@@ -6,7 +6,7 @@
 @section('content')
     <!-- Hero Section -->
     <section
-        style="background: linear-gradient(135deg, var(--color-primary) 0%, rgba(255, 251, 254, 0.95) 100%); min-height: 60vh; display: flex; align-items: center; color: var(--color-dark); margin-top: 80px; position: relative;">
+        style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-white) 100%); min-height: 60vh; display: flex; align-items: center; color: var(--color-dark); margin-top: 80px; position: relative;">
         <div class="container" style="position: relative; z-index: 2;">
             <div style="max-width: 800px; padding: 80px 0 40px;">
                 <span
@@ -323,22 +323,22 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="section-padding bg-dark">
+    <section class="section-padding" style="background: var(--color-primary); text-align: center; color: var(--color-dark);">
         <div class="container">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 class="hero-font" style="font-size: 48px; color: var(--color-white); margin-bottom: 25px;">
+                <h2 class="hero-font" style="font-size: 48px; margin-bottom: 25px;">
                     {{ __('about.cta_title') }}
                 </h2>
-                <p style="font-size: 20px; color: var(--color-accent); margin-bottom: 40px;">
+                <p style="font-size: 20px; color: var(--color-secondary); margin-bottom: 40px;">
                     {{ __('about.cta_text') }}
                 </p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
                     <a href="/booking" class="btn-primary"
-                        style="background-color: var(--color-white); color: var(--color-dark); border-color: var(--color-white);">
+                        style="background-color: var(--color-accent); color: var(--color-dark); border-color: var(--color-accent);">
                         <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> {{ __('about.cta_book') }}
                     </a>
                     <a href="/contact" class="btn-secondary"
-                        style="color: var(--color-white); border-color: var(--color-white);">
+                        style="color: var(--color-dark); border-color: var(--color-secondary);">
                         <i class="fas fa-envelope" style="margin-right: 10px;"></i> {{ __('about.cta_contact') }}
                     </a>
                 </div>

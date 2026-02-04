@@ -6,28 +6,29 @@
 @section('content')
     <!-- Hero Section - Clean Design without Image -->
     <section
-        class="bg-[linear-gradient(135deg,_var(--color-primary)_0%,_rgba(255,_251,_254,_0.95)_100%)] dark:bg-[linear-gradient(135deg,_var(--color-dark)_0%,_rgba(18,_18,_18,_0.95)_100%)]
-        text-[var(--color-dark)] dark:text-[var(--color-white)] min-h-screen flex items-center mt-[80px] relative overflow-hidden">
+        style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-white) 100%); min-height: 100vh; display: flex; align-items: center; color: var(--color-dark); margin-top: 80px; position: relative; overflow: hidden;">
         <!-- Geometric background pattern -->
         <div
-            class="absolute top-[0] right-[0] w-3/5 h-full bg-[linear-gradient(45deg,_var(--color-accent)_0%,_transparent_70%)] opacity-30">
+            style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: linear-gradient(45deg, var(--color-accent) 0%, transparent 70%); opacity: 0.3; z-index: 1;">
         </div>
 
         <div class="container" style="position: relative; z-index: 2;">
-            <div class="max-w-[700px] px-[0] py-[40px]">
-                <div class="mb-[30px]">
-                    <span class="font-semibold tracking-[2px] uppercase text-[14px]">
+            <div style="max-width: 700px; padding: 40px 0;">
+                <div style="margin-bottom: 30px;">
+                    <span  style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">
                         {{ __('home.hero_badge') }}
                     </span>
 
-                    <h1 class="hero-font fade-in-up text-[var(--color-dark)] dark:text-[var(--color-white)]"
-                        style="font-size: 64px; margin: 20px 0 25px 0; line-height: 1.1;  opacity: 0; transform: translateY(30px);">
+                    <h1 class="hero-font fade-in-up"
+                        style="font-size: 64px; margin: 20px 0 25px 0; line-height: 1.1; color: var(--color-dark); opacity: 0; transform: translateY(30px);">
                         {{ __('home.hero_heading_line1') }}<br>
-                        {!! __('home.hero_heading_line2', ['city' => '<span class="text-[var(--color-secondary)] dark:text-[var(--color-secondary)]">Brussels</span>']) !!}
+                        {!! __('home.hero_heading_line2', [
+                            'city' => '<span style="color: var(--color-secondary);">Brussels</span>',
+                        ]) !!}
                     </h1>
 
-                    <p class="fade-in-up text-[var(--color-secondary)] dark:text-[var(--color-accent)]"
-                        style="font-size: 20px; margin-bottom: 40px; opacity: 0; transform: translateY(30px); animation-delay: 0.2s;">
+                    <p class="fade-in-up"
+                        style="font-size: 20px; margin-bottom: 40px; color: var(--color-secondary); opacity: 0; transform: translateY(30px); animation-delay: 0.2s;">
                         {{ __('home.hero_paragraph') }}
                     </p>
                 </div>
@@ -48,17 +49,20 @@
                     <div class="fade-in-up" style="opacity: 0; transform: translateY(30px); animation-delay: 0.6s;">
                         <div style="font-size: 36px; font-weight: 700; color: var(--color-secondary); margin-bottom: 5px;">
                             10+</div>
-                        <div class="text-[var(--color-dark)] dark:text-[var(--color-whte)]">{{ __('home.stat_years_label') }}</div>
+                        <div style="color: var(--color-dark);">
+                            {{ __('home.stat_years_label') }}</div>
                     </div>
                     <div class="fade-in-up" style="opacity: 0; transform: translateY(30px); animation-delay: 0.7s;">
                         <div style="font-size: 36px; font-weight: 700; color: var(--color-secondary); margin-bottom: 5px;">
                             24/7</div>
-                        <div class="text-[var(--color-dark)] dark:text-[var(--color-white)]">{{ __('home.stat_availability_label') }}</div>
+                        <div style="color: var(--color-dark);">
+                            {{ __('home.stat_availability_label') }}</div>
                     </div>
                     <div class="fade-in-up" style="opacity: 0; transform: translateY(30px); animation-delay: 0.8s;">
                         <div style="font-size: 36px; font-weight: 700; color: var(--color-secondary); margin-bottom: 5px;">
                             5000+</div>
-                        <div class="text-[var(--color-dark)] dark:text-[var(--color-white)]">{{ __('home.stat_clients_label') }}</div>
+                        <div style="color: var(--color-dark);">
+                            {{ __('home.stat_clients_label') }}</div>
                     </div>
                 </div>
             </div>
@@ -409,27 +413,28 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="section-padding bg-dark">
+    <section class="section-padding"
+        style="background: var(--color-primary); text-align: center; color: var(--color-dark);">
         <div class="container">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 class="hero-font" style="font-size: 48px; color: var(--color-white); margin-bottom: 25px;">
+                <h2 class="hero-font" style="font-size: 48px; margin-bottom: 25px;">
                     {{ __('home.cta_bottom_title') }}
                 </h2>
-                <p style="font-size: 20px; color: var(--color-accent); margin-bottom: 40px;">
+                <p style="font-size: 20px; color: var(--color-secondary); margin-bottom: 40px;">
                     {{ __('home.cta_bottom_text') }}
                 </p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
                     <a href="/booking" class="btn-primary"
-                        style="background-color: var(--color-white); color: var(--color-dark); border-color: var(--color-white);">
+                        style="background-color: var(--color-accent); color: var(--color-dark); border-color: var(--color-accent);">
                         <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> {{ __('home.cta_book_now') }}
                     </a>
                     <a href="/contact" class="btn-secondary"
-                        style="color: var(--color-white); border-color: var(--color-white);">
+                        style="color: var(--color-dark); border-color: var(--color-secondary);">
                         <i class="fas fa-envelope" style="margin-right: 10px;"></i> {{ __('home.cta_contact_us') }}
                     </a>
                 </div>
                 <div
-                    style="margin-top: 40px; color: var(--color-accent); display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    style="margin-top: 40px; color: var(--color-footer-text-secondary); display: flex; align-items: center; justify-content: center; gap: 10px;">
                     <i class="fas fa-phone" style="font-size: 18px;"></i>
                     <span style="font-size: 20px; font-weight: 600;">+32 2 123 4567</span>
                     <span style="margin: 0 10px;">•</span>
