@@ -6,7 +6,6 @@ return [
     'meta_description' => "Vivez un voyage de luxe à Bruxelles grâce à notre service premium de limousine et de chauffeur privé.\nTransferts aéroport, événements d’entreprise et occasions spéciales.",
 
     // Hero
-    'hero_badge' => 'Service de limousine premium',
     'hero_heading_line1' => 'Voyage élégant',
     'hero_heading_line2' => 'à :city',
     'hero_paragraph' => 'Vivez le summum du luxe, du confort et de la discrétion grâce à notre service premium de limousine et de chauffeur privé. À Bruxelles, l’excellence depuis 2010.',

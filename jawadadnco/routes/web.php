@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
-    return redirect('/fr');
+    return redirect('/en');
 });
 
 Route::get('/dashboard', function () {
@@ -22,36 +22,42 @@ require __DIR__ . '/auth.php';
 Route::get('/{locale}/services', function () {
     return view('layouts/services');
 })
+->name('services')
 ->where(['locale' => 'fr|nl|en'])
 ->middleware('setlocale');
 
 Route::get('/{locale}/fleet', function () {
     return view('layouts/fleet');
-})
+})->name('fleet')
 ->where(['locale' => 'fr|nl|en'])
 ->middleware('setlocale');
 
 Route::get('/{locale}/booking', function () {
     return view('layouts/booking');
 })
+->name('booking')
 ->where(['locale' => 'fr|nl|en'])
 ->middleware('setlocale');
 
 Route::get('/{locale}/pricing', function () {
     return view('layouts/pricing');
 })
+->name('pricing')
 ->where(['locale' => 'fr|nl|en'])
 ->middleware('setlocale');
+
 
 Route::get('/{locale}/about', function () {
     return view('layouts/about');
 })
+->name('about')
 ->where(['locale' => 'fr|nl|en'])
 ->middleware('setlocale');
 
 Route::get('/{locale}/contact', function () {
     return view('layouts/contact');
 })
+->name('contact')
 ->where(['locale' => 'fr|nl|en'])
 ->middleware('setlocale');
 
@@ -82,5 +88,4 @@ Route::prefix('{locale}')
     Route::get('/', function () {
       return view('layouts/home');
     })->name('home');
-
   });

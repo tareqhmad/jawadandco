@@ -15,10 +15,6 @@
         <div class="container" style="position: relative; z-index: 2;">
             <div style="max-width: 700px; padding: 40px 0;">
                 <div style="margin-bottom: 30px;">
-                    <span  style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">
-                        {{ __('home.hero_badge') }}
-                    </span>
-
                     <h1 class="hero-font fade-in-up"
                         style="font-size: 64px; margin: 20px 0 25px 0; line-height: 1.1; color: var(--color-dark); opacity: 0; transform: translateY(30px);">
                         {{ __('home.hero_heading_line1') }}<br>

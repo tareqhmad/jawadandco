@@ -52,11 +52,9 @@
             --color-accent: #D0CFCF;
             --color-white: #FFFFFF;
             --color-dark: #4A4C4C;
-            --color-footer-bg: #1D222F;
+            --color-footer-bg: #282e3b;
             --color-footer-text-primary: #B1B7C2;
             --color-footer-text-secondary: #7A7D7D;
-            --color-gradient-from: #FF7E5F;
-            --color-gradient-to: #FEB47B;
         }
 
         html.dark {
@@ -218,6 +216,18 @@
             gap: 40px;
         }
 
+        .nav-links a.active {
+            color: var(--color-dark);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a.active::after {
+            background-color: var(--color-dark);
+        }
+
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
@@ -356,6 +366,45 @@
         .fade-in-up {
             animation: fadeInUp 0.6s ease-out forwards;
         }
+
+        .noHoverAnimation::after {
+            display: none !important;
+        }
+
+        .noHoverAnimation:hover::after {
+            width: 0 !important;
+        }
+
+        .lang-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: calc(100% + 8px);
+            min-width: 55px;
+            background: var(--color-white);
+            border: 1px solid var(--color-accent);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            z-index: 2000;
+        }
+
+        .lang-menu .lang-item:hover {
+            background: var(--color-accent);
+        }
+
+        .lang-btn {
+            style="display:flex;
+            align-items:center;
+            gap:8px; cursor:pointer;
+            font-size:12px;
+            font-weight:600;
+            color: var(--color-dark);
+            background: var(--color-accent);
+            padding:6px 10px;
+            border-radius:6px;
+            border: 1px solid var(--color-secondary);"
+        }
     </style>
 
     @stack('styles')
@@ -373,15 +422,38 @@
                 <i class="fas fa-bars"></i>
             </button>
 
-            <div class="nav-links"
-                id="navLinks">
-                <a href="/{{ app()->getLocale() }}">{{ __('layout.nav_home') }}</a>
-                <a href="/{{ app()->getLocale() }}/services">{{ __('layout.nav_services') }}</a>
-                <a href="/{{ app()->getLocale() }}/fleet">{{ __('layout.nav_fleet') }}</a>
-                <a href="/{{ app()->getLocale() }}/booking">{{ __('layout.nav_booking') }}</a>
-                <a href="/{{ app()->getLocale() }}/pricing">{{ __('layout.nav_pricing') }}</a>
-                <a href="/{{ app()->getLocale() }}/about">{{ __('layout.nav_about') }}</a>
-                <a href="/{{ app()->getLocale() }}/contact">{{ __('layout.nav_contact') }}</a>
+            <div class="nav-links" id="navLinks">
+                <a href="/{{ app()->getLocale() }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">
+                    {{ __('layout.nav_home') }}
+                </a>
+
+                <a href="/{{ app()->getLocale() }}/services"
+                    class="{{ request()->routeIs('services*') ? 'active' : '' }}">
+                    {{ __('layout.nav_services') }}
+                </a>
+
+                <a href="/{{ app()->getLocale() }}/fleet" class="{{ request()->routeIs('fleet*') ? 'active' : '' }}">
+                    {{ __('layout.nav_fleet') }}
+                </a>
+
+                <a href="/{{ app()->getLocale() }}/booking"
+                    class="{{ request()->routeIs('booking*') ? 'active' : '' }}">
+                    {{ __('layout.nav_booking') }}
+                </a>
+
+                <a href="/{{ app()->getLocale() }}/pricing"
+                    class="{{ request()->routeIs('pricing*') ? 'active' : '' }}">
+                    {{ __('layout.nav_pricing') }}
+                </a>
+
+                <a href="/{{ app()->getLocale() }}/about" class="{{ request()->routeIs('about*') ? 'active' : '' }}">
+                    {{ __('layout.nav_about') }}
+                </a>
+
+                <a href="/{{ app()->getLocale() }}/contact"
+                    class="{{ request()->routeIs('contact*') ? 'active' : '' }}">
+                    {{ __('layout.nav_contact') }}
+                </a>
                 <div style="display: flex; gap: 10px;">
                     <button type="button" id="theme-toggle">
                         @if (request()->cookie('theme', 'light') === 'dark')
@@ -391,19 +463,23 @@
                         @endif
                     </button>
 
-                    <div style="display:flex; align-items:center; gap:10px;">
-                        <span
-                            style="font-size: 12px; font-weight:600; color: var(--color-dark); background: var(--color-accent); padding: 3px 5px; border-radius: 4px;">
+                    <div class="lang-dropdown" style="position: relative; display: inline-block;">
+                        <button type="button" class="lang-btn noHoverAnimation">
                             {{ strtoupper($currentLocale) }}
-                        </span>
+                            <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+                        </button>
 
-                        @foreach (array_diff($supportedLocales, [$currentLocale]) as $loc)
-                            <a href="{{ $buildLocaleUrl($loc) }}"
-                                style="cursor: pointer; font-size: 12px; text-decoration:none; padding: 3px 5px; border-radius: 4px; border: 1px solid var(--color-secondary); color: var(--color-secondary);">
-                                <span class="noselect noHoverAnimation">{{ strtoupper($loc) }}</span>
-                            </a>
-                        @endforeach
+                        <div class="lang-menu">
+                            @foreach (array_diff($supportedLocales, [$currentLocale]) as $loc)
+                                <a class="lang-item noHoverAnimation" href="{{ $buildLocaleUrl($loc) }}"
+                                    style="display:flex; align-items:center; justify-content:space-between; padding:10px 12px;
+                                        text-decoration:none; color: var(--color-dark); font-size:12px;">
+                                    <span class="noselect">{{ strtoupper($loc) }}</span>
+                                </a>
+                            @endforeach
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -414,7 +490,7 @@
     </main>
 
     <!-- Footer -->
-    <footer style="background-color: var(--color-footer-bg); color: var(--color-footer-text-primary);">
+    <footer style="background-color: var(--color-footer-bg); color: var(--color-footer-text-primary); padding-top: 20px;">
         <div class="container section-padding">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px;">
                 <div>
@@ -424,12 +500,9 @@
                     <p style="margin-bottom: 20px;">{{ __('layout.footer_brand_text') }}</p>
 
                     <div style="display: flex; gap: 15px; margin-top: 20px;">
-                        <a href="#" style="font-size: 20px;"><i
-                                class="fab fa-facebook"></i></a>
-                        <a href="#" style="font-size: 20px;"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#" style="font-size: 20px;"><i
-                                class="fab fa-linkedin"></i></a>
+                        <a href="#" style="font-size: 20px;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="font-size: 20px;"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
 
@@ -471,7 +544,8 @@
                     </h4>
 
                     <div style="margin-bottom: 15px; display: flex; align-items: start; gap: 10px;">
-                        <i class="fas fa-map-marker-alt" style="color: var(--color-footer-text-secondary); margin-top: 3px;"></i>
+                        <i class="fas fa-map-marker-alt"
+                            style="color: var(--color-footer-text-secondary); margin-top: 3px;"></i>
                         <p>{{ __('layout.footer_address') }}</p>
                     </div>
                     <div style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
@@ -657,6 +731,33 @@
                     syncButtonLabel();
                     console.error('Theme toggle error:', e);
                 }
+            });
+        })();
+    </script>
+    <script>
+        (function() {
+            const root = document.querySelector('.lang-dropdown');
+            if (!root) return;
+
+            const btn = root.querySelector('.lang-btn');
+            const menu = root.querySelector('.lang-menu');
+
+            function close() {
+                menu.style.display = 'none';
+            }
+
+            function toggle() {
+                menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            }
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggle();
+            });
+
+            document.addEventListener('click', close);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') close();
             });
         })();
     </script>

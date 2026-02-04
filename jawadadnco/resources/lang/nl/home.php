@@ -6,7 +6,6 @@ return [
     'meta_description' => "Ervaar luxueus reizen in Brussel met onze premium limousine- en privéchauffeursdiensten.\nLuchthaventransfers, bedrijfsevenementen en speciale gelegenheden.",
 
     // Hero
-    'hero_badge' => 'Premium limousineservice',
     'hero_heading_line1' => 'Elegant reizen',
     'hero_heading_line2' => 'in :city',
     'hero_paragraph' => 'Ervaar het toppunt van luxe, comfort en discretie met onze premium limousine- en privéchauffeursdiensten. Wij bedienen Brussel met uitmuntendheid sinds 2010.',

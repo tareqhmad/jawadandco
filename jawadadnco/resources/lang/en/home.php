@@ -6,7 +6,6 @@ return [
     'meta_description' => "Experience luxury travel in Brussels with our premium limousine and private chauffeur services.\n    Airport transfers, corporate events, and special occasions.",
 
     // Hero
-    'hero_badge' => 'Premium Limousine Service',
     'hero_heading_line1' => 'Elegant Travel',
     'hero_heading_line2' => 'in :city',
     'hero_paragraph' => 'Experience the pinnacle of luxury, comfort, and discretion with our premium limousine and private chauffeur services. Serving Brussels with excellence since 2010.',

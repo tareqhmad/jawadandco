@@ -28,17 +28,16 @@
     <section class="section-padding">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px;">
-
                 <x-fleet-card
-                    :title="__('fleet.vehicles.mercedes_v_class.title')"
-                    :passengers="__('fleet.vehicles.mercedes_v_class.passengers')"
-                    imageName="mercedes-v-class.png"
-                    :luggage="__('fleet.vehicles.mercedes_v_class.luggage')"
-                    :category="__('fleet.vehicles.mercedes_v_class.category')"
-                    :description="__('fleet.vehicles.mercedes_v_class.description')"
-                    :features="__('fleet.vehicles.mercedes_v_class.features')"
-                    icon="fas fa-van"
-                    iconColor="var(--color-white)"
+                    :title="__('fleet.vehicles.mercedes_e_class.title')"
+                    :passengers="__('fleet.vehicles.mercedes_e_class.passengers')"
+                    imageName="mercedes-e-class.png"
+                    :luggage="__('fleet.vehicles.mercedes_e_class.luggage')"
+                    :category="__('fleet.vehicles.mercedes_e_class.category')"
+                    :description="__('fleet.vehicles.mercedes_e_class.description')"
+                    :features="__('fleet.vehicles.mercedes_e_class.features')"
+                    icon="fas fa-car"
+                    iconColor="var(--color-secondary)"
                     headerTextColor="var(--color-dark)"
                     gradientFrom="var(--color-primary)"
                     gradientTo="var(--color-accent)"
@@ -60,30 +59,15 @@
                 />
 
                 <x-fleet-card
-                    :title="__('fleet.vehicles.bmw_7_series.title')"
-                    :passengers="__('fleet.vehicles.bmw_7_series.passengers')"
-                    imageName="bmw-7-series.png"
-                    :luggage="__('fleet.vehicles.bmw_7_series.luggage')"
-                    :category="__('fleet.vehicles.bmw_7_series.category')"
-                    :description="__('fleet.vehicles.bmw_7_series.description')"
-                    :features="__('fleet.vehicles.bmw_7_series.features')"
-                    icon="fas fa-car"
-                    iconColor="var(--color-secondary)"
-                    headerTextColor="var(--color-dark)"
-                    gradientFrom="var(--color-primary)"
-                    gradientTo="var(--color-accent)"
-                />
-
-                <x-fleet-card
-                    :title="__('fleet.vehicles.mercedes_e_class.title')"
-                    :passengers="__('fleet.vehicles.mercedes_e_class.passengers')"
-                    imageName="mercedes-e-class.png"
-                    :luggage="__('fleet.vehicles.mercedes_e_class.luggage')"
-                    :category="__('fleet.vehicles.mercedes_e_class.category')"
-                    :description="__('fleet.vehicles.mercedes_e_class.description')"
-                    :features="__('fleet.vehicles.mercedes_e_class.features')"
-                    icon="fas fa-car"
-                    iconColor="var(--color-secondary)"
+                    :title="__('fleet.vehicles.mercedes_v_class.title')"
+                    :passengers="__('fleet.vehicles.mercedes_v_class.passengers')"
+                    imageName="mercedes-v-class.png"
+                    :luggage="__('fleet.vehicles.mercedes_v_class.luggage')"
+                    :category="__('fleet.vehicles.mercedes_v_class.category')"
+                    :description="__('fleet.vehicles.mercedes_v_class.description')"
+                    :features="__('fleet.vehicles.mercedes_v_class.features')"
+                    icon="fas fa-van"
+                    iconColor="var(--color-white)"
                     headerTextColor="var(--color-dark)"
                     gradientFrom="var(--color-primary)"
                     gradientTo="var(--color-accent)"
