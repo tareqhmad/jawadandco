@@ -285,7 +285,7 @@
 
     <!-- Price Examples -->
     <section class="section-padding">
-        <div class="container">
+        <div class="container" style="width: 95vw; max-width: 800px;">
             <div style="text-align: center; margin-bottom: 80px;">
                 <h2 class="hero-font fade-in-up" style="font-size: 48px; color: var(--color-dark); margin-bottom: 20px;">
                     {{ __('pricing.routes_title') }}
@@ -296,7 +296,7 @@
                 </p>
             </div>
 
-            <div style="max-width: 800px; margin: 0 auto;">
+            <div style="margin: 0 auto; max-width: 800px;">
                 <div
                     style="background: var(--color-white); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(122, 125, 125, 0.08);">
                     <div style="overflow-x: auto;">
@@ -304,72 +304,72 @@
                             <thead>
                                 <tr style="background: var(--color-secondary);">
                                     <th
-                                        style="padding: 20px; color: var(--color-white); font-weight: 600; text-align: left;">
+                                        style="color: var(--color-white); font-weight: 600; text-align: left;">
                                         {{ __('pricing.table_route') }}
                                     </th>
                                     <th
-                                        style="padding: 20px; color: var(--color-white); font-weight: 600; text-align: left;">
+                                        style="color: var(--color-white); font-weight: 600; text-align: left;">
                                         {{ __('pricing.table_mercedes_s') }}
                                     </th>
                                     <th
-                                        style="padding: 20px; color: var(--color-white); font-weight: 600; text-align: left;">
+                                        style="color: var(--color-white); font-weight: 600; text-align: left;">
                                         {{ __('pricing.table_bmw_7') }}
                                     </th>
                                     <th
-                                        style="padding: 20px; color: var(--color-white); font-weight: 600; text-align: left;">
+                                        style="color: var(--color-white); font-weight: 600; text-align: left;">
                                         {{ __('pricing.table_exec_limo') }}
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr style="border-bottom: 1px solid var(--color-accent);">
-                                    <td style="padding: 20px; color: var(--color-dark); font-weight: 500;">
+                                    <td style="color: var(--color-dark); font-weight: 500;">
                                         {{ __('pricing.route_1_label') }}</td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_1_s') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_1_s') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_1_bmw') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_1_bmw') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_1_limo') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_1_limo') }}
                                     </td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid var(--color-accent);">
-                                    <td style="padding: 20px; color: var(--color-dark); font-weight: 500;">
+                                    <td style="color: var(--color-dark); font-weight: 500;">
                                         {{ __('pricing.route_2_label') }}</td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_2_s') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_2_s') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_2_bmw') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_2_bmw') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_2_limo') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_2_limo') }}
                                     </td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid var(--color-accent);">
-                                    <td style="padding: 20px; color: var(--color-dark); font-weight: 500;">
+                                    <td style="color: var(--color-dark); font-weight: 500;">
                                         {{ __('pricing.route_3_label') }}</td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_3_s') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_3_s') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_3_bmw') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_3_bmw') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_3_limo') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_3_limo') }}
                                     </td>
                                 </tr>
                                 <tr style="border-bottom: 1px solid var(--color-accent);">
-                                    <td style="padding: 20px; color: var(--color-dark); font-weight: 500;">
+                                    <td style="color: var(--color-dark); font-weight: 500;">
                                         {{ __('pricing.route_4_label') }}</td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_4_s') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_4_s') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_4_bmw') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_4_bmw') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_4_limo') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_4_limo') }}
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="padding: 20px; color: var(--color-dark); font-weight: 500;">
+                                    <td style="color: var(--color-dark); font-weight: 500;">
                                         {{ __('pricing.route_5_label') }}</td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_5_s') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_5_s') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_5_bmw') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_5_bmw') }}
                                     </td>
-                                    <td style="padding: 20px; color: var(--color-dark);">{{ __('pricing.price_5_limo') }}
+                                    <td style="color: var(--color-dark);">{{ __('pricing.price_5_limo') }}
                                     </td>
                                 </tr>
                             </tbody>

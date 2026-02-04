@@ -302,6 +302,9 @@
             user-select: none;
         }
 
+        th, td {
+            padding: 1vw;
+        }
         /* Responsive */
         @media (max-width: 992px) {
             .section-padding {
@@ -311,13 +314,50 @@
             .nav-links {
                 gap: 25px;
             }
+
+            .car-image{
+                max-width: 350px;
+            }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1190px){
+            .car-image{
+                max-width: 390px;
+            }
+        }
+        @media (max-width: 860px) {
+            html{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+            body * {
+                border: solid 1px black;
+            }
+            .container{
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+                min-width:80vw;
+                width: 80vw;
+                max-width:100vw;
+                padding: 10px;
+            }
+            body{
+                border:solid 1px black;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+            }
             .mobile-menu-btn {
                 display: block;
             }
-
+            .car-image{
+                max-width: 390px;
+            }
             .nav-links {
                 position: fixed;
                 top: 80px;

@@ -62,11 +62,11 @@ return [
     'qualifications_stat2_label' => 'Achtergrond gecontroleerd',
 
     'community_badge' => 'Teruggeven',
-    'community_title' => 'Gemeenschapsbetrokkenheid',
+    'community_title' => 'Betrokkenheid bij de gemeenschap',
     'community_text' => 'Wij geloven in teruggeven aan de Brusselse gemeenschap die ons heeft gesteund',
 
-    'community_1_title' => 'Liefdadigheidsevenementen',
-    'community_1_text' => 'We bieden gratis vervoer voor geselecteerde liefdadigheidsevenementen en fundraisinggala’s in Brussel.',
+    'community_1_title' => 'Charitatieve evenementen',
+    'community_1_text' => 'We bieden gratis vervoer voor geselecteerde charitatieve evenementen en fundraisinggala’s in Brussel.',
 
     'community_2_title' => 'Lokale tewerkstelling',
     'community_2_text' => 'We geven prioriteit aan het aannemen van lokaal talent en investeren in opleidingsprogramma’s voor Brusselse inwoners.',

@@ -27,7 +27,7 @@
     <!-- Company Story -->
     <section class="section-padding">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            <div class="container">
                 <div>
                     <h2 class="hero-font fade-in-up"
                         style="font-size: 48px; color: var(--color-dark); margin-bottom: 30px;">
@@ -192,8 +192,8 @@
     <!-- Our Chauffeurs -->
     <section class="section-padding bg-accent">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
-                <div>
+            <div class="container" style="cont">
+                <div class="container">
                     <h2 class="hero-font fade-in-up"
                         style="font-size: 48px; color: var(--color-dark); margin-bottom: 30px;">
                         {{ __('about.chauffeurs_title') }}
@@ -333,11 +333,11 @@
                     {{ __('about.cta_text') }}
                 </p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="/booking" class="btn-primary"
+                    <a href="/{{ app()->getLocale() }}/booking" class="btn-primary"
                         style="background-color: var(--color-accent); color: var(--color-dark); border-color: var(--color-accent);">
                         <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> {{ __('about.cta_book') }}
                     </a>
-                    <a href="/contact" class="btn-secondary"
+                    <a href="/{{ app()->getLocale() }}/contact" class="btn-secondary"
                         style="color: var(--color-dark); border-color: var(--color-secondary);">
                         <i class="fas fa-envelope" style="margin-right: 10px;"></i> {{ __('about.cta_contact') }}
                     </a>

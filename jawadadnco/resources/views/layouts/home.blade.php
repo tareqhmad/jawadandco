@@ -30,11 +30,11 @@
                 </div>
 
                 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                    <a href="/booking" class="btn-primary fade-in-up"
+                    <a href="/{{ app()->getLocale() }}/booking" class="btn-primary fade-in-up"
                         style="opacity: 0; transform: translateY(30px); animation-delay: 0.4s;">
                         <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> {{ __('home.cta_book_now') }}
                     </a>
-                    <a href="/fleet" class="btn-secondary fade-in-up"
+                    <a href="/{{ app()->getLocale() }}/fleet" class="btn-secondary fade-in-up"
                         style="opacity: 0; transform: translateY(30px); animation-delay: 0.5s;">
                         <i class="fas fa-car" style="margin-right: 10px;"></i> {{ __('home.cta_view_fleet') }}
                     </a>
@@ -96,7 +96,7 @@
                         {{ __('home.service_airport_text') }}
                     </p>
                     <div style="text-align: center; margin-top: 25px;">
-                        <a href="/services#airport"
+                        <a href="/{{ app()->getLocale() }}/services#airport"
                             style="color: var(--color-secondary); text-decoration: none; font-weight: 500;">
                             {{ __('home.learn_more') }} <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
                         </a>
@@ -115,7 +115,7 @@
                         {{ __('home.service_corporate_text') }}
                     </p>
                     <div style="text-align: center; margin-top: 25px;">
-                        <a href="/services#corporate"
+                        <a href="/{{ app()->getLocale() }}/services#corporate"
                             style="color: var(--color-secondary); text-decoration: none; font-weight: 500;">
                             {{ __('home.learn_more') }} <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
                         </a>
@@ -134,7 +134,7 @@
                         {{ __('home.service_events_text') }}
                     </p>
                     <div style="text-align: center; margin-top: 25px;">
-                        <a href="/services#events"
+                        <a href="/{{ app()->getLocale() }}/services#events"
                             style="color: var(--color-secondary); text-decoration: none; font-weight: 500;">
                             {{ __('home.learn_more') }} <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
                         </a>
@@ -208,8 +208,8 @@
     <!-- Quick Booking Form -->
     <section class="section-padding">
         <div class="container">
-            <div class="fade-in-up"
-                style="max-width: 800px; margin: 0 auto; background: var(--color-white); padding: 70px 60px; border-radius: 8px; box-shadow: 0 15px 40px rgba(122, 125, 125, 0.08); opacity: 0; transform: translateY(30px);">
+            <div class="fade-in-up container"
+                style="max-width: 800px; margin: 0 auto; padding: 5%; background: var(--color-white);border-radius: 8px; box-shadow: 0 15px 40px rgba(122, 125, 125, 0.08); opacity: 0;">
                 <h2 class="hero-font"
                     style="font-size: 40px; color: var(--color-dark); margin-bottom: 15px; text-align: center;">
                     {{ __('home.quote_title') }}
@@ -218,18 +218,18 @@
                     {{ __('home.quote_subtitle') }}
                 </p>
 
-                <form style="display: grid; gap: 25px;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                <form style="display: flex; flex-direction: column; min-width: 100%;">
+                    <div >
                         <div>
                             <label
-                                style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                style="width: 100%; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
                                 {{ __('home.label_pickup') }}
                             </label>
-                            <div style="position: relative;">
+                            <div >
                                 <i class="fas fa-map-marker-alt"
-                                    style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
+                                    style="color: var(--color-secondary);"></i>
                                 <input type="text"
-                                    style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; transition: all 0.3s ease;"
+                                    style="width: 100%; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; transition: all 0.3s ease;"
                                     placeholder="{{ __('home.placeholder_pickup') }}"
                                     onfocus="this.style.borderColor='var(--color-secondary)'"
                                     onblur="this.style.borderColor='var(--color-accent)'">
@@ -237,14 +237,14 @@
                         </div>
                         <div>
                             <label
-                                style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                style="margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
                                 {{ __('home.label_destination') }}
                             </label>
                             <div style="position: relative;">
                                 <i class="fas fa-flag-checkered"
-                                    style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
+                                    style="color: var(--color-secondary);"></i>
                                 <input type="text"
-                                    style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; transition: all 0.3s ease;"
+                                    style="width: 100%; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; transition: all 0.3s ease;"
                                     placeholder="{{ __('home.placeholder_destination') }}"
                                     onfocus="this.style.borderColor='var(--color-secondary)'"
                                     onblur="this.style.borderColor='var(--color-accent)'">
@@ -252,7 +252,7 @@
                         </div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                    <div>
                         <div>
                             <label
                                 style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
@@ -260,9 +260,9 @@
                             </label>
                             <div style="position: relative;">
                                 <i class="far fa-calendar-alt"
-                                    style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
+                                    style="color: var(--color-secondary);"></i>
                                 <input type="date"
-                                    style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; transition: all 0.3s ease;"
+                                    style="width: 100%; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; transition: all 0.3s ease;"
                                     onfocus="this.style.borderColor='var(--color-secondary)'"
                                     onblur="this.style.borderColor='var(--color-accent)'">
                             </div>
@@ -274,7 +274,7 @@
                             </label>
                             <div style="position: relative;">
                                 <i class="far fa-clock"
-                                    style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
+                                    style="color: var(--color-secondary);"></i>
                                 <input type="time"
                                     style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; transition: all 0.3s ease;"
                                     onfocus="this.style.borderColor='var(--color-secondary)'"
@@ -289,7 +289,7 @@
                         </label>
                         <div style="position: relative;">
                             <i class="fas fa-concierge-bell"
-                                style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
+                                style="color: var(--color-secondary);"></i>
                             <select
                                 style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; appearance: none; background: var(--color-white); transition: all 0.3s ease;"
                                 onfocus="this.style.borderColor='var(--color-secondary)'"
@@ -420,11 +420,11 @@
                     {{ __('home.cta_bottom_text') }}
                 </p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="/booking" class="btn-primary"
+                    <a href="/{{ app()->getLocale() }}/booking" class="btn-primary"
                         style="background-color: var(--color-accent); color: var(--color-dark); border-color: var(--color-accent);">
                         <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> {{ __('home.cta_book_now') }}
                     </a>
-                    <a href="/contact" class="btn-secondary"
+                    <a href="/{{ app()->getLocale() }}/contact" class="btn-secondary"
                         style="color: var(--color-dark); border-color: var(--color-secondary);">
                         <i class="fas fa-envelope" style="margin-right: 10px;"></i> {{ __('home.cta_contact_us') }}
                     </a>
