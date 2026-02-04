@@ -382,7 +382,7 @@
                 <a href="/{{ app()->getLocale() }}/pricing">{{ __('layout.nav_pricing') }}</a>
                 <a href="/{{ app()->getLocale() }}/about">{{ __('layout.nav_about') }}</a>
                 <a href="/{{ app()->getLocale() }}/contact">{{ __('layout.nav_contact') }}</a>
-                <div style="display: flex;">
+                <div style="display: flex; gap: 10px;">
                     <button type="button" id="theme-toggle">
                         @if (request()->cookie('theme', 'light') === 'dark')
                             <i class="fas fa-sun"></i>
