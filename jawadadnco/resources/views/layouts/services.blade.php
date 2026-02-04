@@ -59,7 +59,7 @@
                         </li>
                     </ul>
                     <div style="text-align: center;">
-                        <a href="/booking" class="btn-primary">
+                        <a href="/{{ app()->getLocale() }}/booking" class="btn-primary">
                             <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> {{ __('services.cta_book_now') }}
                         </a>
                     </div>
@@ -96,7 +96,7 @@
                         </li>
                     </ul>
                     <div style="text-align: center;">
-                        <a href="/contact" class="btn-secondary">
+                        <a href="/{{ app()->getLocale() }}/contact" class="btn-secondary">
                             <i class="fas fa-envelope" style="margin-right: 10px;"></i> {{ __('services.cta_corporate_inquiry') }}
                         </a>
                     </div>
@@ -133,7 +133,7 @@
                         </li>
                     </ul>
                     <div style="text-align: center;">
-                        <a href="/booking" class="btn-primary">
+                        <a href="/{{ app()->getLocale() }}/booking" class="btn-primary">
                             <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> {{ __('services.cta_plan_event') }}
                         </a>
                     </div>
@@ -170,7 +170,7 @@
                         </li>
                     </ul>
                     <div style="text-align: center;">
-                        <a href="/pricing" class="btn-secondary">
+                        <a href="/{{ app()->getLocale() }}/pricing" class="btn-secondary">
                             <i class="fas fa-euro-sign" style="margin-right: 10px;"></i> {{ __('services.cta_view_pricing') }}
                         </a>
                     </div>
@@ -239,11 +239,11 @@
                     {{ __('services.bottom_text') }}
                 </p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="/booking" class="btn-primary"
+                    <a href="/{{ app()->getLocale() }}/booking" class="btn-primary"
                         style="background-color: var(--color-white); color: var(--color-dark); border-color: var(--color-white);">
                         <i class="fas fa-calendar-check" style="margin-right: 10px;"></i> {{ __('services.cta_book_now') }}
                     </a>
-                    <a href="/contact" class="btn-secondary"
+                    <a href="/{{ app()->getLocale() }}/contact" class="btn-secondary"
                         style="color: var(--color-white); border-color: var(--color-white);">
                         <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> {{ __('services.cta_call_now') }}
                     </a>

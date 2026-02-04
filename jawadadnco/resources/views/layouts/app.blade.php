@@ -1,9 +1,27 @@
 @php
     $locale = request()->route('locale');
     $segments = request()->segments();
-    $segments[0] = $segments[0] === 'fr' ? 'en' : 'fr';
-    $switchUrl = url(implode('/', $segments));
+
+    $supportedLocales = ['en', 'fr', 'nl'];
+
+    $currentLocale = app()->getLocale();
+    if (!in_array($currentLocale, $supportedLocales)) {
+        $currentLocale = 'en';
+    }
+
+    $segments = request()->segments();
+
+    if (!isset($segments[0]) || !in_array($segments[0], $supportedLocales)) {
+        array_unshift($segments, $currentLocale);
+    }
+
+    $buildLocaleUrl = function (string $locale) use ($segments) {
+        $new = $segments;
+        $new[0] = $locale;
+        return url(implode('/', $new));
+    };
 @endphp
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => request()->cookie('theme', 'light') === 'dark'])>
 
@@ -12,8 +30,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'Elite Brussels Limousine - Premium Chauffeur Service')</title>
-    <meta name="description" content="@yield('description', 'Premium limousine and private chauffeur services in Brussels. Airport transfers, corporate travel, and luxury events.')">
+    <title>@yield('title', __('layout.default_title'))</title>
+    <meta name="description" content="@yield('description', __('layout.default_description'))">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -238,6 +256,20 @@
             z-index: 1001;
         }
 
+        .noselect {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+        }
+
         /* Responsive */
         @media (max-width: 992px) {
             .section-padding {
@@ -310,29 +342,39 @@
     <!-- Navigation -->
     <nav class="nav-bar bg-[var(--color-primary)] dark:bg-[var(--color-dark)]">
         <div class="nav-container">
-            <a href="/" class="logo text-[var(--color-)] dark:text-white">EliteBrussels Limo</a>
+            <a href="/{{ app()->getLocale() }}" class="logo text-[var(--color-secondary)] dark:text-white">
+                EliteBrussels Limo
+            </a>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <div class="nav-links bg-[var(--color-primary)] dark:bg-[var(--color-dark)] text-[var(--color-secondary)] dark:text-[var(--color-accent)]" id="navLinks">
-                <a href="/">Home</a>
-                <a href="/{{ app()->getLocale() }}/services">Services</a>
-                <a href="/{{ app()->getLocale() }}/fleet">Fleet</a>
-                <a href="/{{ app()->getLocale() }}/booking">Booking</a>
-                <a href="/{{ app()->getLocale() }}/pricing">Pricing</a>
-                <a href="/{{ app()->getLocale() }}/about">About</a>
-                <a href="/{{ app()->getLocale() }}/contact">Contact</a>
-            </div>
+            <div class="nav-links bg-[var(--color-primary)] dark:bg-[var(--color-dark)] text-[var(--color-secondary)] dark:text-[var(--color-accent)]"
+                id="navLinks">
+                <a href="/{{ app()->getLocale() }}">{{ __('layout.nav_home') }}</a>
+                <a href="/{{ app()->getLocale() }}/services">{{ __('layout.nav_services') }}</a>
+                <a href="/{{ app()->getLocale() }}/fleet">{{ __('layout.nav_fleet') }}</a>
+                <a href="/{{ app()->getLocale() }}/booking">{{ __('layout.nav_booking') }}</a>
+                <a href="/{{ app()->getLocale() }}/pricing">{{ __('layout.nav_pricing') }}</a>
+                <a href="/{{ app()->getLocale() }}/about">{{ __('layout.nav_about') }}</a>
+                <a href="/{{ app()->getLocale() }}/contact">{{ __('layout.nav_contact') }}</a>
+                <div style="display: flex;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span
+                            style="font-size: 12px; font-weight:600; color: var(--color-dark); background: var(--color-accent); padding: 3px 5px; border-radius: 4px;">
+                            {{ strtoupper($currentLocale) }}
+                        </span>
 
-            <button type="button" id="theme-toggle">
-                {{-- Texte initial (aligné avec le cookie) --}}
-                {{ request()->cookie('theme', 'light') === 'dark' ? '☀️ Light' : '🌙 Dark' }}
-            </button>
-            <a href="{{ $switchUrl }}" class="inline-block px-3 py-2 border rounded hover:bg-gray-100">
-                {{ strtoupper($segments[0]) }}
-            </a>
+                        @foreach (array_diff($supportedLocales, [$currentLocale]) as $loc)
+                            <a href="{{ $buildLocaleUrl($loc) }}"
+                                style="cursor: pointer; font-size: 12px; text-decoration:none; padding: 3px 5px; border-radius: 4px; border: 1px solid var(--color-secondary); color: var(--color-secondary);">
+                                <span class="noselect noHoverAnimation">{{ strtoupper($loc) }}</span>
+                            </a>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -346,9 +388,10 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px;">
                 <div>
                     <h3 class="hero-font" style="font-size: 26px; margin-bottom: 25px; color: var(--color-white);">
-                        EliteBrussels Limo</h3>
-                    <p style="margin-bottom: 20px;">Premium chauffeur services in Brussels. Excellence in every journey,
-                        discretion in every detail.</p>
+                        {{ __('layout.footer_brand_title') }}
+                    </h3>
+                    <p style="margin-bottom: 20px;">{{ __('layout.footer_brand_text') }}</p>
+
                     <div style="display: flex; gap: 15px; margin-top: 20px;">
                         <a href="#" style="color: var(--color-white); font-size: 20px;"><i
                                 class="fab fa-facebook"></i></a>
@@ -358,48 +401,64 @@
                                 class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 25px; color: var(--color-white);">Quick
-                        Links</h4>
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 12px;"><a href="/services"
-                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">Our
-                                Services</a></li>
-                        <li style="margin-bottom: 12px;"><a href="/fleet"
-                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">Our
-                                Fleet</a></li>
-                        <li style="margin-bottom: 12px;"><a href="/booking"
-                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">Book
-                                Now</a></li>
-                        <li style="margin-bottom: 12px;"><a href="/contact"
-                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">Contact
-                                Us</a></li>
-                    </ul>
-                </div>
+
                 <div>
                     <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 25px; color: var(--color-white);">
-                        Contact Info</h4>
+                        {{ __('layout.footer_quick_links') }}
+                    </h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 12px;">
+                            <a href="/{{ app()->getLocale() }}/services"
+                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">
+                                {{ __('layout.footer_link_services') }}
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 12px;">
+                            <a href="/{{ app()->getLocale() }}/fleet"
+                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">
+                                {{ __('layout.footer_link_fleet') }}
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 12px;">
+                            <a href="/{{ app()->getLocale() }}/booking"
+                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">
+                                {{ __('layout.footer_link_booking') }}
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 12px;">
+                            <a href="/{{ app()->getLocale() }}/contact"
+                                style="color: var(--color-accent); text-decoration: none; transition: color 0.3s ease;">
+                                {{ __('layout.footer_link_contact') }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 25px; color: var(--color-white);">
+                        {{ __('layout.footer_contact_info') }}
+                    </h4>
+
                     <div style="margin-bottom: 15px; display: flex; align-items: start; gap: 10px;">
                         <i class="fas fa-map-marker-alt" style="color: var(--color-accent); margin-top: 3px;"></i>
-                        <p>Avenue Louise 123, 1050 Brussels, Belgium</p>
+                        <p>{{ __('layout.footer_address') }}</p>
                     </div>
                     <div style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
                         <i class="fas fa-phone" style="color: var(--color-accent);"></i>
-                        <p>+32 2 123 4567</p>
+                        <p>{{ __('layout.footer_phone') }}</p>
                     </div>
                     <div style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
                         <i class="fas fa-envelope" style="color: var(--color-accent);"></i>
-                        <p>info@elitebrusselslimo.be</p>
+                        <p>{{ __('layout.footer_email') }}</p>
                     </div>
-                    <!-- WhatsApp Button Flottant avec icône seulement sur mobile -->
+
+                    <!-- WhatsApp Button -->
                     <div class="whatsapp-button" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
-                        <a href="https://wa.me/32497227033?text=Bonjour%20Elite%20Brussels%20Limousine,%20je%20souhaite%20obtenir%20un%20devis%20pour%20un%20chauffeur%20priv%C3%A9%20%C3%A0%20Bruxelles."
-                            target="_blank"
+                        <a href="{{ __('layout.whatsapp_url') }}" target="_blank"
                             style="display: flex; align-items: center; justify-content: center; gap: 12px; background-color: #25D366; color: white; font-weight: 600; font-size: 16px; padding: 16px 28px; border-radius: 50px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);"
                             onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 25px rgba(37, 211, 102, 0.4)';"
                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(37, 211, 102, 0.3)';">
 
-                            <!-- SVG WhatsApp Icon -->
                             <svg class="whatsapp-icon" style="width: 26px; height: 26px; flex-shrink: 0;"
                                 viewBox="0 0 32 32" fill="currentColor">
                                 <path
@@ -408,10 +467,9 @@
                                     d="M16 2.67C8.64 2.67 2.67 8.64 2.67 16c0 2.59.75 5.01 2.04 7.05L2 30l7.14-2.69A13.26 13.26 0 0 0 16 29.33c7.36 0 13.33-5.97 13.33-13.33S23.36 2.67 16 2.67zm0 24c-2.23 0-4.30-.65-6.05-1.77l-.43-.26-4.24 1.60 1.60-4.14-.28-.43A10.66 10.66 0 0 1 5.33 16c0-5.88 4.79-10.67 10.67-10.67S26.67 10.12 26.67 16 21.88 26.67 16 26.67z" />
                             </svg>
 
-                            <span class="whatsapp-text">WhatsApp</span>
+                            <span class="whatsapp-text">{{ __('layout.whatsapp_label') }}</span>
                         </a>
 
-                        <!-- Indicateur de disponibilité -->
                         <div
                             style="position: absolute; top: -10px; right: -10px; width: 20px; height: 20px; background-color: #25D366; border-radius: 50%; border: 3px solid white; animation: whatsapp-pulse 2s infinite;">
                         </div>
@@ -435,7 +493,6 @@
                             }
                         }
 
-                        /* Responsive WhatsApp Button */
                         @media (max-width: 768px) {
                             .whatsapp-button {
                                 bottom: 25px !important;
@@ -468,22 +525,20 @@
                     </style>
                 </div>
             </div>
+
             <div
                 style="border-top: 1px solid rgba(208, 207, 207, 0.2); margin-top: 70px; padding-top: 30px; text-align: center; color: var(--color-accent);">
-                <p>&copy; {{ date('Y') }} Elite Brussels Limousine. All rights reserved. | Professional chauffeur
-                    services in Brussels</p>
+                <p>&copy; {{ date('Y') }} {{ __('layout.copyright') }}</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script>
-        // Mobile menu toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
 
-            // Change icon
             const icon = this.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -494,7 +549,6 @@
             }
         });
 
-        // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('navLinks').classList.remove('active');
@@ -503,7 +557,6 @@
             });
         });
 
-        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.nav-bar');
             if (window.scrollY > 50) {
@@ -515,7 +568,6 @@
             }
         });
 
-        // Add animation to elements on scroll
         function animateOnScroll() {
             const elements = document.querySelectorAll('.fade-in-up');
             elements.forEach(element => {
@@ -527,7 +579,6 @@
             });
         }
 
-        // Initial check
         window.addEventListener('load', animateOnScroll);
         window.addEventListener('scroll', animateOnScroll);
     </script>
@@ -544,9 +595,9 @@
             }
 
             function syncButtonLabel() {
-                btn.textContent = isDark() ?
-                    "☀️ Light" :
-                    "🌙 Dark";
+                btn.innerHTML = isDark() ?
+                    '<i class="fas fa-sun"></i>' :
+                    '<i class="fas fa-moon"></i>';
             }
 
             syncButtonLabel();
@@ -578,7 +629,6 @@
             });
         })();
     </script>
-
 
     @stack('scripts')
 </body>

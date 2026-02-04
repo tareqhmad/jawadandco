@@ -75,7 +75,7 @@ Route::post('/theme/toggle', function (Request $request) {
 Route::redirect('/', '/en');
 
 Route::prefix('{locale}')
-  ->where(['locale' => 'fr|en'])
+  ->where(['locale' => 'fr|en|nl'])
   ->middleware('setlocale')
   ->group(function () {
 

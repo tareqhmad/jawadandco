@@ -24,7 +24,7 @@
         style="height: 250px; background: linear-gradient(45deg, {{ $gradientFrom }} 0%, {{ $gradientTo }} 100%); display: flex; align-items: end; justify-content: center; gap: 15px; padding: 20px;">
         <div style="text-align: center; display: flex; flex-direction: column; align-items: center;" >
             <img src="{{ URL::to('/') }}/images/{{ $imageName }}" alt="" srcset="" style="width: 80%"/>
-            <h3 style="margin-top: 20px; color: {{ $headerTextColor }}; font-size: 24px; font-weight: 500;" class="dark:color-white class bg-red-500 dark:bg-blue-700">
+            <h3 style="margin-top: 20px; color: {{ $headerTextColor }}; font-size: 24px; font-weight: 500;">
                 {{ $title }}
             </h3>
         </div>

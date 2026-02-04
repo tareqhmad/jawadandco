@@ -1,9 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Our Luxury Fleet | Premium Limousines Brussels')
-@section('description',
-    'Discover our luxury fleet of limousines, sedans, and SUVs available for hire in Brussels.
-    Mercedes-Benz, BMW, Audi, and more.')
+@section('title', __('fleet.meta_title'))
+@section('description', __('fleet.meta_description'))
 
 @section('content')
     <!-- Hero Section -->
@@ -12,15 +10,15 @@
         <div class="container" style="position: relative; z-index: 2;">
             <div style="max-width: 800px; padding: 80px 0 40px;">
                 <span
-                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">Our
-                    Collection</span>
+                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">
+                    {{ __('fleet.hero_badge') }}
+                </span>
                 <h1 class="hero-font fade-in-up"
                     style="font-size: 56px; margin: 20px 0 25px 0; line-height: 1.1; color: var(--color-dark);">
-                    Luxury Fleet
+                    {{ __('fleet.hero_title') }}
                 </h1>
                 <p class="fade-in-up" style="font-size: 20px; margin-bottom: 40px; color: var(--color-secondary);">
-                    Discover our meticulously maintained fleet of premium vehicles, each selected for comfort, style, and
-                    reliability.
+                    {{ __('fleet.hero_text') }}
                 </p>
             </div>
         </div>
@@ -30,49 +28,114 @@
     <section class="section-padding">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px;">
-                <x-fleet-card title="Mercedes V-Class" passengers="6-7" imageName="mercedes-v-class.png" luggage="8+ large"
-                    category="Executive"
-                    description="Spacious luxury for larger groups, offering exceptional comfort and ample luggage space."
-                    :features="['Captain\'s Chairs', 'Individual Climate Control', 'Panoramic Roof']" icon="fas fa-van" iconColor="var(--color-white)" headerTextColor="var(--color-dark)"
-                    gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
-                <x-fleet-card title="Mercedes S-Class" passengers="3-4" imageName="mercedes-s-class.png" luggage="3"
-                    category="Executive"
-                    description="The ultimate in luxury sedans, featuring premium leather, advanced climate control, and
-                            whisper-quiet cabin."
-                    :features="['Wi-Fi & Mobile Charging', 'Refreshment Bar', 'Panoramic Roof']" icon="fas fa-van" iconColor="var(--color-white)" headerTextColor="var(--color-dark)"
-                    gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
 
-                <x-fleet-card title="BMW 7 Series" passengers="3-4" imageName="bmw-7-series.png" luggage="3 large"
-                    category="Executive"
-                    description="Combining sporty performance with executive luxury, featuring gesture control and executive
-                            lounge seating."
-                    :features="['Bowers & Wilkins Sound', 'Massage Seats', 'Rear Entertainment']" icon="fas fa-car" iconColor="var(--color-secondary)"
-                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
-                    
-                <x-fleet-card title="Mercedes E-Class" passengers="3-4" imageName="mercedes-e-class.png" luggage="3 large"
-                    category="Business"
-                    description="A refined premium sedan that balances comfort and elegance.
-                    The E-Class Sedan offers a quiet, smooth ride and a relaxed driving feel"
-                    :features="['Exceptional ride comfort', 'Quiet, relaxing cabin', 'Heated Seats']" icon="fas fa-car" iconColor="var(--color-secondary)"
-                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
-                <x-fleet-card title="Mercedes Sprinter" passengers="16-20" imageName="mercedes-sprinter.png" luggage="10-16 medium"
-                    category="Group"
-                    description="Ideal for larger groups, offering spacious seating and modern amenities for a comfortable
-                            journey."
-                    :features="['Air Conditioning', 'Spacious Interior', 'Comfortable Seating']" icon="fas fa-bus" iconColor="var(--color-secondary)"
-                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
-                <x-fleet-card title="Iveco Daily Minibus" passengers="26-30" imageName="iveco-daily.png" luggage="10-16 medium"
-                    category="Group"
-                    description="Perfect for group travel, featuring comfortable seating and ample luggage space for all your
-                            needs."
-                    :features="['Spacious Seating', 'Air Conditioning', 'Large Luggage Capacity']" icon="fas fa-bus" iconColor="var(--color-secondary)"
-                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
-                <x-fleet-card title="Mercedes Coach" passengers="40-50" imageName="mercedes-coach.png" luggage="20-30 medium"
-                    category="Group"
-                    description="Our largest vehicle, ideal for corporate events and large groups, offering maximum comfort and
-                            space."
-                    :features="['Spacious Interior', 'Air Conditioning', 'Comfortable Seating']" icon="fas fa-bus" iconColor="var(--color-secondary)"
-                    headerTextColor="var(--color-dark)" gradientFrom="var(--color-primary)" gradientTo="var(--color-accent)" />
+                <x-fleet-card
+                    :title="__('fleet.vehicles.mercedes_v_class.title')"
+                    :passengers="__('fleet.vehicles.mercedes_v_class.passengers')"
+                    imageName="mercedes-v-class.png"
+                    :luggage="__('fleet.vehicles.mercedes_v_class.luggage')"
+                    :category="__('fleet.vehicles.mercedes_v_class.category')"
+                    :description="__('fleet.vehicles.mercedes_v_class.description')"
+                    :features="__('fleet.vehicles.mercedes_v_class.features')"
+                    icon="fas fa-van"
+                    iconColor="var(--color-white)"
+                    headerTextColor="var(--color-dark)"
+                    gradientFrom="var(--color-primary)"
+                    gradientTo="var(--color-accent)"
+                />
+
+                <x-fleet-card
+                    :title="__('fleet.vehicles.mercedes_s_class.title')"
+                    :passengers="__('fleet.vehicles.mercedes_s_class.passengers')"
+                    imageName="mercedes-s-class.png"
+                    :luggage="__('fleet.vehicles.mercedes_s_class.luggage')"
+                    :category="__('fleet.vehicles.mercedes_s_class.category')"
+                    :description="__('fleet.vehicles.mercedes_s_class.description')"
+                    :features="__('fleet.vehicles.mercedes_s_class.features')"
+                    icon="fas fa-van"
+                    iconColor="var(--color-white)"
+                    headerTextColor="var(--color-dark)"
+                    gradientFrom="var(--color-primary)"
+                    gradientTo="var(--color-accent)"
+                />
+
+                <x-fleet-card
+                    :title="__('fleet.vehicles.bmw_7_series.title')"
+                    :passengers="__('fleet.vehicles.bmw_7_series.passengers')"
+                    imageName="bmw-7-series.png"
+                    :luggage="__('fleet.vehicles.bmw_7_series.luggage')"
+                    :category="__('fleet.vehicles.bmw_7_series.category')"
+                    :description="__('fleet.vehicles.bmw_7_series.description')"
+                    :features="__('fleet.vehicles.bmw_7_series.features')"
+                    icon="fas fa-car"
+                    iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)"
+                    gradientFrom="var(--color-primary)"
+                    gradientTo="var(--color-accent)"
+                />
+
+                <x-fleet-card
+                    :title="__('fleet.vehicles.mercedes_e_class.title')"
+                    :passengers="__('fleet.vehicles.mercedes_e_class.passengers')"
+                    imageName="mercedes-e-class.png"
+                    :luggage="__('fleet.vehicles.mercedes_e_class.luggage')"
+                    :category="__('fleet.vehicles.mercedes_e_class.category')"
+                    :description="__('fleet.vehicles.mercedes_e_class.description')"
+                    :features="__('fleet.vehicles.mercedes_e_class.features')"
+                    icon="fas fa-car"
+                    iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)"
+                    gradientFrom="var(--color-primary)"
+                    gradientTo="var(--color-accent)"
+                />
+
+                <x-fleet-card
+                    :title="__('fleet.vehicles.mercedes_sprinter.title')"
+                    :passengers="__('fleet.vehicles.mercedes_sprinter.passengers')"
+                    imageName="mercedes-sprinter.png"
+                    :luggage="__('fleet.vehicles.mercedes_sprinter.luggage')"
+                    :category="__('fleet.vehicles.mercedes_sprinter.category')"
+                    :description="__('fleet.vehicles.mercedes_sprinter.description')"
+                    :features="__('fleet.vehicles.mercedes_sprinter.features')"
+                    icon="fas fa-bus"
+                    iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)"
+                    gradientFrom="var(--color-primary)"
+                    gradientTo="var(--color-accent)"
+                />
+
+                <x-fleet-card
+                    :title="__('fleet.vehicles.iveco_daily_minibus.title')"
+                    :passengers="__('fleet.vehicles.iveco_daily_minibus.passengers')"
+                    imageName="iveco-daily.png"
+                    :luggage="__('fleet.vehicles.iveco_daily_minibus.luggage')"
+                    :category="__('fleet.vehicles.iveco_daily_minibus.category')"
+                    :description="__('fleet.vehicles.iveco_daily_minibus.description')"
+                    :features="__('fleet.vehicles.iveco_daily_minibus.features')"
+                    icon="fas fa-bus"
+                    iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)"
+                    gradientFrom="var(--color-primary)"
+                    gradientTo="var(--color-accent)"
+                />
+
+                <x-fleet-card
+                    :title="__('fleet.vehicles.mercedes_coach.title')"
+                    :passengers="__('fleet.vehicles.mercedes_coach.passengers')"
+                    imageName="mercedes-coach.png"
+                    :luggage="__('fleet.vehicles.mercedes_coach.luggage')"
+                    :category="__('fleet.vehicles.mercedes_coach.category')"
+                    :description="__('fleet.vehicles.mercedes_coach.description')"
+                    :features="__('fleet.vehicles.mercedes_coach.features')"
+                    icon="fas fa-bus"
+                    iconColor="var(--color-secondary)"
+                    headerTextColor="var(--color-dark)"
+                    gradientFrom="var(--color-primary)"
+                    gradientTo="var(--color-accent)"
+                />
+
+            </div>
+        </div>
     </section>
 
     <!-- Fleet Features -->
@@ -80,10 +143,11 @@
         <div class="container">
             <div style="text-align: center; margin-bottom: 80px;">
                 <span
-                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">Why
-                    Our Fleet</span>
+                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">
+                    {{ __('fleet.features_badge') }}
+                </span>
                 <h2 class="hero-font fade-in-up" style="font-size: 48px; color: var(--color-dark); margin-bottom: 20px;">
-                    Fleet Excellence
+                    {{ __('fleet.features_title') }}
                 </h2>
             </div>
 
@@ -92,27 +156,36 @@
                     <div class="icon-circle">
                         <i class="fas fa-sync-alt" style="font-size: 32px;"></i>
                     </div>
-                    <h3 style="margin-bottom: 20px; color: var(--color-dark); font-size: 22px;">Regularly Updated</h3>
-                    <p style="color: var(--color-secondary);">Our fleet is updated every 2-3 years to ensure you enjoy the
-                        latest luxury models and technology.</p>
+                    <h3 style="margin-bottom: 20px; color: var(--color-dark); font-size: 22px;">
+                        {{ __('fleet.feature_1_title') }}
+                    </h3>
+                    <p style="color: var(--color-secondary);">
+                        {{ __('fleet.feature_1_text') }}
+                    </p>
                 </div>
 
                 <div style="text-align: center;">
                     <div class="icon-circle">
                         <i class="fas fa-tools" style="font-size: 32px;"></i>
                     </div>
-                    <h3 style="margin-bottom: 20px; color: var(--color-dark); font-size: 22px;">Meticulous Maintenance</h3>
-                    <p style="color: var(--color-secondary);">Every vehicle undergoes rigorous maintenance checks to ensure
-                        safety and reliability.</p>
+                    <h3 style="margin-bottom: 20px; color: var(--color-dark); font-size: 22px;">
+                        {{ __('fleet.feature_2_title') }}
+                    </h3>
+                    <p style="color: var(--color-secondary);">
+                        {{ __('fleet.feature_2_text') }}
+                    </p>
                 </div>
 
                 <div style="text-align: center;">
                     <div class="icon-circle">
                         <i class="fas fa-spray-can" style="font-size: 32px;"></i>
                     </div>
-                    <h3 style="margin-bottom: 20px; color: var(--color-dark); font-size: 22px;">Immaculate Cleanliness</h3>
-                    <p style="color: var(--color-secondary);">Deep cleaning and sanitization after every journey for your
-                        comfort and safety.</p>
+                    <h3 style="margin-bottom: 20px; color: var(--color-dark); font-size: 22px;">
+                        {{ __('fleet.feature_3_title') }}
+                    </h3>
+                    <p style="color: var(--color-secondary);">
+                        {{ __('fleet.feature_3_text') }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -122,18 +195,18 @@
     <section class="section-padding bg-white">
         <div class="container">
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 class="hero-font" style="font-size: 40px; color: var(--color-dark); margin-bottom: 25px;">Need Help
-                    Choosing?</h2>
+                <h2 class="hero-font" style="font-size: 40px; color: var(--color-dark); margin-bottom: 25px;">
+                    {{ __('fleet.help_title') }}
+                </h2>
                 <p style="font-size: 18px; color: var(--color-secondary); margin-bottom: 40px;">
-                    Not sure which vehicle suits your needs? Our team of experts can help you select the perfect vehicle for
-                    your occasion.
+                    {{ __('fleet.help_text') }}
                 </p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="/contact" class="btn-primary">
-                        <i class="fas fa-headset" style="margin-right: 10px;"></i> Contact Our Experts
+                    <a href="/{{ app()->getLocale() }}/contact" class="btn-primary">
+                        <i class="fas fa-headset" style="margin-right: 10px;"></i> {{ __('fleet.cta_contact_experts') }}
                     </a>
-                    <a href="/pricing" class="btn-secondary">
-                        <i class="fas fa-euro-sign" style="margin-right: 10px;"></i> View Pricing
+                    <a href="/{{ app()->getLocale() }}/pricing" class="btn-secondary">
+                        <i class="fas fa-euro-sign" style="margin-right: 10px;"></i> {{ __('fleet.cta_view_pricing') }}
                     </a>
                 </div>
             </div>

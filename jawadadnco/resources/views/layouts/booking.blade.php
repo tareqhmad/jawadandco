@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Book Now | Limousine Service Brussels')
-@section('description', 'Book your premium limousine service in Brussels. Airport transfers, corporate travel, special
-    events, and hourly rentals.')
+@section('title', __('booking.meta_title'))
+@section('description', __('booking.meta_description'))
 
 @section('content')
     <!-- Hero Section -->
@@ -11,14 +10,15 @@
         <div class="container" style="position: relative; z-index: 2;">
             <div style="max-width: 800px; padding: 80px 0 40px;">
                 <span
-                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">Reservation</span>
+                    style="color: var(--color-secondary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 14px;">
+                    {{ __('booking.hero_badge') }}
+                </span>
                 <h1 class="hero-font fade-in-up"
                     style="font-size: 56px; margin: 20px 0 25px 0; line-height: 1.1; color: var(--color-dark);">
-                    Book Your Journey
+                    {{ __('booking.hero_title') }}
                 </h1>
                 <p class="fade-in-up" style="font-size: 20px; margin-bottom: 40px; color: var(--color-secondary);">
-                    Complete the form below to book your premium limousine service. Our team will confirm your booking
-                    within 30 minutes.
+                    {{ __('booking.hero_text') }}
                 </p>
             </div>
         </div>
@@ -32,39 +32,53 @@
                     <!-- Main Form -->
                     <div>
                         <h2 style="font-size: 32px; color: var(--color-dark); margin-bottom: 40px; font-weight: 600;">
-                            Booking Details</h2>
+                            {{ __('booking.form_title') }}
+                        </h2>
 
                         <form style="display: grid; gap: 25px;">
                             <!-- Trip Type -->
                             <div>
                                 <label
-                                    style="display: block; margin-bottom: 15px; font-weight: 600; color: var(--color-dark); font-size: 16px;">Trip
-                                    Type</label>
+                                    style="display: block; margin-bottom: 15px; font-weight: 600; color: var(--color-dark); font-size: 16px;">
+                                    {{ __('booking.trip_type_label') }}
+                                </label>
+
                                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
                                     <label
                                         style="display: flex; align-items: center; padding: 15px; border: 2px solid var(--color-accent); border-radius: 4px; cursor: pointer; transition: all 0.3s ease;">
-                                        <input type="radio" name="tripType" value="oneway" style="margin-right: 10px;"
-                                            checked>
+                                        <input type="radio" name="tripType" value="oneway" style="margin-right: 10px;" checked>
                                         <div>
-                                            <div style="font-weight: 600; color: var(--color-dark);">One Way</div>
-                                            <div style="font-size: 14px; color: var(--color-secondary);">Point A to B</div>
+                                            <div style="font-weight: 600; color: var(--color-dark);">
+                                                {{ __('booking.trip_oneway') }}
+                                            </div>
+                                            <div style="font-size: 14px; color: var(--color-secondary);">
+                                                {{ __('booking.trip_oneway_hint') }}
+                                            </div>
                                         </div>
                                     </label>
+
                                     <label
                                         style="display: flex; align-items: center; padding: 15px; border: 2px solid var(--color-accent); border-radius: 4px; cursor: pointer; transition: all 0.3s ease;">
                                         <input type="radio" name="tripType" value="roundtrip" style="margin-right: 10px;">
                                         <div>
-                                            <div style="font-weight: 600; color: var(--color-dark);">Round Trip</div>
-                                            <div style="font-size: 14px; color: var(--color-secondary);">Return journey
+                                            <div style="font-weight: 600; color: var(--color-dark);">
+                                                {{ __('booking.trip_roundtrip') }}
+                                            </div>
+                                            <div style="font-size: 14px; color: var(--color-secondary);">
+                                                {{ __('booking.trip_roundtrip_hint') }}
                                             </div>
                                         </div>
                                     </label>
+
                                     <label
                                         style="display: flex; align-items: center; padding: 15px; border: 2px solid var(--color-accent); border-radius: 4px; cursor: pointer; transition: all 0.3s ease;">
                                         <input type="radio" name="tripType" value="hourly" style="margin-right: 10px;">
                                         <div>
-                                            <div style="font-weight: 600; color: var(--color-dark);">Hourly</div>
-                                            <div style="font-size: 14px; color: var(--color-secondary);">Multiple stops
+                                            <div style="font-weight: 600; color: var(--color-dark);">
+                                                {{ __('booking.trip_hourly') }}
+                                            </div>
+                                            <div style="font-size: 14px; color: var(--color-secondary);">
+                                                {{ __('booking.trip_hourly_hint') }}
                                             </div>
                                         </div>
                                     </label>
@@ -75,26 +89,29 @@
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Pick-up
-                                        Location *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.pickup_label') }}
+                                    </label>
                                     <div style="position: relative;">
                                         <i class="fas fa-map-marker-alt"
                                             style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
                                         <input type="text" required
                                             style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;"
-                                            placeholder="Address, airport, hotel...">
+                                            placeholder="{{ __('booking.pickup_placeholder') }}">
                                     </div>
                                 </div>
+
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Destination
-                                        *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.destination_label') }}
+                                    </label>
                                     <div style="position: relative;">
                                         <i class="fas fa-flag-checkered"
                                             style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
                                         <input type="text" required
                                             style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;"
-                                            placeholder="Destination address">
+                                            placeholder="{{ __('booking.destination_placeholder') }}">
                                     </div>
                                 </div>
                             </div>
@@ -103,8 +120,9 @@
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Pick-up
-                                        Date *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.pickup_date_label') }}
+                                    </label>
                                     <div style="position: relative;">
                                         <i class="far fa-calendar-alt"
                                             style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
@@ -112,10 +130,12 @@
                                             style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
                                     </div>
                                 </div>
+
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Pick-up
-                                        Time *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.pickup_time_label') }}
+                                    </label>
                                     <div style="position: relative;">
                                         <i class="far fa-clock"
                                             style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
@@ -128,19 +148,20 @@
                             <!-- Vehicle Selection -->
                             <div>
                                 <label
-                                    style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Vehicle
-                                    Type *</label>
+                                    style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                    {{ __('booking.vehicle_type_label') }}
+                                </label>
                                 <div style="position: relative;">
                                     <i class="fas fa-car"
                                         style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
                                     <select required
                                         style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
-                                        <option value="">Select Vehicle</option>
-                                        <option value="mercedes_s">Mercedes-Benz S-Class (3-4 passengers)</option>
-                                        <option value="bmw_7">BMW 7 Series (3-4 passengers)</option>
-                                        <option value="limousine">Executive Limousine (6-8 passengers)</option>
-                                        <option value="mercedes_v">Mercedes V-Class (6-7 passengers)</option>
-                                        <option value="audi_a8">Audi A8 (3-4 passengers)</option>
+                                        <option value="">{{ __('booking.vehicle_select_placeholder') }}</option>
+                                        <option value="mercedes_s">{{ __('booking.vehicle_mercedes_s') }}</option>
+                                        <option value="bmw_7">{{ __('booking.vehicle_bmw_7') }}</option>
+                                        <option value="limousine">{{ __('booking.vehicle_limo') }}</option>
+                                        <option value="mercedes_v">{{ __('booking.vehicle_mercedes_v') }}</option>
+                                        <option value="audi_a8">{{ __('booking.vehicle_audi_a8') }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -148,19 +169,20 @@
                             <!-- Service Type -->
                             <div>
                                 <label
-                                    style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Service
-                                    Type *</label>
+                                    style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                    {{ __('booking.service_type_label') }}
+                                </label>
                                 <div style="position: relative;">
                                     <i class="fas fa-concierge-bell"
                                         style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
                                     <select required
                                         style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
-                                        <option value="">Select Service</option>
-                                        <option value="airport">Airport Transfer</option>
-                                        <option value="corporate">Corporate Travel</option>
-                                        <option value="event">Special Event</option>
-                                        <option value="hourly">Hourly Service</option>
-                                        <option value="tour">City Tour</option>
+                                        <option value="">{{ __('booking.service_select_placeholder') }}</option>
+                                        <option value="airport">{{ __('booking.service_airport') }}</option>
+                                        <option value="corporate">{{ __('booking.service_corporate') }}</option>
+                                        <option value="event">{{ __('booking.service_event') }}</option>
+                                        <option value="hourly">{{ __('booking.service_hourly') }}</option>
+                                        <option value="tour">{{ __('booking.service_tour') }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -169,26 +191,29 @@
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Number
-                                        of Passengers *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.passengers_label') }}
+                                    </label>
                                     <div style="position: relative;">
                                         <i class="fas fa-users"
                                             style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
                                         <input type="number" min="1" max="8" required
                                             style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;"
-                                            placeholder="1-8">
+                                            placeholder="{{ __('booking.passengers_placeholder') }}">
                                     </div>
                                 </div>
+
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Number
-                                        of Luggage *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.luggage_label') }}
+                                    </label>
                                     <div style="position: relative;">
                                         <i class="fas fa-suitcase"
                                             style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
                                         <input type="number" min="0" max="10" required
                                             style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;"
-                                            placeholder="0-10">
+                                            placeholder="{{ __('booking.luggage_placeholder') }}">
                                     </div>
                                 </div>
                             </div>
@@ -196,30 +221,34 @@
                             <!-- Special Instructions -->
                             <div>
                                 <label
-                                    style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Special
-                                    Instructions</label>
+                                    style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                    {{ __('booking.instructions_label') }}
+                                </label>
                                 <textarea
                                     style="width: 100%; padding: 15px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; min-height: 120px;"
-                                    placeholder="Flight number, accessibility needs, special requests..."></textarea>
+                                    placeholder="{{ __('booking.instructions_placeholder') }}"></textarea>
                             </div>
 
                             <!-- Contact Details -->
                             <h3
                                 style="font-size: 24px; color: var(--color-dark); margin: 40px 0 20px; padding-top: 30px; border-top: 1px solid var(--color-accent);">
-                                Contact Information</h3>
+                                {{ __('booking.contact_title') }}
+                            </h3>
 
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">First
-                                        Name *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.first_name_label') }}
+                                    </label>
                                     <input type="text" required
                                         style="width: 100%; padding: 15px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
                                 </div>
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Last
-                                        Name *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.last_name_label') }}
+                                    </label>
                                     <input type="text" required
                                         style="width: 100%; padding: 15px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
                                 </div>
@@ -228,8 +257,9 @@
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Email
-                                        *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.email_label') }}
+                                    </label>
                                     <div style="position: relative;">
                                         <i class="fas fa-envelope"
                                             style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
@@ -237,10 +267,12 @@
                                             style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
                                     </div>
                                 </div>
+
                                 <div>
                                     <label
-                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">Phone
-                                        *</label>
+                                        style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                                        {{ __('booking.phone_label') }}
+                                    </label>
                                     <div style="position: relative;">
                                         <i class="fas fa-phone"
                                             style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
@@ -252,7 +284,8 @@
 
                             <button type="submit" class="btn-primary"
                                 style="width: 100%; padding: 18px; font-size: 18px; margin-top: 30px;">
-                                <i class="fas fa-paper-plane" style="margin-right: 10px;"></i> Submit Booking Request
+                                <i class="fas fa-paper-plane" style="margin-right: 10px;"></i>
+                                {{ __('booking.submit') }}
                             </button>
                         </form>
                     </div>
@@ -263,58 +296,59 @@
                             style="background: var(--color-primary); padding: 30px; border-radius: 8px; box-shadow: 0 10px 30px rgba(122, 125, 125, 0.08); position: sticky; top: 100px;">
                             <h3
                                 style="font-size: 22px; color: var(--color-dark); margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid var(--color-accent);">
-                                Booking Summary</h3>
+                                {{ __('booking.summary_title') }}
+                            </h3>
 
                             <div style="margin-bottom: 25px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span style="color: var(--color-secondary);">Mercedes S-Class</span>
-                                    <span style="color: var(--color-dark); font-weight: 600;">€120-150</span>
+                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_vehicle') }}</span>
+                                    <span style="color: var(--color-dark); font-weight: 600;">{{ __('booking.summary_price_range') }}</span>
                                 </div>
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span style="color: var(--color-secondary);">Airport Transfer</span>
-                                    <span style="color: var(--color-secondary);">Included</span>
+                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_service') }}</span>
+                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_included') }}</span>
                                 </div>
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span style="color: var(--color-secondary);">Meet & Greet</span>
-                                    <span style="color: var(--color-secondary);">Included</span>
+                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_meet_greet') }}</span>
+                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_included') }}</span>
                                 </div>
                             </div>
 
                             <div
                                 style="margin: 30px 0; padding: 20px 0; border-top: 1px solid var(--color-accent); border-bottom: 1px solid var(--color-accent);">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-                                    <span style="color: var(--color-dark); font-weight: 600;">Estimated Total</span>
-                                    <span
-                                        style="color: var(--color-dark); font-size: 24px; font-weight: 700;">€120-150</span>
+                                    <span style="color: var(--color-dark); font-weight: 600;">{{ __('booking.estimated_total') }}</span>
+                                    <span style="color: var(--color-dark); font-size: 24px; font-weight: 700;">{{ __('booking.summary_price_range') }}</span>
                                 </div>
                                 <div style="font-size: 14px; color: var(--color-secondary);">
-                                    * Final price depends on exact route and traffic conditions
+                                    {{ __('booking.final_price_note') }}
                                 </div>
                             </div>
 
                             <div style="margin-bottom: 25px;">
-                                <h4 style="color: var(--color-dark); margin-bottom: 15px; font-size: 16px;">What's
-                                    Included:</h4>
+                                <h4 style="color: var(--color-dark); margin-bottom: 15px; font-size: 16px;">
+                                    {{ __('booking.included_title') }}
+                                </h4>
                                 <ul style="list-style: none; color: var(--color-secondary); font-size: 14px;">
                                     <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
                                         <i class="fas fa-check"
                                             style="color: var(--color-secondary); position: absolute; left: 0; font-size: 12px;"></i>
-                                        Professional Chauffeur
+                                        {{ __('booking.included_1') }}
                                     </li>
                                     <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
                                         <i class="fas fa-check"
                                             style="color: var(--color-secondary); position: absolute; left: 0; font-size: 12px;"></i>
-                                        Flight Tracking
+                                        {{ __('booking.included_2') }}
                                     </li>
                                     <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
                                         <i class="fas fa-check"
                                             style="color: var(--color-secondary); position: absolute; left: 0; font-size: 12px;"></i>
-                                        Bottled Water
+                                        {{ __('booking.included_3') }}
                                     </li>
                                     <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
                                         <i class="fas fa-check"
                                             style="color: var(--color-secondary); position: absolute; left: 0; font-size: 12px;"></i>
-                                        Free Waiting Time
+                                        {{ __('booking.included_4') }}
                                     </li>
                                 </ul>
                             </div>
@@ -325,8 +359,9 @@
                                     <i class="fas fa-headset"
                                         style="color: var(--color-secondary); margin-right: 10px; font-size: 20px;"></i>
                                     <div>
-                                        <div style="color: var(--color-dark); font-weight: 600;">Need Help?</div>
-                                        <div style="color: var(--color-secondary); font-size: 14px;">Call +32 2 123 4567
+                                        <div style="color: var(--color-dark); font-weight: 600;">{{ __('booking.help_title') }}</div>
+                                        <div style="color: var(--color-secondary); font-size: 14px;">
+                                            {{ __('booking.help_call', ['phone' => '+32 2 123 4567']) }}
                                         </div>
                                     </div>
                                 </div>
@@ -345,36 +380,36 @@
                 <div class="icon-circle" style="margin: 0 auto 30px;">
                     <i class="fas fa-shield-alt" style="font-size: 32px;"></i>
                 </div>
-                <h2 class="hero-font" style="font-size: 40px; color: var(--color-dark); margin-bottom: 20px;">Booking
-                    Guarantee</h2>
+                <h2 class="hero-font" style="font-size: 40px; color: var(--color-dark); margin-bottom: 20px;">
+                    {{ __('booking.guarantee_title') }}
+                </h2>
                 <p style="font-size: 18px; color: var(--color-secondary); margin-bottom: 40px;">
-                    Your booking is confirmed immediately upon submission. We guarantee vehicle availability and will
-                    contact you within 30 minutes with your chauffeur details and final confirmation.
+                    {{ __('booking.guarantee_text') }}
                 </p>
                 <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 50px;">
                     <div style="text-align: center;">
                         <div class="icon-circle" style="width: 60px; height: 60px; margin-bottom: 15px;">
                             <i class="fas fa-lock" style="font-size: 22px;"></i>
                         </div>
-                        <div style="font-weight: 600; color: var(--color-dark);">Secure Payment</div>
+                        <div style="font-weight: 600; color: var(--color-dark);">{{ __('booking.badge_secure_payment') }}</div>
                     </div>
                     <div style="text-align: center;">
                         <div class="icon-circle" style="width: 60px; height: 60px; margin-bottom: 15px;">
                             <i class="fas fa-clock" style="font-size: 22px;"></i>
                         </div>
-                        <div style="font-weight: 600; color: var(--color-dark);">30-Min Confirmation</div>
+                        <div style="font-weight: 600; color: var(--color-dark);">{{ __('booking.badge_30min') }}</div>
                     </div>
                     <div style="text-align: center;">
                         <div class="icon-circle" style="width: 60px; height: 60px; margin-bottom: 15px;">
                             <i class="fas fa-user-check" style="font-size: 22px;"></i>
                         </div>
-                        <div style="font-weight: 600; color: var(--color-dark);">Chauffeur Guaranteed</div>
+                        <div style="font-weight: 600; color: var(--color-dark);">{{ __('booking.badge_chauffeur') }}</div>
                     </div>
                     <div style="text-align: center;">
                         <div class="icon-circle" style="width: 60px; height: 60px; margin-bottom: 15px;">
                             <i class="fas fa-car" style="font-size: 22px;"></i>
                         </div>
-                        <div style="font-weight: 600; color: var(--color-dark);">Vehicle Guaranteed</div>
+                        <div style="font-weight: 600; color: var(--color-dark);">{{ __('booking.badge_vehicle') }}</div>
                     </div>
                 </div>
             </div>
