@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return redirect('/en');
@@ -22,44 +23,44 @@ require __DIR__ . '/auth.php';
 Route::get('/{locale}/services', function () {
     return view('layouts/services');
 })
-->name('services')
-->where(['locale' => 'fr|nl|en'])
-->middleware('setlocale');
+    ->name('services')
+    ->where(['locale' => 'fr|nl|en'])
+    ->middleware('setlocale');
 
 Route::get('/{locale}/fleet', function () {
     return view('layouts/fleet');
 })->name('fleet')
-->where(['locale' => 'fr|nl|en'])
-->middleware('setlocale');
+    ->where(['locale' => 'fr|nl|en'])
+    ->middleware('setlocale');
 
 Route::get('/{locale}/booking', function () {
     return view('layouts/booking');
 })
-->name('booking')
-->where(['locale' => 'fr|nl|en'])
-->middleware('setlocale');
+    ->name('booking')
+    ->where(['locale' => 'fr|nl|en'])
+    ->middleware('setlocale');
 
 Route::get('/{locale}/pricing', function () {
     return view('layouts/pricing');
 })
-->name('pricing')
-->where(['locale' => 'fr|nl|en'])
-->middleware('setlocale');
+    ->name('pricing')
+    ->where(['locale' => 'fr|nl|en'])
+    ->middleware('setlocale');
 
 
 Route::get('/{locale}/about', function () {
     return view('layouts/about');
 })
-->name('about')
-->where(['locale' => 'fr|nl|en'])
-->middleware('setlocale');
+    ->name('about')
+    ->where(['locale' => 'fr|nl|en'])
+    ->middleware('setlocale');
 
 Route::get('/{locale}/contact', function () {
     return view('layouts/contact');
 })
-->name('contact')
-->where(['locale' => 'fr|nl|en'])
-->middleware('setlocale');
+    ->name('contact')
+    ->where(['locale' => 'fr|nl|en'])
+    ->middleware('setlocale');
 
 Route::post('/theme/toggle', function (Request $request) {
     $current = $request->cookie('theme', 'light');
@@ -81,11 +82,14 @@ Route::post('/theme/toggle', function (Request $request) {
 Route::redirect('/', '/en');
 
 Route::prefix('{locale}')
-  ->where(['locale' => 'fr|en|nl'])
-  ->middleware('setlocale')
-  ->group(function () {
+    ->where(['locale' => 'fr|en|nl'])
+    ->middleware('setlocale')
+    ->group(function () {
 
-    Route::get('/', function () {
-      return view('layouts/home');
-    })->name('home');
-  });
+        Route::get('/', function () {
+            return view('layouts/home');
+        })->name('home');
+    });
+
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/contact', [ContactController::class, 'contactform'])->name('contactform');

@@ -93,4 +93,6 @@ return [
     'cta_bottom_text' => 'Découvrez la différence d’un service de chauffeur premium à Bruxelles. Réservez votre transport de luxe dès aujourd’hui.',
     'cta_contact_us' => 'Nous contacter',
     'cta_bottom_availability' => 'Service disponible 24h/24 et 7j/7',
+
+    'form_success' => 'Votre demande a bien été envoyée. Nous vous contacterons rapidement.',
 ];

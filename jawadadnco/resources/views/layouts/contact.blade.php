@@ -115,14 +115,15 @@
                         {{ __('contact.form_title') }}
                     </h2>
 
-                    <form style="display: grid; gap: 25px;">
+                    <form action="{{ route('contactform') }}" method="POST" style="display: grid; gap: 25px;">
+                        @csrf
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
                             <div>
                                 <label
                                     style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
                                     {{ __('contact.first_name') }}
                                 </label>
-                                <input type="text" required
+                                <input type="text" name="first_name" required
                                     style="width: 100%; padding: 15px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
                             </div>
                             <div>
@@ -130,43 +131,40 @@
                                     style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
                                     {{ __('contact.last_name') }}
                                 </label>
-                                <input type="text" required
+                                <input type="text" name="last_name" required
                                     style="width: 100%; padding: 15px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
                             </div>
                         </div>
 
                         <div>
-                            <label
-                                style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                            <label style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
                                 {{ __('contact.email_label') }}
                             </label>
                             <div style="position: relative;">
                                 <i class="fas fa-envelope"
                                     style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
-                                <input type="email" required
+                                <input type="email" name="email" required
                                     style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
                             </div>
                         </div>
 
                         <div>
-                            <label
-                                style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                            <label style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
                                 {{ __('contact.phone_label') }}
                             </label>
                             <div style="position: relative;">
                                 <i class="fas fa-phone"
                                     style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--color-secondary);"></i>
-                                <input type="tel"
+                                <input type="tel" name="phone"
                                     style="width: 100%; padding: 15px 15px 15px 45px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
                             </div>
                         </div>
 
                         <div>
-                            <label
-                                style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                            <label style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
                                 {{ __('contact.subject_label') }}
                             </label>
-                            <select required
+                            <select name="subject" required
                                 style="width: 100%; padding: 15px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px;">
                                 <option value="">{{ __('contact.subject_placeholder') }}</option>
                                 <option value="booking">{{ __('contact.subject_booking') }}</option>
@@ -179,11 +177,10 @@
                         </div>
 
                         <div>
-                            <label
-                                style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
+                            <label style="display: block; margin-bottom: 10px; font-weight: 500; color: var(--color-dark);">
                                 {{ __('contact.message_label') }}
                             </label>
-                            <textarea required
+                            <textarea name="message" required
                                 style="width: 100%; padding: 15px; border: 1px solid var(--color-accent); border-radius: 4px; font-size: 16px; min-height: 150px;"
                                 placeholder="{{ __('contact.message_placeholder') }}"></textarea>
                         </div>

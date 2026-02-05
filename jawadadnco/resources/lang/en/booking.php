@@ -89,4 +89,14 @@ return [
     'badge_30min' => '30-Min Confirmation',
     'badge_chauffeur' => 'Chauffeur Guaranteed',
     'badge_vehicle' => 'Vehicle Guaranteed',
+
+
+    'mail_client_subject' => 'Request Confirmation – Luxway',
+    'mail_client_title' => 'Your request has been received',
+    'mail_client_intro' => 'Hello :name, we have successfully received your booking request.',
+    'mail_summary_title' => 'Summary of your request',
+    'mail_client_outro' => 'Our team will contact you shortly to confirm availability and pricing.',
+    'mail_signature' => 'Luxury Chauffeur & Limousine Services',
+    'mail_disclaimer' => 'This is an automated email, please do not reply.',
+    'success_message' => 'Your request has been sent successfully. A confirmation email has been sent to you.',
 ];

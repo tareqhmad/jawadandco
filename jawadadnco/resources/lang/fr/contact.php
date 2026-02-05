@@ -94,4 +94,13 @@ return [
     'cta_text' => "Contactez-nous dès aujourd’hui pour discuter de vos besoins de transport ou réserver votre service de limousine premium.",
     'cta_book' => 'Réserver',
     'cta_call' => 'Appeler',
+
+    'mail_subject_confirmation' => 'Nous avons bien reçu votre message – Luxway',
+    'mail_client_greeting' => 'Bonjour :name,',
+    'mail_client_confirmation_text' => 'Merci de nous avoir contactés. Votre message a bien été transmis à notre équipe de gestion.',
+    'mail_summary_title' => 'Détails de votre demande',
+    'mail_date_label' => 'Date',
+    'mail_client_next_steps' => 'Un conseiller Luxway reviendra vers vous par email ou par téléphone dans les plus brefs délais pour répondre à votre demande.',
+    'mail_signature' => 'L\'équipe Luxway',
+    'mail_disclaimer' => 'Ceci est un message automatique, merci de ne pas y répondre directement.',
 ];

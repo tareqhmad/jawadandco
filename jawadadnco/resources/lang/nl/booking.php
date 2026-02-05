@@ -89,4 +89,13 @@ return [
     'badge_30min' => 'Bevestiging in 30 min',
     'badge_chauffeur' => 'Chauffeur gegarandeerd',
     'badge_vehicle' => 'Voertuig gegarandeerd',
+
+    'mail_client_subject' => 'Bevestiging van uw aanvraag – Luxway',
+    'mail_client_title' => 'Uw aanvraag is goed ontvangen',
+    'mail_client_intro' => 'Beste :name, we hebben uw reserveringsaanvraag goed ontvangen.',
+    'mail_summary_title' => 'Overzicht van uw aanvraag',
+    'mail_client_outro' => 'Ons team neemt zo snel mogelijk contact met u op om de beschikbaarheid en de prijs te bevestigen.',
+    'mail_signature' => 'Luxury Chauffeur & Limousine Services',
+    'mail_disclaimer' => 'Dit is een automatisch bericht, gelieve niet te beantwoorden.',
+    'success_message' => 'Uw aanvraag is succesvol verzonden. Er is een bevestigingsmail naar u verzonden.',
 ];
