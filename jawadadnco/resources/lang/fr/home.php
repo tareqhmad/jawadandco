@@ -34,7 +34,7 @@ return [
 
     // Why choose us
     'why_badge' => 'Pourquoi nous choisir',
-    'why_title' => 'La différence Elite Brussels',
+    'why_title' => 'La différence Luxway',
 
     'why_punctuality_title' => 'Ponctualité',
     'why_punctuality_text' => 'Nous garantissons des prises en charge à l’heure grâce au suivi en temps réel et à la surveillance du trafic. Votre temps est notre priorité.',
@@ -74,7 +74,7 @@ return [
     // Testimonials
     'testimonials_badge' => 'Témoignages',
     'testimonials_title' => 'Ce que disent nos clients',
-    'testimonials_subtitle' => 'Découvrez le service de limousine Elite Brussels à travers les mots de nos clients',
+    'testimonials_subtitle' => 'Découvrez le service de limousine Luxway à travers les mots de nos clients',
 
     'testimonial_1_name' => 'Thomas Laurent',
     'testimonial_1_role' => 'Cadre dirigeant',
@@ -86,7 +86,7 @@ return [
 
     'testimonial_3_name' => 'Maria Kowalski',
     'testimonial_3_role' => 'Voyageuse fréquente',
-    'testimonial_3_text' => '"Cliente régulière pour les transferts aéroport. Toujours fiable, confortable et professionnel. Je recommande vivement Elite Brussels Limousine à toute personne à Bruxelles."',
+    'testimonial_3_text' => '"Cliente régulière pour les transferts aéroport. Toujours fiable, confortable et professionnel. Je recommande vivement Luxway Limousine à toute personne à Bruxelles."',
 
     // CTA bottom
     'cta_bottom_title' => 'Prêt pour votre trajet ?',

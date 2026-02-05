@@ -34,7 +34,7 @@ return [
 
     // Why choose us
     'why_badge' => 'Why Choose Us',
-    'why_title' => 'The Elite Brussels Difference',
+    'why_title' => 'The Luxway Difference',
 
     'why_punctuality_title' => 'Punctuality',
     'why_punctuality_text' => 'We guarantee timely pickups with real-time tracking and traffic monitoring. Your time is our priority.',
@@ -86,7 +86,7 @@ return [
 
     'testimonial_3_name' => 'Maria Kowalski',
     'testimonial_3_role' => 'Frequent Traveler',
-    'testimonial_3_text' => '"Regular client for airport transfers. Always reliable, comfortable, and professional. Highly recommend Elite Brussels Limousine for anyone in Brussels."',
+    'testimonial_3_text' => '"Regular client for airport transfers. Always reliable, comfortable, and professional. Highly recommend Luxway Limousine for anyone in Brussels."',
 
     // CTA bottom
     'cta_bottom_title' => 'Ready for Your Journey?',

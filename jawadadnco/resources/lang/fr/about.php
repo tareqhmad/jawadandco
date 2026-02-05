@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'meta_title' => 'À propos | Elite Brussels Limousine',
-    'meta_description' => "Découvrez Elite Brussels Limousine - un service de chauffeur haut de gamme à Bruxelles avec plus de 10\n    ans d’expérience dans le transport de luxe.",
+    'meta_title' => 'À propos | Luxway Limousine',
+    'meta_description' => "Découvrez Luxway Limousine - un service de chauffeur haut de gamme à Bruxelles avec plus de 10\n    ans d’expérience dans le transport de luxe.",
 
     'hero_badge' => 'Notre histoire',
-    'hero_title' => 'À propos de Elite Brussels Limousine',
+    'hero_title' => 'À propos de Luxway Limousine',
     'hero_text' => 'Depuis plus de dix ans, nous fournissons des services de chauffeur premium à Bruxelles, établissant la référence du transport de luxe.',
 
     'journey_title' => 'Notre parcours',
-    'journey_p1' => "Fondée en 2010 par des vétérans du secteur du transport, Elite Brussels Limousine a commencé avec une mission simple : offrir à Bruxelles un véritable service de chauffeur premium qui combine luxe, fiabilité et discrétion.",
+    'journey_p1' => "Fondée en 2010 par des vétérans du secteur du transport, Luxway Limousine a commencé avec une mission simple : offrir à Bruxelles un véritable service de chauffeur premium qui combine luxe, fiabilité et discrétion.",
     'journey_p2' => "En commençant avec seulement deux véhicules, nous avons grandi pour devenir l’un des services de limousine les plus respectés de Bruxelles, au service de clients corporate, de visiteurs internationaux et de résidents locaux qui n’acceptent rien d’autre que le meilleur.",
     'journey_p3' => "Notre engagement envers l’excellence nous a valu la confiance de missions diplomatiques, d’entreprises du Fortune 500 et d’innombrables personnes célébrant les moments spéciaux de la vie.",
 
@@ -46,7 +46,7 @@ return [
     'team_3_text' => 'Marc dirige notre équipe de chauffeurs professionnels, fixant la norme d’excellence du service et de sécurité routière.',
 
     'chauffeurs_title' => 'Nos chauffeurs professionnels',
-    'chauffeurs_p1' => 'Chaque chauffeur Elite Brussels Limousine suit un processus rigoureux de sélection et de formation. Nous recrutons non seulement sur la compétence de conduite, mais aussi sur le professionnalisme, la communication et l’engagement envers l’excellence du service.',
+    'chauffeurs_p1' => 'Chaque chauffeur Luxway Limousine suit un processus rigoureux de sélection et de formation. Nous recrutons non seulement sur la compétence de conduite, mais aussi sur le professionnalisme, la communication et l’engagement envers l’excellence du service.',
     'chauffeurs_p2' => 'Nos chauffeurs reçoivent une formation continue en :',
 
     'chauffeurs_li_1' => 'Conduite défensive et techniques avancées de sécurité',
@@ -75,7 +75,7 @@ return [
     'community_3_text' => 'Notre flotte est régulièrement renouvelée pour inclure les derniers modèles écologiques à émissions réduites.',
 
     'cta_title' => 'Vivez la différence',
-    'cta_text' => 'Rejoignez notre liste grandissante de clients satisfaits qui ont vécu la différence Elite Brussels Limousine.',
+    'cta_text' => 'Rejoignez notre liste grandissante de clients satisfaits qui ont vécu la différence Luxway Limousine.',
     'cta_book' => 'Réservez votre trajet',
     'cta_contact' => 'Contactez-nous',
 ];

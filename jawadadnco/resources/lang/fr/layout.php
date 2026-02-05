@@ -2,7 +2,7 @@
 
 return [
     // Meta defaults
-    'default_title' => 'Elite Brussels Limousine - Service de chauffeur premium',
+    'default_title' => 'Luxway Limousine - Service de chauffeur premium',
     'default_description' => 'Services premium de limousine et chauffeur privé à Bruxelles. Transferts aéroport, déplacements corporate et événements de luxe.',
 
     // Navigation
@@ -31,12 +31,12 @@ return [
     'footer_contact_info' => 'Coordonnées',
     'footer_address' => 'Avenue Louise 123, 1050 Bruxelles, Belgique',
     'footer_phone' => '+32 2 123 4567',
-    'footer_email' => 'info@elitebrusselslimo.be',
+    'footer_email' => 'info@luxway.be',
 
     // WhatsApp
     'whatsapp_label' => 'WhatsApp',
     'whatsapp_url' => 'https://wa.me/32497227033?text=Bonjour%20Elite%20Brussels%20Limousine,%20je%20souhaite%20obtenir%20un%20devis%20pour%20un%20chauffeur%20priv%C3%A9%20%C3%A0%20Bruxelles.',
 
     // Copyright
-    'copyright' => 'Elite Brussels Limousine. Tous droits réservés. | Services de chauffeur professionnels à Bruxelles',
+    'copyright' => 'Luxway Limousine. Tous droits réservés. | Services de chauffeur professionnels à Bruxelles',
 ];

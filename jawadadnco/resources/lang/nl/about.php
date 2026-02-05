@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'meta_title' => 'Over ons | Elite Brussels Limousine',
-    'meta_description' => "Lees meer over Elite Brussels Limousine - een toonaangevende chauffeursdienst in Brussel met meer dan 10\n    jaar ervaring in luxe vervoer.",
+    'meta_title' => 'Over ons | Luxway Limousine',
+    'meta_description' => "Lees meer over Luxway Limousine - een toonaangevende chauffeursdienst in Brussel met meer dan 10\n    jaar ervaring in luxe vervoer.",
 
     'hero_badge' => 'Ons verhaal',
-    'hero_title' => 'Over Elite Brussels Limousine',
+    'hero_title' => 'Over Luxway Limousine',
     'hero_text' => 'Al meer dan tien jaar leveren wij premium chauffeursdiensten in Brussel en zetten wij de standaard voor luxe vervoer.',
 
     'journey_title' => 'Onze reis',
-    'journey_p1' => "Elite Brussels Limousine werd in 2010 opgericht door veteranen uit de transportsector met een eenvoudige missie: Brussel voorzien van een écht premium chauffeursservice die luxe, betrouwbaarheid en discretie combineert.",
+    'journey_p1' => "Luxway Limousine werd in 2010 opgericht door veteranen uit de transportsector met een eenvoudige missie: Brussel voorzien van een écht premium chauffeursservice die luxe, betrouwbaarheid en discretie combineert.",
     'journey_p2' => "Begonnen met slechts twee voertuigen, zijn we uitgegroeid tot een van de meest gerespecteerde limousinediensten in Brussel, voor zakelijke klanten, internationale bezoekers en lokale bewoners die alleen het beste verwachten.",
     'journey_p3' => "Onze toewijding aan uitmuntendheid heeft ons het vertrouwen opgeleverd van diplomatieke missies, Fortune 500-bedrijven en talloze personen die de speciale momenten van het leven vieren.",
 
@@ -46,7 +46,7 @@ return [
     'team_3_text' => 'Marc leidt ons team van professionele chauffeurs en zet de norm voor service-uitmuntendheid en verkeersveiligheid.',
 
     'chauffeurs_title' => 'Onze professionele chauffeurs',
-    'chauffeurs_p1' => 'Elke Elite Brussels Limousine-chauffeur doorloopt een streng selectie- en trainingsproces. We selecteren niet alleen op rijvaardigheid, maar ook op professionaliteit, communicatie en toewijding aan service-uitmuntendheid.',
+    'chauffeurs_p1' => 'Elke Luxway Limousine-chauffeur doorloopt een streng selectie- en trainingsproces. We selecteren niet alleen op rijvaardigheid, maar ook op professionaliteit, communicatie en toewijding aan service-uitmuntendheid.',
     'chauffeurs_p2' => 'Onze chauffeurs krijgen doorlopende training in:',
 
     'chauffeurs_li_1' => 'Defensief rijden en geavanceerde veiligheidstechnieken',
@@ -75,7 +75,7 @@ return [
     'community_3_text' => 'Onze vloot wordt regelmatig vernieuwd met de nieuwste milieuvriendelijke modellen met lagere uitstoot.',
 
     'cta_title' => 'Ervaar het verschil',
-    'cta_text' => 'Sluit u aan bij onze groeiende lijst tevreden klanten die het Elite Brussels Limousine-verschil hebben ervaren.',
+    'cta_text' => 'Sluit u aan bij onze groeiende lijst tevreden klanten die het Luxway Limousine-verschil hebben ervaren.',
     'cta_book' => 'Boek uw rit',
     'cta_contact' => 'Neem contact op',
 ];

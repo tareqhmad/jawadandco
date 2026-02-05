@@ -302,9 +302,11 @@
             user-select: none;
         }
 
-        th, td {
+        th,
+        td {
             padding: 1vw;
         }
+
         /* Responsive */
         @media (max-width: 992px) {
             .section-padding {
@@ -315,49 +317,52 @@
                 gap: 25px;
             }
 
-            .car-image{
+            .car-image {
                 max-width: 350px;
             }
         }
 
-        @media (max-width: 1190px){
-            .car-image{
+        @media (max-width: 1190px) {
+            .car-image {
                 max-width: 390px;
             }
         }
+
         @media (max-width: 860px) {
-            html{
+            html {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
 
             }
-            body * {
-                border: solid 1px black;
-            }
-            .container{
+
+            .container {
                 justify-content: center;
                 align-items: center;
                 display: flex;
                 flex-direction: column;
                 width: 100vw;
-                min-width:80vw;
+                min-width: 80vw;
                 width: 80vw;
-                max-width:100vw;
+                max-width: 100vw;
                 padding: 10px;
             }
-            body{
-                border:solid 1px black;
-                display:flex;
+
+            body {
+                border: solid 1px black;
+                display: flex;
                 flex-direction: column;
                 justify-content: center;
             }
+
             .mobile-menu-btn {
                 display: block;
             }
-            .car-image{
+
+            .car-image {
                 max-width: 390px;
             }
+
             .nav-links {
                 position: fixed;
                 top: 80px;
@@ -455,7 +460,7 @@
     <nav class="nav-bar">
         <div class="nav-container">
             <a href="/{{ app()->getLocale() }}" class="logo">
-                EliteBrussels Limo
+                Luxway
             </a>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -530,7 +535,8 @@
     </main>
 
     <!-- Footer -->
-    <footer style="background-color: var(--color-footer-bg); color: var(--color-footer-text-primary); padding-top: 20px;">
+    <footer
+        style="background-color: var(--color-footer-bg); color: var(--color-footer-text-primary); padding-top: 20px;">
         <div class="container section-padding">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px;">
                 <div>

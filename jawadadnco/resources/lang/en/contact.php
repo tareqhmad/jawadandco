@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'meta_title' => 'Contact Us | Elite Brussels Limousine',
-    'meta_description' => 'Contact Elite Brussels Limousine for bookings, inquiries, or support. We are available 24/7 to assist with your luxury transportation needs.',
+    'meta_title' => 'Contact Us | Luxway Limousine',
+    'meta_description' => 'Contact Luxway Limousine for bookings, inquiries, or support. We are available 24/7 to assist with your luxury transportation needs.',
 
     'hero_badge' => 'Get in Touch',
     'hero_title' => 'Contact Us',
@@ -18,7 +18,7 @@ return [
     'phone_note' => '24/7 Available',
 
     'email_title' => 'Email Address',
-    'email_value' => 'info@elitebrusselslimo.be',
+    'email_value' => 'info@luxway.be',
     'email_note' => 'Response within 2 hours',
 
     'hours_title' => 'Business Hours',
@@ -61,7 +61,7 @@ return [
     'location_title' => 'Our Location',
     'location_text' => "Find us in the heart of Brussels. While we're primarily a mobile service, our administrative office is located at:",
 
-    'map_card_title' => 'Elite Brussels Limousine',
+    'map_card_title' => 'Luxway Limousine',
     'map_card_address' => 'Avenue Louise 123, 1050 Brussels',
 
     'getting_here_title' => 'Getting Here',

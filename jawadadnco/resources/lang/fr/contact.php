@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'meta_title' => 'Contact | Elite Brussels Limousine',
-    'meta_description' => "Contactez Elite Brussels Limousine pour vos réservations, demandes d'information ou assistance. Nous sommes disponibles 24h/24 et 7j/7 pour répondre à vos besoins de transport de luxe.",
+    'meta_title' => 'Contact | Luxway Limousine',
+    'meta_description' => "Contactez Luxway Limousine pour vos réservations, demandes d'information ou assistance. Nous sommes disponibles 24h/24 et 7j/7 pour répondre à vos besoins de transport de luxe.",
 
     'hero_badge' => 'Nous contacter',
     'hero_title' => 'Contactez-nous',
@@ -18,7 +18,7 @@ return [
     'phone_note' => 'Disponible 24h/24, 7j/7',
 
     'email_title' => 'Adresse e-mail',
-    'email_value' => 'info@elitebrusselslimo.be',
+    'email_value' => 'info@luxway.be',
     'email_note' => 'Réponse sous 2 heures',
 
     'hours_title' => "Heures d'ouverture",
@@ -61,7 +61,7 @@ return [
     'location_title' => 'Notre emplacement',
     'location_text' => "Retrouvez-nous au cœur de Bruxelles. Même si nous sommes principalement un service mobile, notre bureau administratif se situe à :",
 
-    'map_card_title' => 'Elite Brussels Limousine',
+    'map_card_title' => 'Luxway Limousine',
     'map_card_address' => 'Avenue Louise 123, 1050 Bruxelles',
 
     'getting_here_title' => 'Accès',

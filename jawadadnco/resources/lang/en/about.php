@@ -2,17 +2,17 @@
 
 return [
     // SEO
-    'meta_title' => 'About Us | Elite Brussels Limousine',
-    'meta_description' => "Learn about Elite Brussels Limousine - a premier chauffeur service in Brussels with over 10\n    years of experience in luxury transportation.",
+    'meta_title' => 'About Us | Luxway Limousine',
+    'meta_description' => "Learn about Luxway Limousine - a premier chauffeur service in Brussels with over 10\n    years of experience in luxury transportation.",
 
     // Hero
     'hero_badge' => 'Our Story',
-    'hero_title' => 'About Elite Brussels Limousine',
+    'hero_title' => 'About Luxway Limousine',
     'hero_text' => 'For over a decade, we have been providing premium chauffeur services in Brussels, setting the standard for luxury transportation.',
 
     // Company story
     'journey_title' => 'Our Journey',
-    'journey_p1' => "Founded in 2010 by transportation industry veterans, Elite Brussels Limousine began with a simple mission: to provide Brussels with a truly premium chauffeur service that combines luxury, reliability, and discretion.",
+    'journey_p1' => "Founded in 2010 by transportation industry veterans, Luxway Limousine began with a simple mission: to provide Brussels with a truly premium chauffeur service that combines luxury, reliability, and discretion.",
     'journey_p2' => "Starting with just two vehicles, we have grown to become one of Brussels' most respected limousine services, serving corporate clients, international visitors, and local residents who expect nothing but the best.",
     'journey_p3' => "Our commitment to excellence has earned us the trust of diplomatic missions, Fortune 500 companies, and countless individuals celebrating life's special moments.",
 
@@ -52,7 +52,7 @@ return [
 
     // Chauffeurs
     'chauffeurs_title' => 'Our Professional Chauffeurs',
-    'chauffeurs_p1' => 'Every Elite Brussels Limousine chauffeur undergoes a rigorous selection and training process. We hire not just based on driving skill, but on professionalism, communication ability, and commitment to service excellence.',
+    'chauffeurs_p1' => 'Every Luxway Limousine chauffeur undergoes a rigorous selection and training process. We hire not just based on driving skill, but on professionalism, communication ability, and commitment to service excellence.',
     'chauffeurs_p2' => 'Our chauffeurs receive ongoing training in:',
 
     'chauffeurs_li_1' => 'Defensive driving and advanced safety techniques',
@@ -83,7 +83,7 @@ return [
 
     // CTA
     'cta_title' => 'Experience the Difference',
-    'cta_text' => 'Join our growing list of satisfied clients who have experienced the Elite Brussels Limousine difference.',
+    'cta_text' => 'Join our growing list of satisfied clients who have experienced the Luxway Limousine difference.',
     'cta_book' => 'Book Your Journey',
     'cta_contact' => 'Contact Us',
 ];

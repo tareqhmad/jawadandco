@@ -46,7 +46,8 @@
                                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
                                     <label
                                         style="display: flex; align-items: center; padding: 15px; border: 2px solid var(--color-accent); border-radius: 4px; cursor: pointer; transition: all 0.3s ease;">
-                                        <input type="radio" name="tripType" value="oneway" style="margin-right: 10px;" checked>
+                                        <input type="radio" name="tripType" value="oneway" style="margin-right: 10px;"
+                                            checked>
                                         <div>
                                             <div style="font-weight: 600; color: var(--color-dark);">
                                                 {{ __('booking.trip_oneway') }}
@@ -289,85 +290,6 @@
                             </button>
                         </form>
                     </div>
-
-                    <!-- Booking Summary Sidebar -->
-                    <div>
-                        <div
-                            style="background: var(--color-primary); padding: 30px; border-radius: 8px; box-shadow: 0 10px 30px rgba(122, 125, 125, 0.08); position: sticky; top: 100px;">
-                            <h3
-                                style="font-size: 22px; color: var(--color-dark); margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid var(--color-accent);">
-                                {{ __('booking.summary_title') }}
-                            </h3>
-
-                            <div style="margin-bottom: 25px;">
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_vehicle') }}</span>
-                                    <span style="color: var(--color-dark); font-weight: 600;">{{ __('booking.summary_price_range') }}</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_service') }}</span>
-                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_included') }}</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_meet_greet') }}</span>
-                                    <span style="color: var(--color-secondary);">{{ __('booking.summary_included') }}</span>
-                                </div>
-                            </div>
-
-                            <div
-                                style="margin: 30px 0; padding: 20px 0; border-top: 1px solid var(--color-accent); border-bottom: 1px solid var(--color-accent);">
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-                                    <span style="color: var(--color-dark); font-weight: 600;">{{ __('booking.estimated_total') }}</span>
-                                    <span style="color: var(--color-dark); font-size: 24px; font-weight: 700;">{{ __('booking.summary_price_range') }}</span>
-                                </div>
-                                <div style="font-size: 14px; color: var(--color-secondary);">
-                                    {{ __('booking.final_price_note') }}
-                                </div>
-                            </div>
-
-                            <div style="margin-bottom: 25px;">
-                                <h4 style="color: var(--color-dark); margin-bottom: 15px; font-size: 16px;">
-                                    {{ __('booking.included_title') }}
-                                </h4>
-                                <ul style="list-style: none; color: var(--color-secondary); font-size: 14px;">
-                                    <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
-                                        <i class="fas fa-check"
-                                            style="color: var(--color-secondary); position: absolute; left: 0; font-size: 12px;"></i>
-                                        {{ __('booking.included_1') }}
-                                    </li>
-                                    <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
-                                        <i class="fas fa-check"
-                                            style="color: var(--color-secondary); position: absolute; left: 0; font-size: 12px;"></i>
-                                        {{ __('booking.included_2') }}
-                                    </li>
-                                    <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
-                                        <i class="fas fa-check"
-                                            style="color: var(--color-secondary); position: absolute; left: 0; font-size: 12px;"></i>
-                                        {{ __('booking.included_3') }}
-                                    </li>
-                                    <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
-                                        <i class="fas fa-check"
-                                            style="color: var(--color-secondary); position: absolute; left: 0; font-size: 12px;"></i>
-                                        {{ __('booking.included_4') }}
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div
-                                style="background: var(--color-accent); padding: 20px; border-radius: 4px; margin-top: 25px;">
-                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                                    <i class="fas fa-headset"
-                                        style="color: var(--color-secondary); margin-right: 10px; font-size: 20px;"></i>
-                                    <div>
-                                        <div style="color: var(--color-dark); font-weight: 600;">{{ __('booking.help_title') }}</div>
-                                        <div style="color: var(--color-secondary); font-size: 14px;">
-                                            {{ __('booking.help_call', ['phone' => '+32 2 123 4567']) }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -391,7 +313,8 @@
                         <div class="icon-circle" style="width: 60px; height: 60px; margin-bottom: 15px;">
                             <i class="fas fa-lock" style="font-size: 22px;"></i>
                         </div>
-                        <div style="font-weight: 600; color: var(--color-dark);">{{ __('booking.badge_secure_payment') }}</div>
+                        <div style="font-weight: 600; color: var(--color-dark);">{{ __('booking.badge_secure_payment') }}
+                        </div>
                     </div>
                     <div style="text-align: center;">
                         <div class="icon-circle" style="width: 60px; height: 60px; margin-bottom: 15px;">

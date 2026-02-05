@@ -31,10 +31,10 @@ return [
 
     'service_events_title' => 'Speciale evenementen',
     'service_events_text' => 'Maak uw huwelijk, jubileum, gala of viering onvergetelijk met onze luxueuze limousines.',
-    
+
     // Why choose us
     'why_badge' => 'Waarom voor ons kiezen',
-    'why_title' => 'Het Elite Brussels-verschil',
+    'why_title' => 'Het Luxway-verschil',
 
     'why_punctuality_title' => 'Punctualiteit',
     'why_punctuality_text' => 'We garanderen tijdige ophalingen met realtime tracking en verkeersmonitoring. Uw tijd is onze prioriteit.',
@@ -74,7 +74,7 @@ return [
     // Testimonials
     'testimonials_badge' => 'Getuigenissen',
     'testimonials_title' => 'Wat onze klanten zeggen',
-    'testimonials_subtitle' => 'Ontdek de Elite Brussels Limousine-service via de woorden van onze klanten',
+    'testimonials_subtitle' => 'Ontdek de Luxway Limousine-service via de woorden van onze klanten',
 
     'testimonial_1_name' => 'Thomas Laurent',
     'testimonial_1_role' => 'Business executive',
@@ -86,7 +86,7 @@ return [
 
     'testimonial_3_name' => 'Maria Kowalski',
     'testimonial_3_role' => 'Frequent reiziger',
-    'testimonial_3_text' => '"Vaste klant voor luchthaventransfers. Altijd betrouwbaar, comfortabel en professioneel. Ik raad Elite Brussels Limousine ten zeerste aan voor iedereen in Brussel."',
+    'testimonial_3_text' => '"Vaste klant voor luchthaventransfers. Altijd betrouwbaar, comfortabel en professioneel. Ik raad Luxway Limousine ten zeerste aan voor iedereen in Brussel."',
 
     // CTA bottom
     'cta_bottom_title' => 'Klaar voor uw rit?',

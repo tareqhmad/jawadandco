@@ -2,7 +2,7 @@
 
 return [
     // Meta defaults
-    'default_title' => 'Elite Brussels Limousine - Premium chauffeursdienst',
+    'default_title' => 'Luxway Limousine - Premium chauffeursdienst',
     'default_description' => 'Premium limousine- en privéchauffeurdiensten in Brussel. Luchthaventransfers, zakelijk vervoer en luxeevenementen.',
 
     // Navigation
@@ -31,12 +31,12 @@ return [
     'footer_contact_info' => 'Contactinfo',
     'footer_address' => 'Avenue Louise 123, 1050 Brussel, België',
     'footer_phone' => '+32 2 123 4567',
-    'footer_email' => 'info@elitebrusselslimo.be',
+    'footer_email' => 'info@luxway.be',
 
     // WhatsApp
     'whatsapp_label' => 'WhatsApp',
     'whatsapp_url' => 'https://wa.me/32497227033?text=Hallo%20Elite%20Brussels%20Limousine,%20ik%20wil%20graag%20een%20offerte%20voor%20een%20priv%C3%A9chauffeur%20in%20Brussel.',
 
     // Copyright
-    'copyright' => 'Elite Brussels Limousine. Alle rechten voorbehouden. | Professionele chauffeursdiensten in Brussel',
+    'copyright' => 'Luxway Limousine. Alle rechten voorbehouden. | Professionele chauffeursdiensten in Brussel',
 ];
