@@ -91,5 +91,5 @@ Route::prefix('{locale}')
         })->name('home');
     });
 
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/{locale}/contact', [ContactController::class, 'send'])->name('contact.send');
 Route::post('/contact', [ContactController::class, 'contactform'])->name('contactform');
