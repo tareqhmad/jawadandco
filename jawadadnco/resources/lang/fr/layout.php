@@ -27,6 +27,8 @@ return [
     'footer_link_fleet' => 'Notre flotte',
     'footer_link_booking' => 'Réserver',
     'footer_link_contact' => 'Nous contacter',
+    'footer_link_privacy_policy' => 'Politique de confidentialité',
+    'footer_link_legal_notices' => 'Mentions légales',
 
     'footer_contact_info' => 'Coordonnées',
     'footer_address' => 'Avenue Louise 123, 1050 Bruxelles, Belgique',

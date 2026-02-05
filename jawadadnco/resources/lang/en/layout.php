@@ -28,6 +28,7 @@ return [
     'footer_link_booking' => 'Book Now',
     'footer_link_contact' => 'Contact Us',
     'footer_link_privacy_policy' => 'Privacy Policy',
+    'footer_link_legal_notices' => 'Legal Notices',
 
     'footer_contact_info' => 'Contact Info',
     'footer_address' => 'Avenue Louise 123, 1050 Brussels, Belgium',

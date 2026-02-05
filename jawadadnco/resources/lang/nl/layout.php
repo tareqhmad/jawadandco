@@ -27,6 +27,8 @@ return [
     'footer_link_fleet' => 'Onze vloot',
     'footer_link_booking' => 'Nu boeken',
     'footer_link_contact' => 'Contacteer ons',
+    'footer_link_privacy_policy' => 'Privacybeleid',
+    'footer_link_legal_notices' => 'Juridische kennisgevingen',
 
     'footer_contact_info' => 'Contactinfo',
     'footer_address' => 'Avenue Louise 123, 1050 Brussel, België',
