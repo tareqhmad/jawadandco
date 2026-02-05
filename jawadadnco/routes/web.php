@@ -61,6 +61,20 @@ Route::get('/{locale}/contact', function () {
 ->where(['locale' => 'fr|nl|en'])
 ->middleware('setlocale');
 
+Route::get('/{locale}/privacy-policy', function () {
+    return view('layouts/privacy_policy');
+})
+->name('privacy-policy')
+->where(['locale' => 'fr|nl|en'])
+->middleware('setlocale');
+
+Route::get('/{locale}/legal-notices', function () {
+    return view('layouts/legal_notices');
+})
+->name('legal-notices')
+->where(['locale' => 'fr|nl|en'])
+->middleware('setlocale');
+
 Route::post('/theme/toggle', function (Request $request) {
     $current = $request->cookie('theme', 'light');
     $next = $current === 'dark' ? 'light' : 'dark';

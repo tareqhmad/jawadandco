@@ -581,6 +581,12 @@
                                 {{ __('layout.footer_link_contact') }}
                             </a>
                         </li>
+                         <li style="margin-bottom: 12px;">
+                            <a href="/{{ app()->getLocale() }}/privacy-policy"
+                                style="color: var(--color-footer-text-secondary); text-decoration: none; transition: color 0.3s ease;">
+                                {{ __('layout.footer_link_privacy_policy') }}
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
