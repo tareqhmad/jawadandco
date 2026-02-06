@@ -36,18 +36,6 @@ return [
                 'Panoramic Roof',
             ],
         ],
-        'bmw_7_series' => [
-            'title' => 'BMW 7 Series',
-            'passengers' => '3-4',
-            'luggage' => '3 large',
-            'category' => 'Executive',
-            'description' => 'Combining sporty performance with executive luxury, featuring gesture control and executive lounge seating.',
-            'features' => [
-                'Bowers & Wilkins Sound',
-                'Massage Seats',
-                'Rear Entertainment',
-            ],
-        ],
         'mercedes_e_class' => [
             'title' => 'Mercedes E-Class',
             'passengers' => '3-4',
