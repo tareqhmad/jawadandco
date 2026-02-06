@@ -2,8 +2,8 @@
 
 return [
     // SEO
-    'meta_title' => 'Nos services | Service de limousine premium Bruxelles',
-    'meta_description' => "Découvrez nos services premium de chauffeur à Bruxelles : transferts aéroport, déplacements professionnels,\n    événements spéciaux et locations de limousine à l’heure.",
+    'meta_title' => 'Nos services | Luxway',
+    'meta_description' => "Découvrez nos services premium de chauffeur à Bruxelles : transferts aéroport, déplacements professionnels,\n    événements spéciaux et locations de véhicules à l’heure.",
 
     // Hero
     'hero_badge' => 'Nos offres',
@@ -30,7 +30,7 @@ return [
 
     // Cards - Events
     'events_title' => 'Événements spéciaux',
-    'events_text' => 'Rendez vos occasions spéciales inoubliables avec nos services de limousine de luxe et de chauffeur.',
+    'events_text' => 'Rendez vos occasions spéciales inoubliables avec nos services de chauffeur de luxe.',
     'events_feature_1' => 'Mariages et anniversaires',
     'events_feature_2' => 'Galas et événements tapis rouge',
     'events_feature_3' => 'Célébrations d’anniversaire',

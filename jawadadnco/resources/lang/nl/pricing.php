@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'meta_title' => 'Prijzen & tarieven | Limousineservice Brussel',
-    'meta_description' => "Transparante prijzen voor onze premium limousinediensten in Brussel. Luchthaventransfers, uurtarieven\n    en zakelijke pakketten.",
+    'meta_title' => 'Prijzen & tarieven | Luxway Brussel',
+    'meta_description' => "Transparante prijzen voor onze premium privéchauffeursdiensten in Brussel. Luchthaventransfers, uurtarieven\n    en zakelijke pakketten.",
 
     'hero_badge' => 'Transparante prijzen',
     'hero_title' => 'Eenvoudige, duidelijke prijzen',

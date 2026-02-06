@@ -91,7 +91,7 @@ return [
     'faq_a4' => 'Annuleringen meer dan 24 uur vóór de geplande ophaaltijd zijn gratis. Annuleringen binnen 24 uur brengen 50% kosten met zich mee. Voor luchthaventransfers monitoren we vluchtvertragingen en gelden er geen annuleringskosten bij vertraagde of geannuleerde vluchten.',
 
     'cta_title' => 'Klaar om te starten?',
-    'cta_text' => 'Neem vandaag nog contact met ons op om uw vervoersbehoeften te bespreken of boek uw premium limousineservice.',
+    'cta_text' => 'Neem vandaag nog contact met ons op om uw vervoersbehoeften te bespreken of boek uw premium chauffeurservice.',
     'cta_book' => 'Nu boeken',
     'cta_call' => 'Nu bellen',
 

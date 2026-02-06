@@ -2,13 +2,13 @@
 
 return [
     // SEO
-    'meta_title' => 'Premium limousineservice in Brussel | Elite Chauffeur',
-    'meta_description' => "Ervaar luxueus reizen in Brussel met onze premium limousine- en privéchauffeursdiensten.\nLuchthaventransfers, bedrijfsevenementen en speciale gelegenheden.",
+    'meta_title' => 'Luxway - Premium Chauffeur Service',
+    'meta_description' => "Ervaar luxueus reizen in Brussel met onze premium privéchauffeursdiensten.\nLuchthaventransfers, bedrijfsevenementen en speciale gelegenheden.",
 
     // Hero
     'hero_heading_line1' => 'Elegant reizen',
     'hero_heading_line2' => 'in :city',
-    'hero_paragraph' => 'Ervaar het toppunt van luxe, comfort en discretie met onze premium limousine- en privéchauffeursdiensten. Wij bedienen Brussel met uitmuntendheid sinds 2010.',
+    'hero_paragraph' => 'Ervaar het toppunt van luxe, comfort en discretie met onze premium en privéchauffeursdiensten. Wij bedienen Brussel met uitmuntendheid sinds 2010.',
     'cta_book_now' => 'Nu boeken',
     'cta_view_fleet' => 'Onze vloot bekijken',
 
@@ -30,7 +30,7 @@ return [
     'service_corporate_text' => 'Professionele chauffeursdiensten voor vergaderingen, bedrijfsevenementen en executive vervoer in en rond Brussel.',
 
     'service_events_title' => 'Speciale evenementen',
-    'service_events_text' => 'Maak uw huwelijk, jubileum, gala of viering onvergetelijk met onze luxueuze limousines.',
+    'service_events_text' => 'Maak uw huwelijk, jubileum, gala of viering onvergetelijk met onze luxueuze chauffeursdiensten.',
 
     // Why choose us
     'why_badge' => 'Waarom voor ons kiezen',

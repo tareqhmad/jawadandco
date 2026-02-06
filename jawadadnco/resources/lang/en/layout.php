@@ -2,8 +2,8 @@
 
 return [
     // Meta defaults
-    'default_title' => 'Luxway Limousine - Premium Chauffeur Service',
-    'default_description' => 'Premium limousine and private chauffeur services in Brussels. Airport transfers, corporate travel, and luxury events.',
+    'default_title' => 'Luxway - Premium Chauffeur Service',
+    'default_description' => 'Private chauffeur services in Brussels. Airport transfers, corporate travel, and luxury events.',
 
     // Navigation
     'nav_home' => 'Home',
@@ -27,6 +27,8 @@ return [
     'footer_link_fleet' => 'Our Fleet',
     'footer_link_booking' => 'Book Now',
     'footer_link_contact' => 'Contact Us',
+    'footer_link_privacy_policy' => 'Privacy Policy',
+    'footer_link_legal_notices' => 'Legal Notices',
 
     'footer_contact_info' => 'Contact Info',
     'footer_address' => 'Avenue Louise 123, 1050 Brussels, Belgium',
@@ -35,8 +37,8 @@ return [
 
     // WhatsApp
     'whatsapp_label' => 'WhatsApp',
-    'whatsapp_url' => 'https://wa.me/32497227033?text=Hello%20Elite%20Brussels%20Limousine,%20I%20would%20like%20a%20quote%20for%20a%20private%20chauffeur%20in%20Brussels.',
+    'whatsapp_url' => 'https://wa.me/32497227033?text=Hello%20Luxway,%20I%20would%20like%20a%20quote%20for%20a%20private%20chauffeur%20in%20Brussels.',
 
     // Copyright
-    'copyright' => 'Luxway Limousine. All rights reserved. | Professional chauffeur services in Brussels',
+    'copyright' => 'Luxway. All rights reserved. | Professional chauffeur services in Brussels',
 ];

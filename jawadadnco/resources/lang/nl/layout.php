@@ -2,8 +2,8 @@
 
 return [
     // Meta defaults
-    'default_title' => 'Luxway Limousine - Premium chauffeursdienst',
-    'default_description' => 'Premium limousine- en privéchauffeurdiensten in Brussel. Luchthaventransfers, zakelijk vervoer en luxeevenementen.',
+    'default_title' => 'Luxway - Premium chauffeursdienst',
+    'default_description' => 'Privéchauffeurdiensten in Brussel. Luchthaventransfers, zakelijk vervoer en luxeevenementen.',
 
     // Navigation
     'nav_home' => 'Home',
@@ -19,7 +19,7 @@ return [
     'theme_dark' => '🌙 Donker',
 
     // Footer
-    'footer_brand_title' => 'EliteBrussels Limo',
+    'footer_brand_title' => 'Luxway',
     'footer_brand_text' => 'Premium chauffeursdiensten in Brussel. Uitmuntendheid bij elke rit, discretie in elk detail.',
 
     'footer_quick_links' => 'Snelle links',
@@ -27,6 +27,8 @@ return [
     'footer_link_fleet' => 'Onze vloot',
     'footer_link_booking' => 'Nu boeken',
     'footer_link_contact' => 'Contacteer ons',
+    'footer_link_privacy_policy' => 'Privacybeleid',
+    'footer_link_legal_notices' => 'Juridische kennisgevingen',
 
     'footer_contact_info' => 'Contactinfo',
     'footer_address' => 'Avenue Louise 123, 1050 Brussel, België',
@@ -35,8 +37,8 @@ return [
 
     // WhatsApp
     'whatsapp_label' => 'WhatsApp',
-    'whatsapp_url' => 'https://wa.me/32497227033?text=Hallo%20Elite%20Brussels%20Limousine,%20ik%20wil%20graag%20een%20offerte%20voor%20een%20priv%C3%A9chauffeur%20in%20Brussel.',
+    'whatsapp_url' => 'https://wa.me/32497227033?text=Hallo%20Luxway,%20ik%20wil%20graag%20een%20offerte%20voor%20een%20priv%C3%A9chauffeur%20in%20Brussel.',
 
     // Copyright
-    'copyright' => 'Luxway Limousine. Alle rechten voorbehouden. | Professionele chauffeursdiensten in Brussel',
+    'copyright' => 'Luxway. Alle rechten voorbehouden. | Professionele chauffeursdiensten in Brussel',
 ];

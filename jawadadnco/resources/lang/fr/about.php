@@ -10,7 +10,7 @@ return [
 
     'journey_title' => 'Notre parcours',
     'journey_p1' => "Fondée en 2010 par des vétérans du secteur du transport, Luxway Limousine a commencé avec une mission simple : offrir à Bruxelles un véritable service de chauffeur premium qui combine luxe, fiabilité et discrétion.",
-    'journey_p2' => "En commençant avec seulement deux véhicules, nous avons grandi pour devenir l’un des services de limousine les plus respectés de Bruxelles, au service de clients corporate, de visiteurs internationaux et de résidents locaux qui n’acceptent rien d’autre que le meilleur.",
+    'journey_p2' => "En commençant avec seulement deux véhicules, nous avons grandi pour devenir l’un des services de chauffeurs privés les plus respectés de Bruxelles, au service de clients corporate, de visiteurs internationaux et de résidents locaux qui n’acceptent rien d’autre que le meilleur.",
     'journey_p3' => "Notre engagement envers l’excellence nous a valu la confiance de missions diplomatiques, d’entreprises du Fortune 500 et d’innombrables personnes célébrant les moments spéciaux de la vie.",
 
     'badge_years_title' => '10+ ans d’excellence',

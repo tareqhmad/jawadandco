@@ -2,13 +2,13 @@
 
 return [
     // SEO
-    'meta_title' => 'Book Now | Limousine Service Brussels',
-    'meta_description' => 'Book your premium limousine service in Brussels. Airport transfers, corporate travel, special events, and hourly rentals.',
+    'meta_title' => 'Book Now | Luxway',
+    'meta_description' => 'Book your premium chauffeur service in Brussels. Airport transfers, corporate travel, special events, and hourly rentals.',
 
     // Hero
     'hero_badge' => 'Reservation',
     'hero_title' => 'Book Your Journey',
-    'hero_text' => 'Complete the form below to book your premium limousine service. Our team will confirm your booking within 30 minutes.',
+    'hero_text' => 'Complete the form below to book your premium chauffeur service. Our team will confirm your booking within 30 minutes.',
 
     // Form
     'form_title' => 'Booking Details',
@@ -28,14 +28,6 @@ return [
 
     'pickup_date_label' => 'Pick-up Date *',
     'pickup_time_label' => 'Pick-up Time *',
-
-    'vehicle_type_label' => 'Vehicle Type *',
-    'vehicle_select_placeholder' => 'Select Vehicle',
-    'vehicle_mercedes_s' => 'Mercedes-Benz S-Class (3-4 passengers)',
-    'vehicle_bmw_7' => 'BMW 7 Series (3-4 passengers)',
-    'vehicle_limo' => 'Executive Limousine (6-8 passengers)',
-    'vehicle_mercedes_v' => 'Mercedes V-Class (6-7 passengers)',
-    'vehicle_audi_a8' => 'Audi A8 (3-4 passengers)',
 
     'service_type_label' => 'Service Type *',
     'service_select_placeholder' => 'Select Service',

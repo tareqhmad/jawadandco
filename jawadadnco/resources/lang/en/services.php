@@ -2,8 +2,8 @@
 
 return [
     // SEO
-    'meta_title' => 'Our Services | Premium Limousine Service Brussels',
-    'meta_description' => "Discover our premium chauffeur services in Brussels: airport transfers, corporate travel,\n    special events, and hourly limousine rentals.",
+    'meta_title' => 'Our Services | Luxway',
+    'meta_description' => "Discover our premium chauffeur services in Brussels: airport transfers, corporate travel,\n    special events, and hourly fleet rentals.",
 
     // Hero
     'hero_badge' => 'Our Offerings',
@@ -30,7 +30,7 @@ return [
 
     // Cards - Events
     'events_title' => 'Special Events',
-    'events_text' => 'Make your special occasions unforgettable with our luxury limousine and chauffeur services.',
+    'events_text' => 'Make your special occasions unforgettable with our luxury fleet and chauffeur services.',
     'events_feature_1' => 'Weddings and anniversaries',
     'events_feature_2' => 'Galas and red carpet events',
     'events_feature_3' => 'Birthday celebrations',

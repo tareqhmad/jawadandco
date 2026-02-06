@@ -2,13 +2,13 @@
 
 return [
     // SEO
-    'meta_title' => 'Réserver maintenant | Service de limousine Bruxelles',
-    'meta_description' => 'Réservez votre service premium de limousine à Bruxelles. Transferts aéroport, déplacements professionnels, événements spéciaux et locations à l’heure.',
+    'meta_title' => 'Réserver maintenant | Luxway',
+    'meta_description' => 'Réservez votre service premium de chauffeur privé à Bruxelles. Transferts aéroport, déplacements professionnels, événements spéciaux et locations à l’heure.',
 
     // Hero
     'hero_badge' => 'Réservation',
     'hero_title' => 'Réservez votre trajet',
-    'hero_text' => 'Complétez le formulaire ci-dessous pour réserver votre service premium de limousine. Notre équipe confirmera votre réservation dans les 30 minutes.',
+    'hero_text' => 'Complétez le formulaire ci-dessous pour réserver votre service premium de chauffeur privé. Notre équipe confirmera votre réservation dans les 30 minutes.',
 
     // Form
     'form_title' => 'Détails de la réservation',
@@ -28,14 +28,6 @@ return [
 
     'pickup_date_label' => 'Date de prise en charge *',
     'pickup_time_label' => 'Heure de prise en charge *',
-
-    'vehicle_type_label' => 'Type de véhicule *',
-    'vehicle_select_placeholder' => 'Sélectionner un véhicule',
-    'vehicle_mercedes_s' => 'Mercedes-Benz S-Class (3-4 passagers)',
-    'vehicle_bmw_7' => 'BMW 7 Series (3-4 passagers)',
-    'vehicle_limo' => 'Limousine exécutive (6-8 passagers)',
-    'vehicle_mercedes_v' => 'Mercedes V-Class (6-7 passagers)',
-    'vehicle_audi_a8' => 'Audi A8 (3-4 passagers)',
 
     'service_type_label' => 'Type de service *',
     'service_select_placeholder' => 'Sélectionner un service',

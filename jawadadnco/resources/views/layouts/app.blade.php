@@ -1,29 +1,29 @@
 @php
-    $locale = request()->route('locale');
-    $segments = request()->segments();
+$locale = request()->route('locale');
+$segments = request()->segments();
 
-    $supportedLocales = ['en', 'fr', 'nl'];
+$supportedLocales = ['en', 'fr', 'nl'];
 
-    $currentLocale = app()->getLocale();
-    if (!in_array($currentLocale, $supportedLocales)) {
-        $currentLocale = 'en';
-    }
+$currentLocale = app()->getLocale();
+if (!in_array($currentLocale, $supportedLocales)) {
+$currentLocale = 'en';
+}
 
-    $segments = request()->segments();
+$segments = request()->segments();
 
-    if (!isset($segments[0]) || !in_array($segments[0], $supportedLocales)) {
-        array_unshift($segments, $currentLocale);
-    }
+if (!isset($segments[0]) || !in_array($segments[0], $supportedLocales)) {
+array_unshift($segments, $currentLocale);
+}
 
-    $buildLocaleUrl = function (string $locale) use ($segments) {
-        $new = $segments;
-        $new[0] = $locale;
-        return url(implode('/', $new));
-    };
+$buildLocaleUrl = function (string $locale) use ($segments) {
+$new = $segments;
+$new[0] = $locale;
+return url(implode('/', $new));
+};
 @endphp
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => request()->cookie('theme', 'light') === 'dark'])>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark'=> request()->cookie('theme', 'light') === 'dark'])>
 
 <head>
     <meta charset="utf-8">
@@ -189,7 +189,6 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(122, 125, 125, 0.08);
-            transition: all 0.3s ease;
         }
 
         .nav-container {
@@ -213,7 +212,22 @@
             background: var(--color-primary);
             color: var(--color-secondary);
             display: flex;
+            justify-content: center;
             gap: 40px;
+            width: 100%;
+        }
+
+        .nav-links-container {
+            background: var(--color-primary);
+            color: var(--color-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: 100%;
+        }
+
+        .nav-settings {
+            width: fit-content;
         }
 
         .nav-links a.active {
@@ -364,6 +378,15 @@
             }
 
             .nav-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-settings {
+                width: 100%;
+            }
+
+            .nav-links-container {
                 position: fixed;
                 top: 80px;
                 left: 0;
@@ -376,7 +399,7 @@
                 z-index: 999;
             }
 
-            .nav-links.active {
+            .nav-links-container.active {
                 display: flex;
             }
 
@@ -439,16 +462,16 @@
         }
 
         .lang-btn {
-            style="display:flex;
-            align-items:center;
-            gap:8px; cursor:pointer;
-            font-size:12px;
-            font-weight:600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
             color: var(--color-dark);
             background: var(--color-accent);
-            padding:6px 10px;
-            border-radius:6px;
-            border: 1px solid var(--color-secondary);"
+            padding: 6px 10px;
+            border-radius: 6px;
         }
     </style>
 
@@ -467,64 +490,67 @@
                 <i class="fas fa-bars"></i>
             </button>
 
-            <div class="nav-links" id="navLinks">
-                <a href="/{{ app()->getLocale() }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">
-                    {{ __('layout.nav_home') }}
-                </a>
+            <div class="nav-links-container" id="navLinksContainer">
+                <div class="nav-links" id="navLinks">
+                    <a href="/{{ app()->getLocale() }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">
+                        {{ __('layout.nav_home') }}
+                    </a>
 
-                <a href="/{{ app()->getLocale() }}/services"
-                    class="{{ request()->routeIs('services*') ? 'active' : '' }}">
-                    {{ __('layout.nav_services') }}
-                </a>
+                    <a href="/{{ app()->getLocale() }}/services"
+                        class="{{ request()->routeIs('services*') ? 'active' : '' }}">
+                        {{ __('layout.nav_services') }}
+                    </a>
 
-                <a href="/{{ app()->getLocale() }}/fleet" class="{{ request()->routeIs('fleet*') ? 'active' : '' }}">
-                    {{ __('layout.nav_fleet') }}
-                </a>
+                    <a href="/{{ app()->getLocale() }}/fleet" class="{{ request()->routeIs('fleet*') ? 'active' : '' }}">
+                        {{ __('layout.nav_fleet') }}
+                    </a>
 
-                <a href="/{{ app()->getLocale() }}/booking"
-                    class="{{ request()->routeIs('booking*') ? 'active' : '' }}">
-                    {{ __('layout.nav_booking') }}
-                </a>
+                    <a href="/{{ app()->getLocale() }}/booking"
+                        class="{{ request()->routeIs('booking*') ? 'active' : '' }}">
+                        {{ __('layout.nav_booking') }}
+                    </a>
 
-                <a href="/{{ app()->getLocale() }}/pricing"
-                    class="{{ request()->routeIs('pricing*') ? 'active' : '' }}">
-                    {{ __('layout.nav_pricing') }}
-                </a>
+                    <a href="/{{ app()->getLocale() }}/pricing"
+                        class="{{ request()->routeIs('pricing*') ? 'active' : '' }}">
+                        {{ __('layout.nav_pricing') }}
+                    </a>
 
-                <a href="/{{ app()->getLocale() }}/about" class="{{ request()->routeIs('about*') ? 'active' : '' }}">
-                    {{ __('layout.nav_about') }}
-                </a>
+                    <a href="/{{ app()->getLocale() }}/about" class="{{ request()->routeIs('about*') ? 'active' : '' }}">
+                        {{ __('layout.nav_about') }}
+                    </a>
 
-                <a href="/{{ app()->getLocale() }}/contact"
-                    class="{{ request()->routeIs('contact*') ? 'active' : '' }}">
-                    {{ __('layout.nav_contact') }}
-                </a>
-                <div style="display: flex; gap: 10px;">
-                    <button type="button" id="theme-toggle">
-                        @if (request()->cookie('theme', 'light') === 'dark')
+                    <a href="/{{ app()->getLocale() }}/contact"
+                        class="{{ request()->routeIs('contact*') ? 'active' : '' }}">
+                        {{ __('layout.nav_contact') }}
+                    </a>
+                </div>
+                <div class="nav-settings">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <button type="button" id="theme-toggle" style="cursor: pointer">
+                            @if (request()->cookie('theme', 'light') === 'dark')
                             <i class="fas fa-sun"></i>
-                        @else
+                            @else
                             <i class="fas fa-moon"></i>
-                        @endif
-                    </button>
-
-                    <div class="lang-dropdown" style="position: relative; display: inline-block;">
-                        <button type="button" class="lang-btn noHoverAnimation">
-                            {{ strtoupper($currentLocale) }}
-                            <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+                            @endif
                         </button>
 
-                        <div class="lang-menu">
-                            @foreach (array_diff($supportedLocales, [$currentLocale]) as $loc)
+                        <div class="lang-dropdown" style="position: relative; display: inline-block;">
+                            <button type="button" class="lang-btn noHoverAnimation">
+                                {{ strtoupper($currentLocale) }}
+                                <i class="fas fa-chevron-down" style="font-size:10px;"></i>
+                            </button>
+
+                            <div class="lang-menu">
+                                @foreach (array_diff($supportedLocales, [$currentLocale]) as $loc)
                                 <a class="lang-item noHoverAnimation" href="{{ $buildLocaleUrl($loc) }}"
                                     style="display:flex; align-items:center; justify-content:space-between; padding:10px 12px;
                                         text-decoration:none; color: var(--color-dark); font-size:12px;">
                                     <span class="noselect">{{ strtoupper($loc) }}</span>
                                 </a>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -551,7 +577,6 @@
                         <a href="#" style="font-size: 20px;"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-
                 <div>
                     <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 25px">
                         {{ __('layout.footer_quick_links') }}
@@ -579,6 +604,18 @@
                             <a href="/{{ app()->getLocale() }}/contact"
                                 style="color: var(--color-footer-text-secondary); text-decoration: none; transition: color 0.3s ease;">
                                 {{ __('layout.footer_link_contact') }}
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 12px;">
+                            <a href="/{{ app()->getLocale() }}/privacy-policy"
+                                style="color: var(--color-footer-text-secondary); text-decoration: none; transition: color 0.3s ease;">
+                                {{ __('layout.footer_link_privacy_policy') }}
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 12px;">
+                            <a href="/{{ app()->getLocale() }}/legal-notices"
+                                style="color: var(--color-footer-text-secondary); text-decoration: none; transition: color 0.3s ease;">
+                                {{ __('layout.footer_link_legal_notices') }}
                             </a>
                         </li>
                     </ul>
@@ -620,30 +657,9 @@
 
                             <span class="whatsapp-text">{{ __('layout.whatsapp_label') }}</span>
                         </a>
-
-                        <div
-                            style="position: absolute; top: -10px; right: -10px; width: 20px; height: 20px; background-color: #25D366; border-radius: 50%; border: 3px solid white; animation: whatsapp-pulse 2s infinite;">
-                        </div>
                     </div>
 
                     <style>
-                        @keyframes whatsapp-pulse {
-                            0% {
-                                transform: scale(0.9);
-                                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-                            }
-
-                            70% {
-                                transform: scale(1.1);
-                                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
-                            }
-
-                            100% {
-                                transform: scale(0.9);
-                                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-                            }
-                        }
-
                         @media (max-width: 768px) {
                             .whatsapp-button {
                                 bottom: 25px !important;
@@ -688,7 +704,9 @@
     <script>
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
             const navLinks = document.getElementById('navLinks');
+            const navLinksContainer = document.getElementById('navLinksContainer');
             navLinks.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
 
             const icon = this.querySelector('i');
             if (navLinks.classList.contains('active')) {

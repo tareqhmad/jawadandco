@@ -2,7 +2,7 @@
 
 return [
     // SEO
-    'meta_title' => 'Pricing & Rates | Limousine Service Brussels',
+    'meta_title' => 'Pricing & Rates | Luxway',
     'meta_description' => "Transparent pricing for our premium limousine services in Brussels. Airport transfers, hourly\n    rates, and corporate packages.",
 
     // Hero

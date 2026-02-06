@@ -2,13 +2,13 @@
 
 return [
     // SEO
-    'meta_title' => 'Service de limousine premium à Bruxelles | Chauffeur Elite',
-    'meta_description' => "Vivez un voyage de luxe à Bruxelles grâce à notre service premium de limousine et de chauffeur privé.\nTransferts aéroport, événements d’entreprise et occasions spéciales.",
+    'meta_title' => 'Luxway - Service De Chauffeur Premium',
+    'meta_description' => "Vivez un voyage de luxe à Bruxelles grâce à notre service premium de chauffeur privé.\nTransferts aéroport, événements d’entreprise et occasions spéciales.",
 
     // Hero
     'hero_heading_line1' => 'Voyage élégant',
     'hero_heading_line2' => 'à :city',
-    'hero_paragraph' => 'Vivez le summum du luxe, du confort et de la discrétion grâce à notre service premium de limousine et de chauffeur privé. À Bruxelles, l’excellence depuis 2010.',
+    'hero_paragraph' => 'Vivez le summum du luxe, du confort et de la discrétion grâce à notre service premium de chauffeur privé. À Bruxelles, l’excellence depuis 2010.',
     'cta_book_now' => 'Réserver',
     'cta_view_fleet' => 'Voir notre flotte',
 
@@ -30,7 +30,7 @@ return [
     'service_corporate_text' => 'Service de chauffeur professionnel pour vos réunions, événements d’entreprise et transports exécutifs partout à Bruxelles.',
 
     'service_events_title' => 'Événements spéciaux',
-    'service_events_text' => 'Rendez votre mariage, anniversaire, gala ou célébration inoubliable grâce à notre flotte de limousines de luxe.',
+    'service_events_text' => 'Rendez votre mariage, anniversaire, gala ou célébration inoubliable grâce à notre flotte de véhicules de luxe.',
 
     // Why choose us
     'why_badge' => 'Pourquoi nous choisir',
@@ -74,7 +74,7 @@ return [
     // Testimonials
     'testimonials_badge' => 'Témoignages',
     'testimonials_title' => 'Ce que disent nos clients',
-    'testimonials_subtitle' => 'Découvrez le service de limousine Luxway à travers les mots de nos clients',
+    'testimonials_subtitle' => 'Découvrez le service de chauffeur privé Luxway à travers les mots de nos clients',
 
     'testimonial_1_name' => 'Thomas Laurent',
     'testimonial_1_role' => 'Cadre dirigeant',
