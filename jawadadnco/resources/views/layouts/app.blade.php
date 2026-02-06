@@ -1,29 +1,29 @@
 @php
-    $locale = request()->route('locale');
-    $segments = request()->segments();
+$locale = request()->route('locale');
+$segments = request()->segments();
 
-    $supportedLocales = ['en', 'fr', 'nl'];
+$supportedLocales = ['en', 'fr', 'nl'];
 
-    $currentLocale = app()->getLocale();
-    if (!in_array($currentLocale, $supportedLocales)) {
-        $currentLocale = 'en';
-    }
+$currentLocale = app()->getLocale();
+if (!in_array($currentLocale, $supportedLocales)) {
+$currentLocale = 'en';
+}
 
-    $segments = request()->segments();
+$segments = request()->segments();
 
-    if (!isset($segments[0]) || !in_array($segments[0], $supportedLocales)) {
-        array_unshift($segments, $currentLocale);
-    }
+if (!isset($segments[0]) || !in_array($segments[0], $supportedLocales)) {
+array_unshift($segments, $currentLocale);
+}
 
-    $buildLocaleUrl = function (string $locale) use ($segments) {
-        $new = $segments;
-        $new[0] = $locale;
-        return url(implode('/', $new));
-    };
+$buildLocaleUrl = function (string $locale) use ($segments) {
+$new = $segments;
+$new[0] = $locale;
+return url(implode('/', $new));
+};
 @endphp
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => request()->cookie('theme', 'light') === 'dark'])>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark'=> request()->cookie('theme', 'light') === 'dark'])>
 
 <head>
     <meta charset="utf-8">
@@ -439,16 +439,17 @@
         }
 
         .lang-btn {
-            style="display:flex;
-            align-items:center;
-            gap:8px; cursor:pointer;
-            font-size:12px;
-            font-weight:600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
             color: var(--color-dark);
             background: var(--color-accent);
-            padding:6px 10px;
-            border-radius:6px;
-            border: 1px solid var(--color-secondary);"
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--color-secondary);
         }
     </style>
 
@@ -499,12 +500,13 @@
                     class="{{ request()->routeIs('contact*') ? 'active' : '' }}">
                     {{ __('layout.nav_contact') }}
                 </a>
-                <div style="display: flex; gap: 10px;">
-                    <button type="button" id="theme-toggle">
+
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <button type="button" id="theme-toggle" style="cursor: pointer">
                         @if (request()->cookie('theme', 'light') === 'dark')
-                            <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
                         @else
-                            <i class="fas fa-moon"></i>
+                        <i class="fas fa-moon"></i>
                         @endif
                     </button>
 
@@ -516,15 +518,14 @@
 
                         <div class="lang-menu">
                             @foreach (array_diff($supportedLocales, [$currentLocale]) as $loc)
-                                <a class="lang-item noHoverAnimation" href="{{ $buildLocaleUrl($loc) }}"
-                                    style="display:flex; align-items:center; justify-content:space-between; padding:10px 12px;
+                            <a class="lang-item noHoverAnimation" href="{{ $buildLocaleUrl($loc) }}"
+                                style="display:flex; align-items:center; justify-content:space-between; padding:10px 12px;
                                         text-decoration:none; color: var(--color-dark); font-size:12px;">
-                                    <span class="noselect">{{ strtoupper($loc) }}</span>
-                                </a>
+                                <span class="noselect">{{ strtoupper($loc) }}</span>
+                            </a>
                             @endforeach
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -551,7 +552,6 @@
                         <a href="#" style="font-size: 20px;"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-
                 <div>
                     <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 25px">
                         {{ __('layout.footer_quick_links') }}
@@ -632,30 +632,9 @@
 
                             <span class="whatsapp-text">{{ __('layout.whatsapp_label') }}</span>
                         </a>
-
-                        <div
-                            style="position: absolute; top: -10px; right: -10px; width: 20px; height: 20px; background-color: #25D366; border-radius: 50%; border: 3px solid white; animation: whatsapp-pulse 2s infinite;">
-                        </div>
                     </div>
 
                     <style>
-                        @keyframes whatsapp-pulse {
-                            0% {
-                                transform: scale(0.9);
-                                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-                            }
-
-                            70% {
-                                transform: scale(1.1);
-                                box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
-                            }
-
-                            100% {
-                                transform: scale(0.9);
-                                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-                            }
-                        }
-
                         @media (max-width: 768px) {
                             .whatsapp-button {
                                 bottom: 25px !important;

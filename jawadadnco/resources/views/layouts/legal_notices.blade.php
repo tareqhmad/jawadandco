@@ -4,8 +4,7 @@
 @section('description', __('privacy_policy.meta_description'))
 
 @section('content')
-    <section class="section-padding container">
-
+    <section class="section-padding">
 
         <head>
             <meta charset="utf-8" />
@@ -59,7 +58,7 @@
             </style>
         </head>
 
-        <header>
+        <header class="container">
             <h1>Mentions légales – Luxway</h1>
             <p class="meta"><strong>Dernière mise à jour :</strong> [JJ/MM/AAAA]</p>
             <p class="meta">
@@ -69,7 +68,7 @@
             </p>
         </header>
 
-        <main>
+        <main class="container">
             <section id="editeur">
                 <h2>1) Éditeur du site</h2>
                 <p><strong>Raison sociale :</strong> Luxway</p>

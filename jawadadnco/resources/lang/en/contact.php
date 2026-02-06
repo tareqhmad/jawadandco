@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'meta_title' => 'Contact Us | Luxway Limousine',
-    'meta_description' => 'Contact Luxway Limousine for bookings, inquiries, or support. We are available 24/7 to assist with your luxury transportation needs.',
+    'meta_title' => 'Contact Us | Luxway',
+    'meta_description' => 'Contact Luxway for bookings, inquiries, or support. We are available 24/7 to assist with your luxury transportation needs.',
 
     'hero_badge' => 'Get in Touch',
     'hero_title' => 'Contact Us',
@@ -61,7 +61,7 @@ return [
     'location_title' => 'Our Location',
     'location_text' => "Find us in the heart of Brussels. While we're primarily a mobile service, our administrative office is located at:",
 
-    'map_card_title' => 'Luxway Limousine',
+    'map_card_title' => 'Luxway',
     'map_card_address' => 'Avenue Louise 123, 1050 Brussels',
 
     'getting_here_title' => 'Getting Here',
@@ -91,7 +91,7 @@ return [
     'faq_a4' => 'Cancellations made more than 24 hours before the scheduled pickup are free. Cancellations within 24 hours incur a 50% charge. For airport transfers, flight delays are monitored and no cancellation fees apply for delayed or cancelled flights.',
 
     'cta_title' => 'Ready to Get Started?',
-    'cta_text' => 'Contact us today to discuss your transportation needs or book your premium limousine service.',
+    'cta_text' => 'Contact us today to discuss your transportation needs or book your premium chauffeur service.',
     'cta_book' => 'Book Now',
     'cta_call' => 'Call Now',
 ];

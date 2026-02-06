@@ -91,7 +91,7 @@ return [
     'faq_a4' => "Les annulations effectuées plus de 24 heures avant l’heure de prise en charge sont gratuites. Les annulations dans les 24 heures entraînent des frais de 50 %. Pour les transferts aéroport, les retards de vol sont suivis et aucun frais d’annulation ne s’applique en cas de vol retardé ou annulé.",
 
     'cta_title' => 'Prêt à commencer ?',
-    'cta_text' => "Contactez-nous dès aujourd’hui pour discuter de vos besoins de transport ou réserver votre service de limousine premium.",
+    'cta_text' => "Contactez-nous dès aujourd’hui pour discuter de vos besoins de transport ou réserver votre service de chauffeur privé premium.",
     'cta_book' => 'Réserver',
     'cta_call' => 'Appeler',
 ];

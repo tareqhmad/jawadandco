@@ -3,7 +3,7 @@
 return [
     // SEO
     'meta_title' => 'Notre flotte de luxe | Limousines premium Bruxelles',
-    'meta_description' => "Découvrez notre flotte de luxe de limousines, berlines et SUV disponibles à la location à Bruxelles.\n    Mercedes-Benz, BMW, Audi, et plus.",
+    'meta_description' => "Découvrez notre flotte de luxe de berlines et SUV disponibles à la location à Bruxelles.\n    Mercedes-Benz, BMW, Minibus, et plus.",
 
     // Hero
     'hero_badge' => 'Notre collection',
@@ -27,7 +27,7 @@ return [
         'mercedes_s_class' => [
             'title' => 'Mercedes S-Class',
             'passengers' => '3-4',
-            'luggage' => '3',
+            'luggage' => '3 moyens',
             'category' => 'Exécutif',
             'description' => 'Le summum des berlines de luxe, avec cuir premium, climatisation avancée et habitacle silencieux.',
             'features' => [

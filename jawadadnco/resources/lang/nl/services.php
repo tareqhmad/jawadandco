@@ -2,8 +2,8 @@
 
 return [
     // SEO
-    'meta_title' => 'Onze diensten | Premium limousineservice Brussel',
-    'meta_description' => "Ontdek onze premium chauffeursdiensten in Brussel: luchthaventransfers, zakelijk vervoer,\n    speciale evenementen en uurlijkse limousineverhuur.",
+    'meta_title' => 'Onze diensten | Luxway',
+    'meta_description' => "Ontdek onze premium chauffeursdiensten in Brussel: luchthaventransfers, zakelijk vervoer,\n    speciale evenementen en uurlijkse privéchauffeur service.",
 
     // Hero
     'hero_badge' => 'Ons aanbod',
@@ -30,7 +30,7 @@ return [
 
     // Cards - Events
     'events_title' => 'Speciale evenementen',
-    'events_text' => 'Maak uw speciale gelegenheden onvergetelijk met onze luxe limousine- en chauffeursdiensten.',
+    'events_text' => 'Maak uw speciale gelegenheden onvergetelijk met onze luxe chauffeursdiensten.',
     'events_feature_1' => 'Bruiloften en jubilea',
     'events_feature_2' => 'Gala’s en rode-loper evenementen',
     'events_feature_3' => 'Verjaardagsvieringen',

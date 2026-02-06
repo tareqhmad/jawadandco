@@ -2,8 +2,8 @@
 
 return [
     // SEO
-    'meta_title' => 'Onze luxe vloot | Premium limousines Brussel',
-    'meta_description' => "Ontdek onze luxe vloot van limousines, sedans en SUV’s die te huur zijn in Brussel.\n    Mercedes-Benz, BMW, Audi, en meer.",
+    'meta_title' => 'Onze luxe vloot | Luxway',
+    'meta_description' => "Ontdek onze luxe vloot van sedans en SUV’s die te huur zijn in Brussel.\n    Mercedes-Benz, BMW, Audi, en meer.",
 
     // Hero
     'hero_badge' => 'Onze collectie',
@@ -27,7 +27,7 @@ return [
         'mercedes_s_class' => [
             'title' => 'Mercedes S-Class',
             'passengers' => '3-4',
-            'luggage' => '3',
+            'luggage' => '3 middelgrote',
             'category' => 'Executive',
             'description' => 'Het ultieme in luxe sedans, met premium leder, geavanceerde klimaatregeling en fluisterstille cabine.',
             'features' => [

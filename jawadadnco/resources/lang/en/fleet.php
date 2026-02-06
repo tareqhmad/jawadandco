@@ -2,8 +2,8 @@
 
 return [
     // SEO
-    'meta_title' => 'Our Luxury Fleet | Premium Limousines Brussels',
-    'meta_description' => "Discover our luxury fleet of limousines, sedans, and SUVs available for hire in Brussels.\n    Mercedes-Benz, BMW, Audi, and more.",
+    'meta_title' => 'Our Luxury Fleet',
+    'meta_description' => "Discover our luxury fleet of vehicles, sedans, and SUVs available for hire in Brussels.\n    Mercedes-Benz, BMW, Audi, and more.",
 
     // Hero
     'hero_badge' => 'Our Collection',
@@ -27,7 +27,7 @@ return [
         'mercedes_s_class' => [
             'title' => 'Mercedes S-Class',
             'passengers' => '3-4',
-            'luggage' => '3',
+            'luggage' => '3 medium',
             'category' => 'Executive',
             'description' => 'The ultimate in luxury sedans, featuring premium leather, advanced climate control, and whisper-quiet cabin.',
             'features' => [

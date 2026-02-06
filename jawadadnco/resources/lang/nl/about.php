@@ -10,7 +10,7 @@ return [
 
     'journey_title' => 'Onze reis',
     'journey_p1' => "Luxway Limousine werd in 2010 opgericht door veteranen uit de transportsector met een eenvoudige missie: Brussel voorzien van een écht premium chauffeursservice die luxe, betrouwbaarheid en discretie combineert.",
-    'journey_p2' => "Begonnen met slechts twee voertuigen, zijn we uitgegroeid tot een van de meest gerespecteerde limousinediensten in Brussel, voor zakelijke klanten, internationale bezoekers en lokale bewoners die alleen het beste verwachten.",
+    'journey_p2' => "Begonnen met slechts twee voertuigen, zijn we uitgegroeid tot een van de meest gerespecteerde chauffeursdiensten in Brussel, voor zakelijke klanten, internationale bezoekers en lokale bewoners die alleen het beste verwachten.",
     'journey_p3' => "Onze toewijding aan uitmuntendheid heeft ons het vertrouwen opgeleverd van diplomatieke missies, Fortune 500-bedrijven en talloze personen die de speciale momenten van het leven vieren.",
 
     'badge_years_title' => '10+ jaar uitmuntendheid',
