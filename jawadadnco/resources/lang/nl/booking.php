@@ -29,6 +29,8 @@ return [
     'pickup_date_label' => 'Ophaaldatum *',
     'pickup_time_label' => 'Ophaaltijd *',
 
+    'vehicle_type_label' => 'Type voertuig *',
+
     'service_type_label' => 'Type service *',
     'service_select_placeholder' => 'Selecteer service',
     'service_airport' => 'Luchthaventransfer',

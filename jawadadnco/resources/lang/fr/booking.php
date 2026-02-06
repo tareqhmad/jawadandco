@@ -29,6 +29,8 @@ return [
     'pickup_date_label' => 'Date de prise en charge *',
     'pickup_time_label' => 'Heure de prise en charge *',
 
+    'vehicle_type_label' => 'Type de véhicule *',
+
     'service_type_label' => 'Type de service *',
     'service_select_placeholder' => 'Sélectionner un service',
     'service_airport' => 'Transfert aéroport',

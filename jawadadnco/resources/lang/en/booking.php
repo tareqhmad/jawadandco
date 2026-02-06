@@ -29,6 +29,8 @@ return [
     'pickup_date_label' => 'Pick-up Date *',
     'pickup_time_label' => 'Pick-up Time *',
 
+    'vehicle_type_label' => 'Vehicle Type *',
+
     'service_type_label' => 'Service Type *',
     'service_select_placeholder' => 'Select Service',
     'service_airport' => 'Airport Transfer',
