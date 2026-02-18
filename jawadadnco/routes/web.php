@@ -40,14 +40,6 @@ Route::get('/{locale}/booking', function () {
     ->where(['locale' => 'fr|nl|en'])
     ->middleware('setlocale');
 
-Route::get('/{locale}/pricing', function () {
-    return view('layouts/pricing');
-})
-    ->name('pricing')
-    ->where(['locale' => 'fr|nl|en'])
-    ->middleware('setlocale');
-
-
 Route::get('/{locale}/about', function () {
     return view('layouts/about');
 })
