@@ -87,26 +87,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div style="margin-top: 40px;">
-                        <h3 style="font-size: 20px; color: var(--color-dark); margin-bottom: 20px;">
-                            {{ __('contact.hours_title') }}
-                        </h3>
-                        <div style="color: var(--color-secondary);">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                <span>{{ __('contact.hours_row1_left') }}</span>
-                                <span>{{ __('contact.hours_row1_right') }}</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                <span>{{ __('contact.hours_row2_left') }}</span>
-                                <span>{{ __('contact.hours_row2_right') }}</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                <span>{{ __('contact.hours_row3_left') }}</span>
-                                <span>{{ __('contact.hours_row3_right') }}</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Contact Form -->

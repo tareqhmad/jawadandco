@@ -21,14 +21,6 @@ return [
     'email_value' => 'info@luxway.be',
     'email_note' => 'Response within 2 hours',
 
-    'hours_title' => 'Business Hours',
-    'hours_row1_left' => 'Monday - Friday',
-    'hours_row1_right' => '24/7 Service',
-    'hours_row2_left' => 'Saturday - Sunday',
-    'hours_row2_right' => '24/7 Service',
-    'hours_row3_left' => 'Holidays',
-    'hours_row3_right' => '24/7 Service',
-
     'form_title' => 'Send Us a Message',
     'first_name' => 'First Name *',
     'last_name' => 'Last Name *',

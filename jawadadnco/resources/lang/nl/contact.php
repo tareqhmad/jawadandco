@@ -21,14 +21,6 @@ return [
     'email_value' => 'info@luxway.be',
     'email_note' => 'Antwoord binnen 2 uur',
 
-    'hours_title' => 'Openingsuren',
-    'hours_row1_left' => 'Maandag - Vrijdag',
-    'hours_row1_right' => '24/7 service',
-    'hours_row2_left' => 'Zaterdag - Zondag',
-    'hours_row2_right' => '24/7 service',
-    'hours_row3_left' => 'Feestdagen',
-    'hours_row3_right' => '24/7 service',
-
     'form_title' => 'Stuur ons een bericht',
     'first_name' => 'Voornaam *',
     'last_name' => 'Achternaam *',
