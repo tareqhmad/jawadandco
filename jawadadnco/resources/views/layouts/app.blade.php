@@ -23,7 +23,7 @@ return url(implode('/', $new));
 @endphp
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark'=> request()->cookie('theme', 'light') === 'dark'])>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark'=> request()->cookie('theme', 'dark') === 'dark'])>
 
 <head>
     <meta charset="utf-8">

@@ -39,28 +39,13 @@
                         <div style="display: flex; align-items: center; margin-bottom: 20px;">
                             <div
                                 style="width: 50px; height: 50px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                <i class="fas fa-map-marker-alt" style="color: var(--color-secondary);"></i>
-                            </div>
-                            <div>
-                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">
-                                    {{ __('contact.address_title') }}
-                                </div>
-                                <div style="color: var(--color-secondary);">
-                                    {!! __('contact.address_value') !!}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                            <div
-                                style="width: 50px; height: 50px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
                                 <i class="fas fa-phone" style="color: var(--color-secondary);"></i>
                             </div>
                             <div>
                                 <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">
                                     {{ __('contact.phone_title') }}
                                 </div>
-                                <div style="color: var(--color-secondary);">
+                                <div style="color: var(--color-dark);">
                                     {{ __('contact.phone_value') }}
                                 </div>
                                 <div style="color: var(--color-accent); font-size: 14px; margin-top: 5px;">
@@ -78,7 +63,7 @@
                                 <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">
                                     {{ __('contact.email_title') }}
                                 </div>
-                                <div style="color: var(--color-secondary);">
+                                <div style="color: var(--color-dark);">
                                     {{ __('contact.email_value') }}
                                 </div>
                                 <div style="color: var(--color-accent); font-size: 14px; margin-top: 5px;">
