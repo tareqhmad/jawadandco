@@ -10,11 +10,7 @@ return [
 
     'info_title' => 'Contactgegevens',
 
-    'address_title' => 'Ons adres',
-    'address_value' => 'Avenue Louise 123<br>1050 Brussel, België',
-
     'phone_title' => 'Telefoonnummer',
-    'phone_value' => '+32 2 123 4567',
     'phone_note' => '24/7 beschikbaar',
 
     'email_title' => 'E-mailadres',
@@ -43,12 +39,9 @@ return [
     'emergency_title' => 'Noodcontact',
     'emergency_text' => 'Voor dringende zaken, bestaande boekingen of onmiddellijke hulp, bel onze 24/7 noodlijn.',
     'emergency_label' => '24/7 noodlijn',
-    'emergency_phone' => '+32 2 123 4567',
 
     'corporate_title' => 'Zakelijke diensten',
     'corporate_text' => 'Voor zakelijke accounts, langlopende contracten of enterprise-oplossingen, neem contact op met ons corporate team.',
-    'corporate_email' => 'corporate@elitebrusselslimo.be',
-    'corporate_phone' => '+32 2 123 4568',
 
     'location_title' => 'Onze locatie',
     'location_text' => 'U vindt ons in het hart van Brussel. Hoewel we vooral een mobiele service zijn, bevindt ons administratief kantoor zich op:',

@@ -46,7 +46,10 @@
                                     {{ __('contact.phone_title') }}
                                 </div>
                                 <div style="color: var(--color-dark);">
-                                    {{ __('contact.phone_value') }}
+                                    {{ __('contact.phone1_value') }}
+                                </div>
+                                 <div style="color: var(--color-dark);">
+                                    {{ __('contact.phone2_value') }}
                                 </div>
                                 <div style="color: var(--color-accent); font-size: 14px; margin-top: 5px;">
                                     {{ __('contact.phone_note') }}

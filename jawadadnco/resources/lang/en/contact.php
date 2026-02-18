@@ -10,11 +10,9 @@ return [
 
     'info_title' => 'Contact Information',
 
-    'address_title' => 'Our Address',
-    'address_value' => 'Avenue Louise 123<br>1050 Brussels, Belgium',
-
     'phone_title' => 'Phone Number',
-    'phone_value' => '+32 2 123 4567',
+    'phone1_value' => '+32 497 121 012',
+    'phone2_value' => '+32 487 853 111',
     'phone_note' => '24/7 Available',
 
     'email_title' => 'Email Address',

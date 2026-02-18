@@ -10,15 +10,10 @@ return [
 
     'info_title' => 'Coordonnées',
 
-    'address_title' => 'Notre adresse',
-    'address_value' => 'Avenue Louise 123<br>1050 Bruxelles, Belgique',
-
     'phone_title' => 'Numéro de téléphone',
-    'phone_value' => '+32 2 123 4567',
     'phone_note' => 'Disponible 24h/24, 7j/7',
 
     'email_title' => 'Adresse e-mail',
-    'email_value' => 'info@luxway.be',
     'email_note' => 'Réponse sous 2 heures',
 
     'form_title' => 'Envoyez-nous un message',
