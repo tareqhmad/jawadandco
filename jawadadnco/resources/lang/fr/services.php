@@ -38,13 +38,13 @@ return [
     'cta_plan_event' => 'Planifier votre événement',
 
     // Cards - Hourly
-    'hourly_title' => 'Service à l’heure',
-    'hourly_text' => 'Locations horaires flexibles pour des tours en ville, des virées shopping ou toute occasion nécessitant un service prolongé.',
+    'hourly_title' => 'Mise à disposition',
+    'hourly_text' => 'Un chauffeur privé de luxe à votre disposition pour quelques heures ou pour la journée, selon vos besoins et votre emploi du temps.',
     'hourly_feature_1' => 'Réservation minimum de 3 heures',
-    'hourly_feature_2' => 'Arrêts multiples autorisés',
-    'hourly_feature_3' => 'Tours en ville et à la campagne',
-    'hourly_feature_4' => 'Itinéraires personnalisés',
-    'cta_view_pricing' => 'Voir les tarifs',
+    'hourly_feature_2' => 'Chauffeur dédié',
+    'hourly_feature_3' => 'Arrêts multiples autorisés',
+    'hourly_feature_4' => 'Trajet sur mesure',
+    'cta_view_booking' => 'Réserver Maintenant',
 
     // Process
     'process_badge' => 'Comment ça marche',

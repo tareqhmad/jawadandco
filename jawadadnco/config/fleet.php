@@ -56,6 +56,23 @@ return [
             'gradientFrom' => 'var(--color-primary)',
             'gradientTo' => 'var(--color-accent)',
         ],
+[
+            'key' => 'mercedes_vito',
+
+            'title' => 'fleet.vehicles.mercedes_vito.title',
+            'passengers' => 'fleet.vehicles.mercedes_vito.passengers',
+            'luggage' => 'fleet.vehicles.mercedes_vito.luggage',
+            'category' => 'fleet.vehicles.mercedes_vito.category',
+            'description' => 'fleet.vehicles.mercedes_vito.description',
+            'features' => 'fleet.vehicles.mercedes_vito.features',
+
+            'imageName' => 'mercedes-vito.png',
+            'icon' => 'fas fa-van',
+            'iconColor' => 'var(--color-white)',
+            'headerTextColor' => 'var(--color-dark)',
+            'gradientFrom' => 'var(--color-primary)',
+            'gradientTo' => 'var(--color-accent)',
+        ],
 
         [
             'key' => 'mercedes_sprinter',

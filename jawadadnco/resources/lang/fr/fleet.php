@@ -36,18 +36,6 @@ return [
                 'Toit panoramique',
             ],
         ],
-        'bmw_7_series' => [
-            'title' => 'BMW 7 Series',
-            'passengers' => '3-4',
-            'luggage' => '3 grands',
-            'category' => 'Exécutif',
-            'description' => 'Alliant performances sportives et luxe exécutif, avec contrôle gestuel et sièges lounge exécutifs.',
-            'features' => [
-                'Son Bowers & Wilkins',
-                'Sièges massants',
-                'Divertissement arrière',
-            ],
-        ],
         'mercedes_e_class' => [
             'title' => 'Mercedes E-Class',
             'passengers' => '3-4',
@@ -94,6 +82,18 @@ return [
                 'Intérieur spacieux',
                 'Climatisation',
                 'Sièges confortables',
+            ],
+        ],
+        'mercedes_vito' => [
+            'title' => 'Mercedes Vito',
+            'passengers' => '7-8',
+            'luggage' => '6+ grands',
+            'category' => 'Exécutif',
+            'description' => 'Confort spacieux pour les groupes et les transferts, offrant un excellent équilibre entre praticité, confort et capacité de chargement.',
+            'features' => [
+                'Habitacle spacieux',
+                'Climatisation individuelle avant/arrière',
+                'Grand coffre pour les bagages',
             ],
         ],
     ],

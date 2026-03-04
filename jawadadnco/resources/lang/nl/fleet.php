@@ -96,6 +96,18 @@ return [
                 'Comfortabele zitplaatsen',
             ],
         ],
+        'mercedes_vito' => [
+            'title' => 'Mercedes Vito',
+            'passengers' => '7-8',
+            'luggage' => '6+ grote',
+            'category' => 'Executive',
+            'description' => 'Ruim comfort voor groepen en transfers, met een uitstekende balans tussen praktisch gebruik, comfort en bagagecapaciteit.',
+            'features' => [
+                'Ruim interieur',
+                'Individuele klimaatregeling voor/achter',
+                'Grote bagageruimte',
+            ],
+        ],
     ],
 
     // Fleet features section

@@ -29,7 +29,7 @@
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px;">
                 <!-- Contact Card -->
-                <div class="fade-in-up"
+                <div class="fade-in-up flex flex-col h-fit"
                     style="background: var(--color-white); padding: 50px; border-radius: 8px; box-shadow: 0 10px 30px rgba(122, 125, 125, 0.08);">
                     <h2 style="font-size: 32px; color: var(--color-dark); margin-bottom: 40px;">
                         {{ __('contact.info_title') }}
@@ -71,6 +71,20 @@
                                 </div>
                                 <div style="color: var(--color-accent); font-size: 14px; margin-top: 5px;">
                                     {{ __('contact.email_note') }}
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                            <div
+                                style="width: 50px; height: 50px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <i class="fas fa-envelope" style="color: var(--color-secondary);"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--color-dark); margin-bottom: 5px;">
+                                    {{ __('contact.address_title') }}
+                                </div>
+                                <div style="color: var(--color-dark);">
+                                    <p>Rue Adolphe willemyns 136 1070</p>
                                 </div>
                             </div>
                         </div>

@@ -38,13 +38,13 @@ return [
     'cta_plan_event' => 'Uw evenement plannen',
 
     // Cards - Hourly
-    'hourly_title' => 'Uurservice',
-    'hourly_text' => 'Flexibele uurtarieven voor stadstours, shoppingtrips of elke gelegenheid die een langere service vereist.',
+    'hourly_title' => 'Chauffeur ter Beschikking',
+    'hourly_text' => 'Een luxe privéchauffeur tot uw beschikking voor enkele uren of voor de hele dag, volgens uw behoeften en planning.',
     'hourly_feature_1' => 'Minimale boeking van 3 uur',
     'hourly_feature_2' => 'Meerdere stops toegestaan',
-    'hourly_feature_3' => 'Stads- en plattelandstours',
-    'hourly_feature_4' => 'Maatwerkroute',
-    'cta_view_pricing' => 'Prijzen bekijken',
+    'hourly_feature_3' => 'Toegewijde chauffeur',
+    'hourly_feature_4' => 'Traject op maat',
+    'cta_view_booking' => 'Nu Boeken',
 
     // Process
     'process_badge' => 'Hoe het werkt',

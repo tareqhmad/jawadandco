@@ -38,13 +38,13 @@ return [
     'cta_plan_event' => 'Plan Your Event',
 
     // Cards - Hourly
-    'hourly_title' => 'Hourly Service',
-    'hourly_text' => 'Flexible hourly rentals for city tours, shopping trips, or any occasion requiring extended service.',
+    'hourly_title' => 'Chauffeur at Disposal',
+    'hourly_text' => 'A luxury private chauffeur at your disposal for a few hours or for the whole day, according to your needs and schedule.',
     'hourly_feature_1' => 'Minimum 3-hour booking',
+    'hourly_feature_3' => 'Dedicated chauffeur',
     'hourly_feature_2' => 'Multiple stops allowed',
-    'hourly_feature_3' => 'City and country tours',
-    'hourly_feature_4' => 'Custom itineraries',
-    'cta_view_pricing' => 'View Pricing',
+    'hourly_feature_4' => 'Tailor-made journey',
+    'cta_view_booking' => 'Book Now',
 
     // Process
     'process_badge' => 'How It Works',

@@ -510,10 +510,6 @@ return url(implode('/', $new));
                         {{ __('layout.nav_booking') }}
                     </a>
 
-                    <a href="/{{ app()->getLocale() }}/about" class="{{ request()->routeIs('about*') ? 'active' : '' }}">
-                        {{ __('layout.nav_about') }}
-                    </a>
-
                     <a href="/{{ app()->getLocale() }}/contact"
                         class="{{ request()->routeIs('contact*') ? 'active' : '' }}">
                         {{ __('layout.nav_contact') }}

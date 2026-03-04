@@ -18,7 +18,7 @@ return [
     'trip_oneway_hint' => 'Punt A naar B',
     'trip_roundtrip' => 'Retour',
     'trip_roundtrip_hint' => 'Terugreis',
-    'trip_hourly' => 'Uurlijk',
+    'trip_hourly' => 'Chauffeur ter Beschikking',
     'trip_hourly_hint' => 'Meerdere stops',
 
     'pickup_label' => 'Ophaallocatie *',
@@ -36,7 +36,7 @@ return [
     'service_airport' => 'Luchthaventransfer',
     'service_corporate' => 'Zakelijk vervoer',
     'service_event' => 'Speciaal evenement',
-    'service_hourly' => 'Uurservice',
+    'service_hourly' => 'Chauffeur ter Beschikking',
     'service_tour' => 'Stadstour',
 
     'passengers_label' => 'Aantal passagiers *',

@@ -16,6 +16,8 @@ return [
     'email_title' => 'Adresse e-mail',
     'email_note' => 'Réponse sous 2 heures',
 
+    'address_title' => 'Notre Emplacement',
+
     'form_title' => 'Envoyez-nous un message',
     'first_name' => 'Prénom *',
     'last_name' => 'Nom *',

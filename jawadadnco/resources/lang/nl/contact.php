@@ -17,6 +17,8 @@ return [
     'email_value' => 'info@luxway.be',
     'email_note' => 'Antwoord binnen 2 uur',
 
+    'address_title' => 'Onze Locatie',
+
     'form_title' => 'Stuur ons een bericht',
     'first_name' => 'Voornaam *',
     'last_name' => 'Achternaam *',

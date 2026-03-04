@@ -18,7 +18,7 @@ return [
     'trip_oneway_hint' => 'Point A vers B',
     'trip_roundtrip' => 'Aller-retour',
     'trip_roundtrip_hint' => 'Trajet retour',
-    'trip_hourly' => 'À l’heure',
+    'trip_hourly' => 'Mise à disposition',
     'trip_hourly_hint' => 'Arrêts multiples',
 
     'pickup_label' => 'Lieu de prise en charge *',
@@ -36,7 +36,7 @@ return [
     'service_airport' => 'Transfert aéroport',
     'service_corporate' => 'Déplacement professionnel',
     'service_event' => 'Événement spécial',
-    'service_hourly' => 'Service à l’heure',
+    'service_hourly' => 'Mise à disposition',
     'service_tour' => 'Tour de la ville',
 
     'passengers_label' => 'Nombre de passagers *',

@@ -18,7 +18,7 @@ return [
     'trip_oneway_hint' => 'Point A to B',
     'trip_roundtrip' => 'Round Trip',
     'trip_roundtrip_hint' => 'Return journey',
-    'trip_hourly' => 'Hourly',
+    'trip_hourly' => 'Chauffeur at Disposal',
     'trip_hourly_hint' => 'Multiple stops',
 
     'pickup_label' => 'Pick-up Location *',
@@ -36,7 +36,7 @@ return [
     'service_airport' => 'Airport Transfer',
     'service_corporate' => 'Corporate Travel',
     'service_event' => 'Special Event',
-    'service_hourly' => 'Hourly Service',
+    'service_hourly' => 'Chauffeur at Disposal',
     'service_tour' => 'City Tour',
 
     'passengers_label' => 'Number of Passengers *',

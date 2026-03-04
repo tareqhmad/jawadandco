@@ -170,8 +170,8 @@
                         </li>
                     </ul>
                     <div style="text-align: center;">
-                        <a href="/{{ app()->getLocale() }}/pricing" class="btn-secondary">
-                            <i class="fas fa-euro-sign" style="margin-right: 10px;"></i> {{ __('services.cta_view_pricing') }}
+                        <a href="/{{ app()->getLocale() }}/booking" class="btn-secondary">
+                            <i class="fas fa-euro-sign" style="margin-right: 10px;"></i> {{ __('services.cta_view_booking') }}
                         </a>
                     </div>
                 </div>

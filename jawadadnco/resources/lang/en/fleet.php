@@ -84,6 +84,18 @@ return [
                 'Comfortable Seating',
             ],
         ],
+        'mercedes_vito' => [
+            'title' => 'Mercedes Vito',
+            'passengers' => '7-8',
+            'luggage' => '6+ large',
+            'category' => 'Executive',
+            'description' => 'Spacious comfort for groups and transfers, offering an excellent balance of practicality, comfort, and luggage capacity.',
+            'features' => [
+                'Spacious interior',
+                'Individual front/rear climate control',
+                'Large luggage compartment',
+            ],
+        ],
     ],
 
     // Fleet features section
